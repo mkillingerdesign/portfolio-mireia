@@ -1,0 +1,472 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+body.light-mode {
+    background: #ffffff;
+    color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.dark-mode .header {
+    background: #2a2a2a;
+}
+
+.light-mode .header {
+    background: #f5f5f5;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.dark-mode .logo {
+    color: #ffffff;
+}
+
+.light-mode .logo {
+    color: #000000;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.dark-mode .theme-toggle {
+    color: #ffffff;
+}
+
+.light-mode .theme-toggle {
+    color: #000000;
+}
+
+.theme-toggle:hover {
+    color: #58a6ff;
+}
+
+/* Hero Section */
+.project-hero {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-meta {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.dark-mode .project-meta {
+    color: #aaaaaa;
+}
+
+.light-mode .project-meta {
+    color: #666666;
+}
+
+.hero-content p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background: #58a6ff;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #1f6feb;
+}
+
+.project-image {
+    max-width: 400px;
+    height: auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+/* Project Details */
+.project-details {
+    padding: 4rem 0;
+}
+
+.project-details h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-details h2 i {
+    margin-right: 0.5rem;
+}
+
+.project-content p {
+    margin-bottom: 1rem;
+}
+
+.project-content ul {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.project-content ul li {
+    margin-bottom: 0.75rem;
+}
+
+.project-content ul li strong {
+    color: #58a6ff;
+}
+
+/* Gallery Section with Carousel */
+.project-gallery {
+    padding: 4rem 0;
+}
+
+.project-gallery h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.project-gallery h2 i {
+    margin-right: 0.5rem;
+}
+
+.carousel {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    text-align: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-item p {
+    margin-top: 0.5rem;
+    font-size: 1rem;
+}
+
+.dark-mode .carousel-item p {
+    color: #aaaaaa;
+}
+
+.light-mode .carousel-item p {
+    color: #666666;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Categories Section */
+.categories-section {
+    padding: 4rem 0;
+}
+
+.categories-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.categories-section h2 i {
+    margin-right: 0.5rem;
+}
+
+.category {
+    margin-bottom: 2rem;
+}
+
+.category h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #58a6ff;
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas */
+    gap: 1rem;
+}
+
+.thumbnails img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.05);
+}
+
+/* Modal for Category Content */
+.category-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-modal.show {
+    display: flex;
+}
+
+.modal-content {
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.dark-mode .modal-content {
+    background: #2a2a2a;
+}
+
+.light-mode .modal-content {
+    background: #f5f5f5;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.dark-mode .close-modal {
+    color: #ffffff;
+}
+
+.light-mode .close-modal {
+    color: #000000;
+}
+
+.close-modal:hover {
+    color: #58a6ff;
+}
+
+.modal-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.modal-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+.modal-gallery img,
+.modal-gallery video {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.modal-gallery .pdf-viewer {
+    width: 100%;
+    height: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.modal-gallery .pdf-viewer canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-gallery .pdf-nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-gallery .pdf-nav-button:first-of-type {
+    left: 10px;
+}
+
+.modal-gallery .pdf-nav-button:last-of-type {
+    right: 10px;
+}
+
+.modal-gallery .pdf-nav-button:hover {
+    background: rgba(88, 166, 255, 0.7);
+}
+
+/* Back to Projects */
+.back-to-projects {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.btn-secondary {
+    background: #444444;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background: #555555;
+}
+
+.light-mode .btn-secondary {
+    background: #d0d0d0;
+    color: #000000;
+}
+
+.light-mode .btn-secondary:hover {
+    background: #bbbbbb;
+}
+
+.btn-secondary i {
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+.footer {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.dark-mode .footer {
+    background: #2a2a2a;
+}
+
+.light-mode .footer {
+    background: #f5f5f5;
+}
+
+.footer p {
+    font-size: 0.9rem;
+}
+
+.footer i {
+    color: #58a6ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .project-details h2,
+    .project-gallery h2,
+    .categories-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-control {
+        font-size: 1.2rem;
+        padding: 0.3rem;
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-content {
+        width: 95%;
+        padding: 1rem;
+    }
+}
