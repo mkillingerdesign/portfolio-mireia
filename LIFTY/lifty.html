@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lifty: App y Web con IA para Diversidad Funcional</title>
-    <meta name="description" content="Lifty, diseñada por Mireia Killinger, es una app/web con IA que empodera a personas con diversidad funcional mediante herramientas accesibles para la educación y la vida diaria.">
-    <meta name="keywords" content="IA, accesibilidad, diversidad funcional, NEE, educación inclusiva, diseño de app, Mireia Killinger">
-    <meta name="author" content="Mireia Killinger">
+    <title>Mireia Killinger - Proyectos de Apps</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="lifty.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="dark-mode">
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="nav">
-                <a href="index.html" class="logo">Mireia Killinger</a>
-                <nav>
+                <a href="../index.html" class="logo">Mireia Killinger</a>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav class="nav-menu">
                     <ul>
-                        <li><a href="index.html#about">Acerca</a></li>
-                        <li><a href="index.html#projects">Proyectos</a></li>
-                        <li><a href="index.html#skills">Habilidades</a></li>
-                        <li><a href="index.html#experience">Experiencia</a></li>
-                        <li><a href="index.html#education">Educación</a></li>
-                        <li><a href="index.html#contact">Contacto</a></li>
+                        <li><a href="#descripcion">Descripción</a></li>
+                        <li><a href="#wireframes">Wireframes</a></li>
+                        <li><a href="#interactividad">Interactividad</a></li>
+                        <li><a href="#web">Web</a></li>
                     </ul>
                 </nav>
                 <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
@@ -35,121 +35,93 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-<section class="hero project-hero" data-aos="fade-up">
-    <div id="particles-js" class="particles"></div>
-    <div class="container">
-        <div class="hero-content">
-            <img src="../img/lifty2 blanco.png" alt="Logo de Lifty" class="hero-logo" data-aos="zoom-in" data-aos-delay="100">
-            <h1>Hacemos fácil lo que parece difícil</h1>
-            <p class="project-meta">Diseño de App/Web | IA | Inclusión | 2025</p>
-            <p>Lifty es una aplicación y web que utiliza inteligencia artificial para apoyar a personas con diversidad funcional en su autonomía académica y cotidiana, promoviendo inclusión y confianza.</p>
-            <div class="hero-buttons">
-                <a href="#project-details" class="btn btn-primary">Explora el Proyecto</a>
-                <a href="https://liftyhelp.github.io/lifty/" target="_blank" class="btn btn-secondary">Visita la Web de Lifty</a>
+    <!-- Apps Section -->
+    <main>
+        <section class="app-projects" data-aos="fade-up">
+            <div class="container">
+                <h1>
+                    <img src="../img/lifty2 blanco.png"  alt="Logo de Lifty" class="lifty-logo">
+                    <br>
+                    <span class="slogan">Hacemos fácil lo que parece difícil</span>
+                </h1>
+
+                <!-- Descripción -->
+                <div class="project-category" id="descripcion">
+                    <h2 data-aos="fade-up">Descripción de Lifty</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        Lifty es una aplicación móvil diseñada para promover la accesibilidad, ayudando a personas con diversidad funcional a encontrar lugares y servicios adaptados. La app ofrece información verificada sobre accesibilidad en espacios públicos y privados, con una interfaz intuitiva que prioriza la inclusión. Desarrollé Lifty combinando HTML, CSS y JavaScript para la landing page, y frameworks móviles para la app, integrando APIs de geolocalización y datos en tiempo real. El proyecto nació de la necesidad de crear soluciones digitales que empoderen a las personas y fomenten la igualdad.
+                    </p>
+                </div>
+
+                <!-- Wireframes -->
+                <div class="project-category" id="wireframes">
+                    <h2 data-aos="fade-up">Wireframes de Lifty</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Prototipos iniciales creados en Figma, enfocados en la estructura y usabilidad de la app, diseñados para garantizar una experiencia accesible y fluida.</p>
+                    <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
+                        <img src="../img/lifty-wireframe1.png" alt="Wireframe de pantalla de inicio en Figma" class="gallery-img">
+                        <img src="../img/lifty-wireframe2.png" alt="Wireframe de búsqueda en Figma" class="gallery-img">
+                        <img src="../img/lifty-wireframe3.png" alt="Wireframe de perfil de usuario en Figma" class="gallery-img">
+                    </div>
+                </div>
+
+                <!-- Interactividad -->
+                <div class="project-category" id="interactividad">
+                    <h2 data-aos="fade-up">Interactividad de Lifty</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Prototipos interactivos en Figma que muestran la navegación dinámica, filtros de accesibilidad y funcionalidades clave de Lifty, listos para su desarrollo.</p>
+                    <div class="preview-gallery" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="preview-item">
+                            <a href="https://www.figma.com/proto/XXXXX" target="_blank" aria-label="Ver prototipo interactivo de Lifty en Figma">
+                                <img src="../img/lifty-proto1.png" alt="Vista previa de prototipo interactivo en Figma" class="preview-img-lifty">
+                            </a>
+                        </div>
+                        <div class="preview-item">
+                            <a href="https://www.figma.com/proto/YYYYY" target="_blank" aria-label="Ver prototipo de filtros en Figma">
+                                <img src="../img/lifty-proto2.png" alt="Vista previa de filtros en Figma" class="preview-img-lifty">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web -->
+                <div class="project-category" id="web">
+                    <h2 data-aos="fade-up">Web de Lifty</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">
+                        La landing page de Lifty, disponible en <a href="https://liftyhelp.github.io/lifty/" target="_blank">liftyhelp.github.io/lifty/</a>, fue creada con HTML, CSS y JavaScript, ofreciendo un diseño responsivo y accesible que cumple con los estándares WCAG. La web promociona la app, destacando sus funcionalidades: búsqueda de lugares accesibles, personalización de perfiles y guías detalladas. Utilicé una paleta de colores suaves, tipografía clara y animaciones sutiles para mejorar la experiencia de usuario. El desarrollo incluyó prototipado en Figma, pruebas de accesibilidad y alojamiento en GitHub Pages para un despliegue eficiente.
+                    </p>
+                </div>
+
+                <!-- Banner -->
+                <div class="banner" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../img/banner lifty_Mesa de trabajo 1.jpg" alt="Banner de Lifty" class="banner-img">
+                    <div class="banner-text">
+                        <h3>¡Explora Lifty!</h3>
+                        <p>Tu guía para un mundo más accesible.</p>
+                        <a href="https://liftyhelp.github.io/lifty/" target="_blank" class="banner-cta">Visita la Web</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <video class="project-video" autoplay muted loop playsinline aria-label="Video demostrativo de Lifty">
-            <source src="../img/VIDEO_PROMOCIONAL_LIFTY.mp4" type="video/mp4">
-            Tu navegador no soporta video.
-        </video>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <span class="lightbox-close" id="lightbox-close">×</span>
+        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
     </div>
-</section>
-
-    <!-- Project Details Section -->
-    <section id="project-details" class="project-details" data-aos="fade-up">
-        <div class="container">
-            <h2><i class="fas fa-info-circle"></i> Detalles del Proyecto</h2>
-            <div class="project-content">
-                <p>Lifty es un proyecto de final de curso que combina IA y diseño inclusivo para asistir a personas con diversidad funcional (TEA, síndrome de Down, parálisis cerebral, entre otros) en entornos académicos y cotidianos. Las funcionalidades clave incluyen:</p>
-                <ul>
-                    <li><strong>Ámbito Académico</strong>: Recursos adaptados para asignaturas, recordatorios de tareas, gestión de horarios, y herramientas de comunicación (pictogramas, voz, texto).</li>
-                    <li><strong>Vida Cotidiana</strong>: Guías para higiene, cocina, limpieza, y recordatorios para medicación o hábitos, con soporte emocional mediante ejercicios de respiración.</li>
-                    <li><strong>Pulsera Inteligente</strong>: Detecta estados emocionales (calma, nervioso, estrés) con sensores y muestra colores (verde, amarillo, rojo) para alertar a cuidadores.</li>
-                    <li><strong>Soporte Emocional</strong>: Ofrece herramientas como ejercicios de respiración guiados, actividades de relajación y mensajes motivacionales para promover el bienestar emocional y reducir el estrés.</li>
-                    <li><strong>Ayuda Emergencias</strong>: Proporciona alertas rápidas a cuidadores o servicios de emergencia, con activación sencilla mediante comandos de voz o gestos para garantizar asistencia inmediata.</li>
-                </ul>
-                <p>Lifty fomenta la autonomía, la comunicación, y el bienestar emocional, integrando IA en la educación inclusiva y la vida diaria, aunque no es apto para casos severos.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Banner Section -->
-    <section class="banner" data-aos="fade-up">
-        <div class="banner-content">
-            <h2>Empoderando la Autonomía con IA Inclusiva</h2>
-            <p>Descubre cómo Lifty transforma la vida de personas con diversidad funcional mediante tecnología accesible.</p>
-            <a href="https://liftyhelp.github.io/lifty/#inicio" target="_blank" class="btn btn-primary">Visita la Web de Lifty</a>
-        </div>
-    </section>
-
-   <!-- Gallery Section -->
-<section class="project-gallery" data-aos="fade-up">
-    <div class="container">
-        <h2><i class="fas fa-images"></i> Galería del Proyecto</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
-                <img src="../img/escolar copia.png" alt="Mockup de Vida Cotidiana">
-                <p>Rutina Académica</p>
-                <div class="tooltip">Guías para rutinas diarias como higiene y cocina.</div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
-                <img src="../img/vida copia.jpg" alt="Mockup de Vida Día a Día">
-                <p>Vida Cotidiana</p>
-                <div class="tooltip">Apoyo para hábitos diarios y gestión de tareas cotidianas.</div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
-                <img src="../img/cuidadors copia.svg" alt="Mockup de Soporte Emocional">
-                <p>Soporte Emocional</p>
-                <div class="tooltip">Ejercicios de relajación y mensajes motivacionales.</div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
-                <img src="../img/numero de telefono.png" alt="Mockup de Ayuda en Emergencias">
-                <p>Ayuda en Emergencias</p>
-                <div class="tooltip">Alertas rápidas para cuidadores en situaciones críticas.</div>
-            </div>
-            <div class="gallery-item" data-aos="zoom-in" data-aos-delay="500">
-                <img src="../img/pulsera copia.png" alt="Pulsera Inteligente">
-                <p>Pulsera Inteligente</p>
-                <div class="tooltip">Detecta emociones y alerta a cuidadores.</div>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Back to Projects -->
-    <section class="back-to-projects" data-aos="fade-up">
-        <div class="container">
-            <a href="../index.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Volver a Proyectos</a>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>© 2025 Mireia Killinger. Diseñado con <i class="fas fa-paint-brush"></i> y <i class="fas fa-camera"></i>.</p>
+            <p>© 2025 Mireia Killinger | Hecho con <i class="fas fa-heart"></i> y <i class="fas fa-code"></i></p>
         </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="lifty.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
-        particlesJS('particles-js', {
-            particles: {
-                number: { value: 80, density: { enable: true, value_area: 800 } },
-                color: { value: ['#58a6ff', '#79c0ff'] },
-                shape: { type: 'circle' },
-                opacity: { value: 0.5, random: true },
-                size: { value: 3, random: true },
-                line_linked: { enable: true, distance: 150, color: '#58a6ff', opacity: 0.4, width: 1 },
-                move: { enable: true, speed: 2 }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' } }
-            }
+        AOS.init({
+            once: true,
+            duration: 800,
         });
     </script>
 </body>

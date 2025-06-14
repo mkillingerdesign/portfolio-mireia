@@ -203,12 +203,14 @@ body.light-mode .project-category p {
 /* Preview Gallery */
 .preview-gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
 }
 
 .preview-item {
     position: relative;
+    width: 100%;
+    height: 230px;
     border-radius: 8px;
     border: 1px solid #30363d;
     overflow: hidden;
@@ -231,43 +233,18 @@ body.light-mode .preview-item:hover {
 .preview-item a {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 100%;
 }
 
-.preview-img {
+.preview-img-portfolio,
+.preview-img-lifty,
+.preview-img-app,
+.preview-img-bart {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
     cursor: pointer;
-}
-
-.preview-fallback {
-    font-size: 12px;
-    color: #8b949e;
-    text-align: center;
-    margin-top: 8px;
-}
-
-body.light-mode .preview-fallback {
-    color: #57606a;
-}
-
-.preview-fallback a {
-    color: #58a6ff;
-    text-decoration: none;
-}
-
-.preview-fallback a:hover {
-    color: #79c0ff;
-}
-
-body.light-mode .preview-fallback a {
-    color: #1a74e8;
-}
-
-body.light-mode .preview-fallback a:hover {
-    color: #0969da;
 }
 
 /* Image Gallery */
@@ -306,37 +283,56 @@ body.light-mode .gallery-img:hover {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
     z-index: 2000;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .lightbox.active {
     display: flex;
 }
 
-.lightbox-img {
+/* Estilos específicos para imágenes de Wireframes en el lightbox */
+.lightbox-img.wireframe-img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    border-radius: 0;
+    border: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+body.light-mode .lightbox-img.wireframe-img {
+    border: none;
+}
+
+/* Estilos para otras imágenes en el lightbox */
+.lightbox-img:not(.wireframe-img) {
     max-width: 90%;
     max-height: 90%;
     border-radius: 8px;
     border: 2px solid #58a6ff;
 }
 
-body.light-mode .lightbox-img {
+body.light-mode .lightbox-img:not(.wireframe-img) {
     border-color: #1a74e8;
 }
 
 .lightbox-close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+    position: fixed;
+    top: 15px;
+    right: 15px;
     font-size: 30px;
     color: #c9d1d9;
     cursor: pointer;
     transition: color 0.2s;
+    z-index: 2100;
 }
 
 .lightbox-close:hover {
@@ -349,6 +345,71 @@ body.light-mode .lightbox-close {
 
 body.light-mode .lightbox-close:hover {
     color: #1a74e8;
+}
+
+/* Functional Gallery */
+.functional-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.functional-item {
+    display: flex;
+    flex-direction: column;
+    border: none;
+}
+
+.functional-image-container {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+body.light-mode .functional-image-container {
+    border-color: #e1e4e8;
+}
+
+.functional-image-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(88, 166, 255, 0.3);
+}
+
+body.light-mode .functional-image-container:hover {
+    box-shadow: 0 8px 16px rgba(26, 116, 232, 0.3);
+}
+
+.functional-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.functional-item h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #c9d1d9;
+    margin: 12px 0 8px;
+}
+
+body.light-mode .functional-item h3 {
+    color: #24292f;
+}
+
+.functional-item p {
+    font-size: 14px;
+    color: #8b949e;
+    margin-bottom: 12px;
+}
+
+body.light-mode .functional-item p {
+    color: #57606a;
 }
 
 /* Footer */
@@ -377,13 +438,13 @@ body.light-mode .footer p {
     margin: 0 6px;
 }
 
-/* Tablet and Mobile Responsive Styles */
+/* Tablet Responsive Styles (up to 768px) */
 @media screen and (max-width: 768px) {
     /* Header */
     .nav {
         position: relative;
         align-items: center;
-        padding: 16px 0;
+        padding: 12px 0;
     }
 
     .hamburger {
@@ -398,9 +459,9 @@ body.light-mode .footer p {
     .theme-toggle {
         position: absolute;
         top: 50%;
-        right: 60px;
+        right: 56px;
         transform: translateY(-50%);
-        padding: 8px;
+        font-size: 18px;
     }
 
     .nav-menu {
@@ -412,9 +473,8 @@ body.light-mode .footer p {
         height: 100vh;
         background: rgba(13, 17, 23, 0.95);
         z-index: 1000;
-        display: flex;
-        align-items: center;
         justify-content: center;
+        align-items: center;
         opacity: 0;
         transform: translateY(-100%);
         transition: opacity 0.3s ease, transform 0.3s ease;
@@ -438,39 +498,33 @@ body.light-mode .footer p {
     }
 
     .nav-menu ul li {
-        margin: 20px 0;
+        margin: 16px 0;
     }
 
     .nav-menu ul li a {
-        font-size: 24px;
-        padding: 12px 0;
+        font-size: 20px;
+        padding: 10px 0;
         display: block;
-        color: #c9d1d9;
-        transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
+        transition: color 0.2s, transform 0.2s;
     }
 
     .nav-menu ul li a:hover {
         color: #58a6ff;
-        text-shadow: 0 0 12px rgba(88, 166, 255, 0.7);
-        transform: scale(1.1);
-    }
-
-    body.light-mode .nav-menu ul li a {
-        color: #24292f;
+        transform: scale(1.05);
     }
 
     body.light-mode .nav-menu ul li a:hover {
         color: #1a74e8;
-        text-shadow: 0 0 12px rgba(26, 116, 232, 0.7);
     }
 
     /* Web Projects */
     .web-projects {
-        padding: 40px 0;
+        padding: 40px 12px;
     }
 
     h1 {
         font-size: 28px;
+        margin-bottom: 24px;
     }
 
     h2 {
@@ -483,17 +537,26 @@ body.light-mode .footer p {
         margin-bottom: 16px;
     }
 
+    /* Preview Gallery */
     .preview-gallery {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: 1fr; /* Una columna para tabletas */
         gap: 12px;
     }
 
-    .preview-item a {
-        height: 250px;
+    .preview-item {
+        height: 180px;
     }
 
+    .preview-img-portfolio,
+    .preview-img-lifty,
+    .preview-img-app,
+    .preview-img-bart {
+        object-fit: cover;
+    }
+
+    /* Image Gallery */
     .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
         gap: 12px;
     }
 
@@ -501,35 +564,96 @@ body.light-mode .footer p {
         height: 300px;
     }
 
-    .preview-fallback {
-        font-size: 11px;
+    /* Functional Gallery */
+    .functional-gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .functional-image-container {
+        height: 120px;
+    }
+
+    .functional-item h3 {
+        font-size: 16px;
+        margin: 10px 0 6px;
+    }
+
+    .functional-item p {
+        font-size: 13px;
+        margin-bottom: 10px;
+    }
+
+    /* Lightbox */
+    .lightbox-img.wireframe-img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        border-radius: 0;
+        border: none;
+    }
+
+    .lightbox-img:not(.wireframe-img) {
+        max-width: 85%;
+        max-height: 85%;
+    }
+
+    .lightbox-close {
+        font-size: 24px;
+        top: 15px;
+        right: 15px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 24px 12px;
+    }
+
+    .footer p {
+        font-size: 13px;
     }
 }
 
-/* Mobile-Specific Styles (below 480px) */
+/* Mobile Responsive Styles (up to 480px) */
 @media screen and (max-width: 480px) {
     .container {
-        padding: 0 12px;
+        padding: 0 10px;
     }
 
+    /* Header */
     .logo {
         font-size: 20px;
     }
 
     .hamburger {
-        right: 12px;
+        right: 10px;
+        padding: 6px;
+    }
+
+    .hamburger span {
+        width: 20px;
+        height: 2px;
+        margin: 4px 0;
     }
 
     .theme-toggle {
-        right: 48px;
+        right: 44px;
+        font-size: 16px;
     }
 
     .nav-menu ul li a {
-        font-size: 20px;
+        font-size: 18px;
+        padding: 8px 0;
+    }
+
+    /* Web Projects */
+    .web-projects {
+        padding: 32px 8px;
     }
 
     h1 {
         font-size: 24px;
+        margin-bottom: 20px;
     }
 
     h2 {
@@ -537,30 +661,88 @@ body.light-mode .footer p {
         margin-bottom: 10px;
     }
 
+    .project-category {
+        margin-bottom: 32px;
+    }
+
     .project-category p {
         font-size: 13px;
         margin-bottom: 12px;
     }
 
+    /* Preview Gallery */
     .preview-gallery {
-        grid-template-columns: 1fr;
-        gap: 8px;
+        grid-template-columns: 1fr; /* Una columna para móviles */
+        gap: 10px;
     }
 
-    .preview-item a {
-        height: 200px;
+    .preview-item {
+        height: 150px;
     }
 
+    .preview-img-portfolio,
+    .preview-img-lifty,
+    .preview-img-app,
+    .preview-img-bart {
+        object-fit: cover;
+    }
+
+    /* Image Gallery */
     .gallery {
         grid-template-columns: 1fr;
-        gap: 8px;
+        gap: 10px;
     }
 
     .gallery-img {
-        height: 200px;
+        height: 250px;
     }
 
-    .preview-fallback {
-        font-size: 10px;
+    /* Functional Gallery */
+    .functional-gallery {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .functional-image-container {
+        height: 100px;
+    }
+
+    .functional-item h3 {
+        font-size: 14px;
+        margin: 8px 0 4px;
+    }
+
+    .functional-item p {
+        font-size: 12px;
+        margin-bottom: 8px;
+    }
+
+    /* Lightbox */
+    .lightbox-img.wireframe-img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: contain;
+        border-radius: 0;
+        border: none;
+    }
+
+    .lightbox-img:not(.wireframe-img) {
+        max-width: 90%;
+        max-height: 80%;
+    }
+
+    .lightbox-close {
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 20px 8px;
+    }
+
+    .footer p {
+        font-size: 12px;
     }
 }
