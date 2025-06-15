@@ -30,22 +30,25 @@ document.addEventListener('DOMContentLoaded', () => {
             themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
         }
 
+        // Evento de cambio de tema
         themeToggle.addEventListener('click', () => {
             body.classList.toggle('light-mode');
             themeToggle.innerHTML = body.classList.contains('light-mode')
                 ? '<i class="fas fa-moon"></i>'
                 : '<i class="fas fa-sun"></i>';
         });
+    } else {
+        console.error('No se encontró el elemento themeToggle');
     }
 
-    // Lightbox
-    const galleryImages = document.querySelectorAll('.gallery-img');
+    // Lightbox (solo para imágenes de interactividad)
+    const previewImages = document.querySelectorAll('.preview-img-lifty');
     const lightbox = document.querySelector('#lightbox');
     const lightboxImg = document.querySelector('#lightbox-img');
     const lightboxClose = document.querySelector('#lightbox-close');
 
-    if (galleryImages && lightbox && lightboxImg && lightboxClose) {
-        galleryImages.forEach(img => {
+    if (previewImages && lightbox && lightboxImg && lightboxClose) {
+        previewImages.forEach(img => {
             img.addEventListener('click', () => {
                 lightboxImg.src = img.src;
                 lightboxImg.classList.add('wireframe-img');
