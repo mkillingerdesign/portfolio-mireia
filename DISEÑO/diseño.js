@@ -118,15 +118,16 @@ if (!carousel || !carouselImages.length || !prevButton || !nextButton) {
     // Inicializar el carrusel en la primera imagen
     showImage(0);
 
-    // Colaboraciones Gallery Functionality
+   // Colaboraciones Gallery Functionality
 const galleries = document.querySelectorAll('#colaboraciones .gallery');
 const isMobile = window.innerWidth <= 768; // Alternativa a matchMedia
 console.log(`Es dispositivo móvil: ${isMobile}`);
+console.log(`Galerías encontradas: ${galleries.length}`); // Debería ser 4 (2 SWS + 2 Graape Art)
 
 // Hover effect for desktop
 if (!isMobile) {
     const galleryImages = document.querySelectorAll('#colaboraciones .gallery-img');
-    console.log(`Imágenes encontradas: ${galleryImages.length}`); // Debería ser 6 (3 vinilos + 3 merchandising)
+    console.log(`Imágenes encontradas: ${galleryImages.length}`); // Debería ser 12 (6 SWS + 6 Graape Art)
     galleryImages.forEach(img => {
         const originalSrc = img.src;
         const hoverSrc = img.dataset.hoverImg;
