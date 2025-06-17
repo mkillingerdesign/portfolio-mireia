@@ -210,7 +210,7 @@ body.light-mode .project-category p {
 .preview-item {
     position: relative;
     width: 100%;
-    height: 230px;
+    height: 350px; /* Aumentado de 230px a 350px */
     border-radius: 8px;
     border: 1px solid #30363d;
     overflow: hidden;
@@ -544,7 +544,7 @@ body.light-mode .footer p {
     }
 
     .preview-item {
-        height: 180px;
+        height: 280px; /* Aumentado de 180px a 280px */
     }
 
     .preview-img-portfolio,
@@ -677,7 +677,7 @@ body.light-mode .footer p {
     }
 
     .preview-item {
-        height: 150px;
+        height: 220px; /* Aumentado de 150px a 220px */
     }
 
     .preview-img-portfolio,

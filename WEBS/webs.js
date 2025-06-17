@@ -1,58 +1,41 @@
-// Theme Toggle
-const themeToggle = document.getElementById('theme-toggle');
-themeToggle.addEventListener('click', () => {
-    document.body.classList.toggle('light-mode');
-    document.body.classList.toggle('dark-mode');
-    themeToggle.innerHTML = document.body.classList.contains('dark-mode') 
-        ? '<i class="fas fa-sun"></i>' 
-        : '<i class="fas fa-moon"></i>';
-    localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+// Inicializar AOS
+AOS.init({
+    once: true,
+    duration: 800,
 });
 
-// Load Theme Preference
-document.addEventListener('DOMContentLoaded', () => {
-    if (localStorage.getItem('theme') !== 'light') {
-        document.body.classList.add('dark-mode');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+// Toggle tema claro/oscuro
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    const icon = themeToggle.querySelector('i');
+    if (body.classList.contains('light-mode')) {
+        icon.classList.replace('fa-moon', 'fa-sun');
     } else {
-        document.body.classList.add('light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        icon.classList.replace('fa-sun', 'fa-moon');
     }
 });
 
-// Smooth Scroll for Navigation
-document.querySelectorAll('nav ul li a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const href = this.getAttribute('href');
-        if (href.startsWith('../index.html#')) {
-            window.location.href = href;
-        } else {
-            const targetId = href.substring(1);
-            const target = document.getElementById(targetId);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-        // Close the menu after clicking a link on mobile
-        const navMenu = document.querySelector('.nav-menu');
-        const hamburger = document.querySelector('.hamburger');
-        if (navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-});
-
-// Hamburger Menu Toggle
+// Menú hamburguesa
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
 });
 
-// Lightbox Functionality
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+// Lightbox para imágenes de Wireframes
 const galleryImages = document.querySelectorAll('.gallery-img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -62,17 +45,27 @@ galleryImages.forEach(img => {
     img.addEventListener('click', () => {
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
+        lightboxImg.classList.add('wireframe-img');
         lightbox.classList.add('active');
+        console.log(`Abriendo lightbox con: ${img.src}`);
     });
 });
 
 lightboxClose.addEventListener('click', () => {
     lightbox.classList.remove('active');
+    lightboxImg.classList.remove('wireframe-img');
+    console.log('Cerrando lightbox');
 });
 
-// Close lightbox when clicking outside the image
-lightbox.addEventListener('click', (e) => {
+lightbox.addEventListener('click', e => {
     if (e.target === lightbox) {
         lightbox.classList.remove('active');
+        lightboxImg.classList.remove('wireframe-img');
+        console.log('Cerrando lightbox por clic fuera');
     }
 });
+
+// Verificar rutas de imágenes
+const images = document.querySelectorAll('img');
+console.log(`Imágenes encontradas: ${images.length}`);
+images.forEach(img => console.log(`Imagen: ${img.src}`));
