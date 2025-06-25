@@ -351,7 +351,7 @@ body.light-mode .lightbox-close:hover {
 .functional-gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
+    gap: 58px;
 }
 
 .functional-item {
@@ -363,7 +363,7 @@ body.light-mode .lightbox-close:hover {
 .functional-image-container {
     position: relative;
     width: 100%;
-    height: 150px;
+    height: 550px;
     border-radius: 8px;
     border: 1px solid #30363d;
     overflow: hidden;
@@ -395,7 +395,7 @@ body.light-mode .functional-image-container:hover {
     font-size: 18px;
     font-weight: 600;
     color: #c9d1d9;
-    margin: 12px 0 8px;
+    margin: 32px 0 8px;
 }
 
 body.light-mode .functional-item h3 {
@@ -405,7 +405,7 @@ body.light-mode .functional-item h3 {
 .functional-item p {
     font-size: 14px;
     color: #8b949e;
-    margin-bottom: 12px;
+    margin-bottom: 32px;
 }
 
 body.light-mode .functional-item p {

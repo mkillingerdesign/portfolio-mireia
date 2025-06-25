@@ -8,6 +8,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     <link rel="stylesheet" href="diseño.css">
+
+    
+    <!-- Estilos inline para el carrusel automático -->
+    <style>
+        .auto-carousel {
+            position: relative;
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid #30363d;
+            background: #1c2526;
+        }
+        body.light-mode .auto-carousel {
+            border-color: #e1e4e8;
+            background: #f6f8fa;
+        }
+        .auto-carousel-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            animation: fadeAuto 15s infinite;
+        }
+        @keyframes fadeAuto {
+            0%, 15% { opacity: 0; } /* Oculta al inicio */
+            20%, 35% { opacity: 1; } /* Visible durante su turno */
+            40%, 100% { opacity: 0; } /* Oculta después */
+        }
+        .auto-carousel-img:nth-child(1) { animation-delay: 0s; }
+        .auto-carousel-img:nth-child(2) { animation-delay: 3s; }
+        .auto-carousel-img:nth-child(3) { animation-delay: 6s; }
+        .auto-carousel-img:nth-child(4) { animation-delay: 9s; }
+        .auto-carousel-img:nth-child(5) { animation-delay: 12s; }
+        /* Ajustes para móviles */
+        @media screen and (max-width: 768px) {
+            .auto-carousel {
+                height: 200px;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            .auto-carousel {
+                height: 150px;
+            }
+        }
+    </style>
 </head>
 <body class="dark-mode">
     <!-- Header -->
@@ -40,139 +89,142 @@
             <div class="container">
                 <h1><i class=""></i> Proyectos de Diseño Gráfico</h1>
 
-<!-- Diseños -->
-<div class="project-category" id="diseños">
-    <h2 data-aos="fade-up">Diseños</h2>
-    <p class="category-description" data-aos="fade-up" data-aos-delay="100">Creaciones únicas que abarcan desde anuncios publicitarios hasta portadas creativas, diseñadas con Adobe Illustrator y Photoshop para captar la atención.</p>
-    <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
-        <div class="gallery-item">
-            <img src="../img/portadajordans.png" alt="Anuncio publicitario para Jordans" class="gallery-img">
-            <p>Anuncio vibrante para la campaña de zapatillas Jordans, con foco en colores audaces.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="../img/portadapeli.JPG" alt="Portada de película" class="gallery-img">
-            <p>Portada cinematográfica con composición dramática para una película ficticia.</p>
-        </div>
-        <div class="gallery-item">
-            <img src="../img/portadamusica.png" alt="Portada de disco musical" class="gallery-img">
-            <p>Portada de álbum musical con estética retro para un disco indie.</p>
-        </div>
-    </div>
-    <div class="carousel-container">
-        <h3>Portada de Videojuego: Épocas del Año</h3>
-        <p>Diseño de portada para un videojuego conceptual que representa las cuatro estaciones, creado con ilustraciones detalladas en Photoshop.</p>
-        <div class="carousel">
-            <img src="../img/skylin2.png" alt="Portada Épocas del Año - Primavera" class="carousel-img">
-            <img src="../img/skyline1.png" alt="Portada Épocas del Año - Verano" class="carousel-img">
-            <img src="../img/skyline3.png" alt="Portada Épocas del Año - Otoño" class="carousel-img">
-            <img src="../img/skyline4.png" alt="Portada Épocas del Año - Invierno" class="carousel-img">
-            <img src="../img/skyline5.png" alt="Portada Épocas del Año - Variación" class="carousel-img">
-        </div>
-        <button class="carousel-prev"><i class="fas fa-chevron-left"></i></button>
-        <button class="carousel-next"><i class="fas fa-chevron-right"></i></button>
-    </div>
-</div>
+                <!-- Diseños -->
+                <div class="project-category" id="diseños">
+                    <h2 data-aos="fade-up">Diseños</h2>
+                    <p class="category-description" data-aos="fade-up" data-aos-delay="100">Creaciones únicas que abarcan desde anuncios publicitarios hasta portadas creativas, diseñadas con Adobe Illustrator y Photoshop para captar la atención.</p>
+                    <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="gallery-item">
+                            <img src="../img/portadajordans.png" alt="Anuncio publicitario para Jordans" class="gallery-img">
+                            <p>Anuncio vibrante para la campaña de zapatillas Jordans, con foco en colores audaces.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../img/portadapeli.JPG" alt="Portada de película" class="gallery-img">
+                            <p>Portada cinematográfica con composición dramática para una película ficticia.</p>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="../img/portadamusica.png" alt="Portada de disco musical" class="gallery-img">
+                            <p>Portada de álbum musical con estética retro para un disco indie.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-container">
+                        <h3>Portada de Videojuego: Épocas del Año</h3>
+                        <p class="carousel-description">Diseño de portada para un videojuego conceptual que representa las cuatro estaciones, creado con ilustraciones detalladas en Photoshop.</p>
+                        <div class="auto-carousel" data-aos="zoom-in" data-aos-delay="200">
+                            <img src="../img/skylin2.png" alt="Portada Épocas del Año - Primavera" class="auto-carousel-img">
+                            <img src="../img/skyline1.png" alt="Portada Épocas del Año - Verano" class="auto-carousel-img">
+                            <img src="../img/skyline3.png" alt="Portada Épocas del Año - Otoño" class="auto-carousel-img">
+                            <img src="../img/skyline4.png" alt="Portada Épocas del Año - Invierno" class="auto-carousel-img">
+                            <img src="../img/skyline5.png" alt="Portada Épocas del Año - Variación" class="auto-carousel-img">
+                        </div>
+                    </div>
+                </div>
 
-<!-- Campañas -->
+
+                <!-- Campañas -->
 <div class="project-category" id="campañas">
     <h2 data-aos="fade-up">Campañas</h2>
     <p class="category-description" data-aos="fade-up" data-aos-delay="100">Estrategia de marketing para redes sociales de Oreo, diseñada en Adobe Illustrator y Photoshop, que abarca cinco etapas clave: Awareness, Consideration, Conversion, Fidelity y Loyalty, para maximizar la visibilidad, interacción y fidelidad a la marca.</p>
     <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
-        <!-- Imagen 1: Awareness -->
-        <div class="gallery-item">
-            <img src="../img/oreo1.PNG" alt="Campaña Oreo - Awareness" class="gallery-img">
-            <p><strong>Awareness</strong><br>Dar a conocer la promoción de un año gratis de Netflix, atrayendo seguidores y generando alta interacción.
+        <!-- Primera fila: 3 imágenes -->
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="../img/oreo1.PNG" alt="Campaña Oreo - Awareness" class="camp-img">
+                <p><strong>Awareness</strong><br>Dar a conocer la promoción de un año gratis de Netflix, atrayendo seguidores y generando alta interacción.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../img/oreo2.PNG" alt="Campaña Oreo - Consideration" class="camp-img">
+                <p><strong>Consideration</strong><br>Aprovechar un comentario de Ibai en Twitter para motivar a sus seguidores a probar Oreo.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../img/oreo3.JPEG" alt="Campaña Oreo - Conversion" class="camp-img">
+                <p><strong>Conversion</strong><br>Motivar a los usuarios a aprovechar una oferta 2x1 en packs de Oreo, creando urgencia.</p>
+            </div>
         </div>
-        <!-- Imagen 2: Consideration -->
-        <div class="gallery-item">
-            <img src="../img/oreo2.PNG" alt="Campaña Oreo - Consideration" class="gallery-img">
-            <p><strong>Consideration</strong><br> Aprovechar un comentario de Ibai en Twitter para motivar a sus seguidores a probar Oreo.
-        </div>
-        <!-- Imagen 3: Conversion -->
-        <div class="gallery-item">
-            <img src="../img/oreo3.JPEG" alt="Campaña Oreo - Conversion" class="gallery-img">
-            <p><strong>Conversion</strong><br>Motivar a los usuarios a aprovechar una oferta 2x1 en packs de Oreo, creando urgencia.
-        </div>
-        <!-- Imagen 4: Fidelity -->
-        <div class="gallery-item">
-            <img src="../img/oreo4.JPEG" alt="Campaña Oreo - Fidelity" class="gallery-img">
-            <p><strong>Fidelity</strong><br>Incentivar la participación en el Club Exclusivo de Oreo con beneficios vía QR.
-        </div>
-        <!-- Imagen 5: Loyalty -->
-        <div class="gallery-item">
-            <img src="../img/oreo5.JPEG" alt="Campaña Oreo - Loyalty" class="gallery-img">
-            <p><strong>Loyalty</strong><br>Agradecer públicamente al cliente más leal, destacando su compromiso.
+        <!-- Segunda fila: 2 imágenes -->
+        <div class="gallery-row">
+            <div class="gallery-item">
+                <img src="../img/oreo4.JPEG" alt="Campaña Oreo - Fidelity" class="camp-img">
+                <p><strong>Fidelity</strong><br>Incentivar la participación en el Club Exclusivo de Oreo con beneficios vía QR.</p>
+            </div>
+            <div class="gallery-item">
+                <img src="../img/oreo5.JPEG" alt="Campaña Oreo - Loyalty" class="camp-img">
+                <p><strong>Loyalty</strong><br>Agradecer públicamente al cliente más leal, destacando su compromiso.</p>
+            </div>
         </div>
     </div>
 </div>
+                </div>
 
-               
-                    <!-- Colaboraciones -->
-<div class="project-category" id="colaboraciones">
-    <h2 data-aos="fade-up">Colaboraciones</h2>
-    <div class="collaboration" data-aos="zoom-in" data-aos-delay="100">
-        <h3>Supermoto World Shop</h3>
-        <img src="../img/SWSlogo.png" alt="Logo de SWS SupermotoWorldShop" class="collab-logo">
-        <p>Colaboración con SWS, una empresa especializada en vinilos y accesorios para motos de supermoto, creando diseños personalizados para sus productos.</p>
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
-            <div class="gallery-item">
-                <img src="../img/ktm1.jpg" alt="Vinilo para KTM" class="gallery-img" data-hover-img="../img/ktm2.png">
-                <p>Vinilo personalizado para KTM, con diseño agresivo en naranja y negro.</p>
+                <!-- Colaboraciones -->
+                <div class="project-category" id="colaboraciones">
+                    <h2 data-aos="fade-up">Colaboraciones</h2>
+                    <div class="collaboration" data-aos="zoom-in" data-aos-delay="100">
+                        <h3>Supermoto World Shop</h3>
+                        <img src="../img/SWSlogo.png" alt="Logo de SWS SupermotoWorldShop" class="collab-logo">
+                        <p>Colaboración con SWS, una empresa especializada en vinilos y accesorios para motos de supermoto, creando diseños personalizados para sus productos.</p>
+                        <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="gallery-item">
+                                <img src="../img/ktm1.jpg" alt="Vinilo para KTM" class="gallery-img" data-hover-img="../img/ktm2.png">
+                                <p>Vinilo personalizado para KTM, con diseño agresivo en naranja y negro.</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../img/husky1.jpg" alt="Vinilo para Husqvarna" class="gallery-img" data-hover-img="../img/husky2.png">
+                                <p>Vinilo para Husqvarna, con patrones geométricos en azules y blanco.</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../img/gasgas1.png" alt="Vinilo para GasGas" class="gallery-img" data-hover-img="../img/gasgas2.png">
+                                <p>Vinilo para GasGas, con estética en rojos y grises.</p>
+                            </div>
+                        </div>
+                        <div class="gallery" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="gallery-item">
+                                <img src="../img/sudadera1.png" alt="Merchandising SWS" class="gallery-img" data-hover-img="../img/camisetaparteatras.png">
+                                <p>Diseño de sudadera y camiseta para la marca SWS.</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../img/tarjeta1.png" alt="Tarjeta de visita SWS" class="gallery-img" data-hover-img="../img/tarjeta2.png">
+                                <p>Tarjeta de visita profesional para SWS.</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../img/infosws1.png" alt="Datos de contacto SWS" class="gallery-img" data-hover-img="../img/infosws2.png">
+                                <p>Diseño de material con datos de contacto para SWS.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="collaboration" data-aos="zoom-in" data-aos-delay="400">
+                        <h3>Graape Art</h3>
+                        <img src="../img/logograape.png" alt="Logo de Graape Art" class="collab-logo">
+                        <p>Colaboración con Graape Art, una empresa ficticia de materiales de artes gráficas.</p>
+                        <div class="gallery" data-aos="zoom-in" data-aos-delay="500">
+                            <div class="gallery-item">
+                                <img src="../img/web1.png" alt="Vinilo para Kawasaki" class="gallery-img" data-hover-img="../img/web2.png">
+                                <p>Vinilo para Kawasaki, con diseño futurista en verde neón.</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../img/merch1.png" alt="Vinilo para Suzuki" class="gallery-img" data-hover-img="../img/merch2.png">
+                                <p>Vinilo para Suzuki, con patrones dinámicos en amarillo.</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../img/memoria1.png" alt="Vinilo para Ducati" class="gallery-img" data-hover-img="../img/memoria2.png">
+                                <p>Vinilo para Ducati, con estética elegante en rojo.</p>
+                            </div>
+                        </div>
+                        <div class="gallery" data-aos="zoom-in" data-aos-delay="600">
+                            <div class="gallery-item">
+                                <img src="../img/manual1.png" alt="Merchandising Graape Art" class="gallery-img" data-hover-img="../img/manual2.png">
+                                <p>Diseño de sudaderas y llaveros para Graape Art.</p>
+                            </div>
+                            <div class="gallery-item">
+                                <img src="../img/29.PNG" alt="Tarjeta de visita Graape Art" class="gallery-img">
+                                <p>Tarjeta de visita para Graape Art.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="gallery-item">
-                <img src="../img/husky1.jpg" alt="Vinilo para Husqvarna" class="gallery-img" data-hover-img="../img/husky2.png">
-                <p>Vinilo para Husqvarna, con patrones geométricos en azules y blanco.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/gasgas1.png" alt="Vinilo para GasGas" class="gallery-img" data-hover-img="../img/gasgas2.png">
-                <p>Vinilo para GasGas, con estética en rojos y grises.</p>
-            </div>
-        </div>
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="300">
-            <div class="gallery-item">
-                <img src="../img/sudadera1.png" alt="Merchandising SWS" class="gallery-img" data-hover-img="../img/camisetaparteatras.png">
-                <p>Diseño de sudadera y camiseta para la marca SWS.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/tarjeta1.png" alt="Tarjeta de visita SWS" class="gallery-img" data-hover-img="../img/tarjeta2.png">
-                <p>Tarjeta de visita profesional para SWS.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/infosws1.png" alt="Datos de contacto SWS" class="gallery-img" data-hover-img="../img/infosws2.png">
-                <p>Diseño de material con datos de contacto para SWS.</p>
-            </div>
-        </div>
-    </div>
-    <div class="collaboration" data-aos="zoom-in" data-aos-delay="400">
-        <h3>Graape Art</h3>
-        <img src="../img/logograape.png" alt="Logo de Graape Art" class="collab-logo">
-        <p>Colaboración con Graape Art, una empresa ficticia de materiales de artes gráficas.</p>
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="500">
-            <div class="gallery-item">
-                <img src="../img/web1.png" alt="Vinilo para Kawasaki" class="gallery-img" data-hover-img="../img/web2.png">
-                <p>Vinilo para Kawasaki, con diseño futurista en verde neón.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/merch1.png" alt="Vinilo para Suzuki" class="gallery-img" data-hover-img="../img/merch2.png">
-                <p>Vinilo para Suzuki, con patrones dinámicos en amarillo.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/memoria1.png" alt="Vinilo para Ducati" class="gallery-img" data-hover-img="../img/memoria2.png">
-                <p>Vinilo para Ducati, con estética elegante en rojo.</p>
-            </div>
-        </div>
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="600">
-            <div class="gallery-item">
-                <img src="../img/manual1.png" alt="Merchandising Graape Art" class="gallery-img" data-hover-img="../img/manual2.png">
-                <p>Diseño de sudaderas y llaveros para Graape Art.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/29.PNG" alt="Tarjeta de visita Graape Art" class="gallery-img">
-                <p>Tarjeta de visita para Graape Art.</p>
-            </div>
-        </div>
-    </div>
-</div>
+        </section>
+    </main>
 
     <!-- Lightbox -->
     <div class="lightbox" id="lightbox">
