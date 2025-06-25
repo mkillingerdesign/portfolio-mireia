@@ -1,73 +1,85 @@
-// Carousel Functionality
-const carousel = document.querySelector('.carousel');
-const carouselImages = document.querySelectorAll('.carousel-img');
-const prevButton = document.querySelector('.carousel-prev');
-const nextButton = document.querySelector('.carousel-next');
-let currentIndex = 0;
+// Inicializar AOS
+AOS.init({
+    once: true,
+    duration: 800,
+});
 
-if (!carousel || !carouselImages.length || !prevButton || !nextButton) {
-    console.error('Error: No se encontraron los elementos del carrusel. Verifica los selectores.');
-} else {
-    console.log(`Carrusel inicializado con ${carouselImages.length} imágenes`);
-
-    // Verificar que las imágenes se carguen
-    carouselImages.forEach((img, index) => {
-        img.addEventListener('error', () => {
-            console.error(`Error al cargar la imagen ${index + 1}: ${img.src}`);
-        });
-        img.addEventListener('load', () => {
-            console.log(`Imagen ${index + 1} cargada correctamente: ${img.src}`);
-        });
-    });
-
-    function showImage(index) {
-        currentIndex = (index + carouselImages.length) % carouselImages.length;
-        const offset = -currentIndex * 100;
-        carousel.style.transform = `translateX(${offset}%)`;
-        console.log(`Mostrando imagen ${currentIndex + 1} de ${carouselImages.length} con desplazamiento ${offset}%`);
-    }
-
-    prevButton.addEventListener('click', () => {
-        showImage(currentIndex - 1);
-    });
-
-    nextButton.addEventListener('click', () => {
-        showImage(currentIndex + 1);
-    });
-
-    showImage(0);
-
-    carouselImages.forEach(img => {
-        img.addEventListener('click', () => {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            lightboxImg.src = img.src;
-            lightboxImg.alt = img.alt;
-            lightbox.classList.add('active');
-            console.log(`Abriendo lightbox con: ${img.src}`);
-        });
-    });
-}
-
-// Theme Toggle Functionality
+// Toggle tema claro/oscuro
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
 
-if (!themeToggle) {
-    console.error('Error: No se encontró el botón de cambio de tema. Verifica el selector #theme-toggle.');
-} else {
-    console.log('Botón de cambio de tema encontrado correctamente.');
-    themeToggle.addEventListener('click', () => {
-        body.classList.toggle('light-mode');
-        const icon = themeToggle.querySelector('i');
-        if (body.classList.contains('light-mode')) {
-            icon.classList.remove('fa-sun');
-            icon.classList.add('fa-moon');
-            console.log('Cambiado a modo claro: fondo blanco activado.');
-        } else {
-            icon.classList.remove('fa-moon');
-            icon.classList.add('fa-sun');
-            console.log('Cambiado a modo oscuro: fondo oscuro activado.');
-        }
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    const icon = themeToggle.querySelector('i');
+    if (body.classList.contains('light-mode')) {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+    } else {
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+    }
+});
+
+// Menú hamburguesa
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+// Cerrar menú al hacer clic en un enlace
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
     });
-}
+});
+
+// Lightbox para imágenes
+const galleryImages = document.querySelectorAll('.gallery-img, .camp-img');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxClose = document.getElementById('lightbox-close');
+
+galleryImages.forEach(img => {
+    img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        console.log(`Abriendo lightbox con: ${img.src}`);
+    });
+});
+
+lightboxClose.addEventListener('click', () => {
+    lightbox.classList.remove('active');
+    console.log('Cerrando lightbox');
+});
+
+lightbox.addEventListener('click', e => {
+    if (e.target === lightbox) {
+        lightbox.classList.remove('active');
+        console.log('Cerrando lightbox por clic fuera');
+    }
+});
+
+// Hover para imágenes con data-hover-img
+const hoverImages = document.querySelectorAll('[data-hover-img]');
+hoverImages.forEach(img => {
+    const originalSrc = img.src;
+    const hoverSrc = img.dataset.hoverImg;
+
+    img.addEventListener('mouseenter', () => {
+        img.src = hoverSrc;
+    });
+
+    img.addEventListener('mouseleave', () => {
+        img.src = originalSrc;
+    });
+});
+
+// Verificar rutas de imágenes
+const images = document.querySelectorAll('img');
+console.log(`Imágenes encontradas: ${images.length}`);
+images.forEach(img => console.log(`Imagen: ${img.src}`));

@@ -175,16 +175,20 @@ h1 i {
     margin-bottom: 40px;
 }
 
-h2 {
+.project-category#colaboraciones h2 {
+    text-align: left; /* Alinea a la izquierda como las descripciones */
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 16px;
     color: #c9d1d9;
     text-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
-    text-align: left;
+    max-width: 1200px; /* Igual que .collaboration */
+    padding: 0 16px; /* Igual que .collaboration */
+    margin-left: auto; /* Centra el contenedor */
+    margin-right: auto; /* Centra el contenedor */
 }
 
-body.light-mode h2 {
+body.light-mode .project-category#colaboraciones h2 {
     color: #24292f;
     text-shadow: none;
 }
@@ -193,7 +197,7 @@ body.light-mode h2 {
 .category-description {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0px;
+    padding: 0;
     box-sizing: border-box;
     color: #8b949e;
     font-size: 16px;
@@ -205,16 +209,60 @@ body.light-mode .category-description {
     color: #57606a;
 }
 
+/* Collaboration */
+.collaboration {
+    margin: 0 auto;
+    max-width: 1200px; /* Igual que .container */
+    padding: 0 16px; /* Igual que .container */
+}
+
+.collaboration h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #c9d1d9;
+    margin: 0 0 16px; /* Alinea a la izquierda */
+    text-align: left; /* Alinea como las descripciones */
+}
+
+body.light-mode .collaboration h3 {
+    color: #24292f;
+}
+
+.collaboration p {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+    color: #8b949e;
+    font-size: 16px;
+    text-align: left; /* Mantiene alineación izquierda */
+}
+
+body.light-mode .collaboration p {
+    color: #57606a;
+}
+
+/* Collaboration Logo */
+.collab-logo {
+    width: 150px;
+    height: auto;
+    margin: 0 0 16px; /* Alinea a la izquierda en lugar de centrado */
+    display: block;
+    border-radius: 8px;
+}
+
 /* Gallery */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 16px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 .gallery-item {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .gallery-img {
@@ -244,12 +292,38 @@ body.light-mode .gallery-img:hover {
 .gallery-item p {
     font-size: 14px;
     color: #8b949e;
-    margin-top: 8px;
+    margin: 18px 0 40px;
     text-align: center;
+    max-width: 100%;
 }
 
 body.light-mode .gallery-item p {
     color: #57606a;
+}
+
+/* Campaña Images (mantener por compatibilidad) */
+.camp-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
+}
+
+body.light-mode .camp-img {
+    border-color: #e1e4e8;
+}
+
+.camp-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(88, 166, 255, 0.3);
+    opacity: 0.9;
+}
+
+body.light-mode .camp-img:hover {
+    box-shadow: 0 8px 16px rgba(26, 116, 232, 0.3);
 }
 
 /* Carousel */
@@ -282,20 +356,20 @@ body.light-mode .carousel-container h3 {
 
 body.light-mode .carousel {
     border-color: #e1e4e8;
-    background: #f6f8fa; /* Fondo temporal para depuración en modo claro */
+    background: #f6f8fa;
 }
 
 .carousel-img {
     width: 100%;
-    min-width: 100%; /* Forzar que cada imagen ocupe el ancho completo */
+    min-width: 100%;
     flex-shrink: 0;
 }
 
 .carousel-description {
-    padding-bottom: 24px; /* Espacio debajo de la descripción */
+    padding-bottom: 24px;
     font-size: 14px;
     color: #8b949e;
-    margin-bottom: 0; /* Evita márgenes adicionales */
+    margin-bottom: 0;
     text-align: left;
 }
 
@@ -340,29 +414,9 @@ body.light-mode .carousel-next:hover {
     right: 10px;
 }
 
-/* Campaña Images */
-.camp-img {
-    width: 100%;
-    height: 300px; /* Altura más compacta para imágenes de campañas */
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #30363d;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
-}
-
-
-/* Collaboration Logo */
-.collab-logo {
-    width: 150px;
-    height: auto;
-    margin-bottom: 16px;
-    border-radius: 8px;
-}
-
 /* Hover effect for gallery images in Colaboraciones */
 @media screen and (max-width: 768px) {
-    .gallery-img:hover {
+    .gallery-img:hover, .camp-img:hover {
         transform: none;
         box-shadow: none;
         opacity: 1;
@@ -539,20 +593,37 @@ body.light-mode .footer p {
         padding: 40px 12px;
     }
 
+    .container {
+        padding: 0 12px;
+    }
+
     h1 {
         font-size: 28px;
         margin-bottom: 24px;
     }
 
-    h2 {
+    .project-category#colaboraciones h2 {
         font-size: 20px;
+        margin-bottom: 12px;
+        text-align: left;
+    }
+
+    .collaboration {
+        padding: 0 12px;
+    }
+
+    .collaboration h3 {
+        font-size: 18px;
         margin-bottom: 12px;
     }
 
-    .category-description {
+    .collaboration p {
         font-size: 14px;
-        padding: 0 12px;
         margin-bottom: 16px;
+    }
+
+    .collab-logo {
+        width: 120px;
     }
 
     .gallery {
@@ -560,7 +631,7 @@ body.light-mode .footer p {
         gap: 12px;
     }
 
-    .gallery-img {
+    .gallery-img, .camp-img {
         height: 150px;
     }
 
@@ -581,10 +652,6 @@ body.light-mode .footer p {
     .carousel-next {
         font-size: 20px;
         padding: 8px;
-    }
-
-    .collab-logo {
-        width: 120px;
     }
 
     .lightbox-img {
@@ -647,19 +714,28 @@ body.light-mode .footer p {
         margin-bottom: 20px;
     }
 
-    h2 {
-        font-size: 18px;
+    .project-category#colaboraciones h2 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+
+    .collaboration {
+        padding: 0 10px;
+    }
+
+    .collaboration h3 {
+        font-size: 16px;
         margin-bottom: 10px;
     }
 
-    .project-category {
-        margin-bottom: 32px;
+    .collaboration p {
+        font-size: 13px;
+        margin-bottom: 12px;
     }
 
-    .category-description {
-        font-size: 13px;
-        padding: 0 10px;
-        margin-bottom: 12px;
+    .collab-logo {
+        width: 100px;
     }
 
     .gallery {
@@ -667,7 +743,7 @@ body.light-mode .footer p {
         gap: 10px;
     }
 
-    .gallery-img {
+    .gallery-img, .camp-img {
         height: 120px;
     }
 
@@ -688,10 +764,6 @@ body.light-mode .footer p {
     .carousel-next {
         font-size: 20px;
         padding: 8px;
-    }
-
-    .collab-logo {
-        width: 100px;
     }
 
     .lightbox-img {

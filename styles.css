@@ -732,15 +732,15 @@ body.light-mode .footer p {
     }
 
     .timeline {
-        padding-left: 24px;
+        padding-left: 22px; /* Aumentado de 24px a 32px para más espacio */
     }
 
     .timeline::before {
-        left: 0;
+        left: 8px; /* Mover la línea vertical para alinearse con los puntos */
     }
 
     .timeline-item::before {
-        left: -12px;
+        left: -25px; /* Mover el punto azul más a la izquierda (de -12px a -20px) */
         width: 16px;
         height: 16px;
     }

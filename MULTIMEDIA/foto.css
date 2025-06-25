@@ -239,7 +239,7 @@ body.light-mode .category-description {
 
 .gallery-img {
     width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
     border-radius: 8px;
     border: 1px solid #30363d;
