@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 528.69 339.62">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" y="8.71" width="386.4" height="250.02"/>
+    </clipPath>
+  </defs>
+  <g class="cls-2">
+    <image width="1024" height="1024" transform="translate(189.06) scale(.33)" xlink:href="targetas3_Carpeta/Links/lifty emocionado.png"/>
+  </g>
+  <rect class="cls-1" x="2.4" y="8.72" width="384" height="250.01"/>
+</svg>

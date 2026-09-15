@@ -23,7 +23,9 @@ body.light-mode {
     padding: 0 16px;
 }
 
-/* Header */
+
+/* HEADER */
+
 .header {
     position: sticky;
     top: 0;
@@ -110,7 +112,9 @@ body.light-mode .theme-toggle:hover {
     color: #1a74e8;
 }
 
-/* Hamburger Menu */
+
+/* HAMBURGER */
+
 .hamburger {
     display: none;
     background: none;
@@ -145,7 +149,9 @@ body.light-mode .hamburger span {
     transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Hero Section */
+
+/* HERO */
+
 .hero {
     text-align: center;
     padding: 80px 16px;
@@ -216,6 +222,9 @@ body.light-mode .hero-content p {
     color: #57606a;
 }
 
+
+/* BUTTONS */
+
 .btn {
     display: inline-block;
     padding: 12px 28px;
@@ -227,14 +236,24 @@ body.light-mode .hero-content p {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #58a6ff 0%, #1f6feb 100%);
+    background: linear-gradient(
+        135deg,
+        #58a6ff 0%,
+        #1f6feb 100%
+    );
     color: #ffffff;
     box-shadow: 0 0 16px rgba(88, 166, 255, 0.5);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #1f6feb 0%, #58a6ff 100%);
+    background: linear-gradient(
+        135deg,
+        #1f6feb 0%,
+        #58a6ff 100%
+    );
+
     transform: translateY(-4px);
+
     box-shadow: 0 0 24px rgba(88, 166, 255, 0.7);
 }
 
@@ -264,7 +283,9 @@ body.light-mode .btn-secondary:hover {
     box-shadow: 0 0 16px rgba(26, 116, 232, 0.5);
 }
 
-/* About Section */
+
+/* ABOUT */
+
 .about {
     padding: 60px 16px;
     background: #0d1117;
@@ -286,15 +307,8 @@ body.light-mode .about p {
     color: #57606a;
 }
 
-/* Projects Section */
-.projects {
-    padding: 60px 16px;
-    background: #0d1117;
-}
 
-body.light-mode .projects {
-    background: #ffffff;
-}
+/* GENERAL HEADINGS */
 
 h2 {
     font-size: 28px;
@@ -312,9 +326,21 @@ h2 i {
     margin-right: 8px;
 }
 
+
+/* PROJECTS */
+
+.projects {
+    padding: 60px 16px;
+    background: #0d1117;
+}
+
+body.light-mode .projects {
+    background: #ffffff;
+}
+
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Force 2 columns for 2x2 grid */
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
 }
 
@@ -388,7 +414,9 @@ body.light-mode .repo-link:hover {
     text-shadow: none;
 }
 
-/* Skills Section */
+
+/* SKILLS */
+
 .skills {
     padding: 60px 16px;
     background: #0d1117;
@@ -432,7 +460,9 @@ body.light-mode .skill:hover {
     box-shadow: 0 0 16px rgba(26, 116, 232, 0.5);
 }
 
-/* Experience Section */
+
+/* EXPERIENCE */
+
 .experience {
     padding: 60px 16px;
     background: #0d1117;
@@ -441,6 +471,9 @@ body.light-mode .skill:hover {
 body.light-mode .experience {
     background: #ffffff;
 }
+
+
+/* TIMELINE */
 
 .timeline {
     position: relative;
@@ -502,7 +535,9 @@ body.light-mode .date {
     color: #57606a;
 }
 
-/* Education Section */
+
+/* EDUCATION */
+
 .education {
     padding: 60px 16px;
     background: #0d1117;
@@ -512,7 +547,21 @@ body.light-mode .education {
     background: #ffffff;
 }
 
-/* Contact Section */
+
+/* LANGUAGES */
+
+.languages {
+    padding: 60px 16px;
+    background: #0d1117;
+}
+
+body.light-mode .languages {
+    background: #ffffff;
+}
+
+
+/* CONTACT */
+
 .contact {
     padding: 60px 16px;
     background: #0d1117;
@@ -530,7 +579,9 @@ body.light-mode .contact {
     gap: 16px;
 }
 
-/* Footer */
+
+/* FOOTER */
+
 .footer {
     padding: 32px 16px;
     border-top: 1px solid #30363d;
@@ -556,9 +607,11 @@ body.light-mode .footer p {
     margin: 0 6px;
 }
 
-/* Tablet and Mobile Responsive Styles */
+
+/* TABLET / MOBILE */
+
 @media screen and (max-width: 768px) {
-    /* Header */
+
     .nav {
         position: relative;
         align-items: center;
@@ -591,12 +644,16 @@ body.light-mode .footer p {
         height: 100vh;
         background: rgba(13, 17, 23, 0.95);
         z-index: 1000;
-        display: flex;
+
         align-items: center;
         justify-content: center;
+
         opacity: 0;
         transform: translateY(-100%);
-        transition: opacity 0.3s ease, transform 0.3s ease;
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease;
     }
 
     .nav-menu.active {
@@ -625,7 +682,11 @@ body.light-mode .footer p {
         padding: 12px 0;
         display: block;
         color: #c9d1d9;
-        transition: color 0.2s, text-shadow 0.2s, transform 0.2s;
+
+        transition:
+            color 0.2s,
+            text-shadow 0.2s,
+            transform 0.2s;
     }
 
     .nav-menu ul li a:hover {
@@ -643,13 +704,15 @@ body.light-mode .footer p {
         text-shadow: 0 0 12px rgba(26, 116, 232, 0.7);
     }
 
-    /* Projects */
+
+    /* PROJECTS */
+
     .projects {
         padding: 40px 0;
     }
 
     .project-grid {
-        grid-template-columns: 1fr; /* Single column for responsive */
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
@@ -669,7 +732,9 @@ body.light-mode .footer p {
         font-size: 13px;
     }
 
-    /* Hero */
+
+    /* HERO */
+
     .hero {
         padding: 40px 0;
     }
@@ -697,7 +762,9 @@ body.light-mode .footer p {
         font-size: 14px;
     }
 
-    /* About */
+
+    /* ABOUT */
+
     .about {
         padding: 40px 0;
     }
@@ -707,7 +774,9 @@ body.light-mode .footer p {
         max-width: 90%;
     }
 
-    /* Skills */
+
+    /* SKILLS */
+
     .skills {
         padding: 40px 0;
     }
@@ -726,21 +795,23 @@ body.light-mode .footer p {
         padding: 6px 16px;
     }
 
-    /* Experience */
+
+    /* EXPERIENCE */
+
     .experience {
         padding: 40px 0;
     }
 
     .timeline {
-        padding-left: 22px; /* Aumentado de 24px a 32px para más espacio */
+        padding-left: 22px;
     }
 
     .timeline::before {
-        left: 8px; /* Mover la línea vertical para alinearse con los puntos */
+        left: 8px;
     }
 
     .timeline-item::before {
-        left: -25px; /* Mover el punto azul más a la izquierda (de -12px a -20px) */
+        left: -25px;
         width: 16px;
         height: 16px;
     }
@@ -757,12 +828,23 @@ body.light-mode .footer p {
         font-size: 13px;
     }
 
-    /* Education */
+
+    /* EDUCATION */
+
     .education {
         padding: 40px 0;
     }
 
-    /* Contact */
+
+    /* LANGUAGES */
+
+    .languages {
+        padding: 40px 0;
+    }
+
+
+    /* CONTACT */
+
     .contact {
         padding: 40px 0;
     }
@@ -780,7 +862,9 @@ body.light-mode .footer p {
         text-align: center;
     }
 
-    /* Footer */
+
+    /* FOOTER */
+
     .footer {
         padding: 24px 0;
     }
@@ -790,8 +874,11 @@ body.light-mode .footer p {
     }
 }
 
-/* Mobile-Specific Styles (below 480px) */
+
+/* MOBILE BELOW 480px */
+
 @media screen and (max-width: 480px) {
+
     .container {
         padding: 0 12px;
     }

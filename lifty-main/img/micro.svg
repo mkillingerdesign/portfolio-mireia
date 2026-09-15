@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 124 124">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        mix-blend-mode: color-dodge;
+        opacity: .7;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-5 {
+        fill: #ce5c5c;
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-9 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-10 {
+        clip-path: url(#clippath-5);
+      }
+
+      .cls-11 {
+        fill: #c18ea6;
+      }
+
+      .cls-12 {
+        fill: #c3e6f8;
+      }
+
+      .cls-13 {
+        fill: url(#Degradado_sin_nombre_4);
+      }
+
+      .cls-4 {
+        mix-blend-mode: multiply;
+        opacity: .4;
+      }
+
+      .cls-14 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-1" width="124" height="124"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <circle class="cls-1" cx="62" cy="62" r="62"/>
+    </clipPath>
+    <linearGradient id="Degradado_sin_nombre_4" data-name="Degradado sin nombre 4" x1="-233.61" y1="480.16" x2="-233.59" y2="480.16" gradientTransform="translate(38405.59 79000.57) scale(164.4 -164.4)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8ccfd7"/>
+      <stop offset=".03" stop-color="#8ccfd7"/>
+      <stop offset=".27" stop-color="#e36131"/>
+      <stop offset=".78" stop-color="#e79338"/>
+      <stop offset="1" stop-color="#a6ada2"/>
+    </linearGradient>
+    <clipPath id="clippath-2">
+      <rect class="cls-1" y="0" width="124" height="124"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-1" y="10.89" width="124" height="106.51"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <rect class="cls-1" x=".64" y="35.18" width="122.1" height="77.84"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="cls-1" x="1.47" y="52.5" width="68.43" height="69.63"/>
+    </clipPath>
+  </defs>
+  <g class="cls-3">
+    <g id="Capa_1" data-name="Capa 1">
+      <g class="cls-14">
+        <g id="Grupo_1383" data-name="Grupo 1383">
+          <g id="Grupo_1371" data-name="Grupo 1371">
+            <g class="cls-6">
+              <g id="Grupo_1370" data-name="Grupo 1370">
+                <rect id="Rectángulo_541" data-name="Rectángulo 541" class="cls-13" x="-20.18" y="-20.23" width="164.4" height="164.4" transform="translate(-20.19 31.5) rotate(-24.64)"/>
+              </g>
+            </g>
+          </g>
+          <g id="Grupo_1382" data-name="Grupo 1382">
+            <g class="cls-9">
+              <g id="Grupo_1381" data-name="Grupo 1381">
+                <path id="Trazado_1224" data-name="Trazado 1224" class="cls-5" d="M124,62c0,34.24-27.76,62-62,62S0,96.24,0,62,27.76,0,62,0s62,27.76,62,62"/>
+                <g id="Grupo_1374" data-name="Grupo 1374" class="cls-4">
+                  <g id="Grupo_1373" data-name="Grupo 1373">
+                    <g class="cls-7">
+                      <g id="Grupo_1372" data-name="Grupo 1372">
+                        <path id="Trazado_1225" data-name="Trazado 1225" class="cls-11" d="M22.95,64.27c6.29-1.26,13.18-.35,18.76-4.15,5.18-3.53,7.73-9.89,12.94-13.33,2.73-1.64,5.82-2.59,8.99-2.78,3.72-.42,7.05-1.05,9.98-3.57,1.14-.99,4.18-3.46,2.93-5.3-.97-1.43-3.27-1.77-4.84-2-4.82-.66-9.7-.74-14.53-.25-3.27.36-6.47,1.2-9.49,2.5-3.59,1.49-6.98,3.22-10.86,3.78-6.73.98-13.21-.6-19.84-1.53-3.56-.61-7.19-.69-10.77-.21-.43.07-.85.16-1.27.25-5.59,13.14-6.48,27.8-2.53,41.53,3.66-2.54,6.81-5.73,10.14-8.68,3.06-2.72,6.26-5.42,10.38-6.25"/>
+                        <path id="Trazado_1226" data-name="Trazado 1226" class="cls-11" d="M34.15,117.4c2.54-.62,4.97-1.62,7.21-2.96,3.54-2.27,6.72-5.05,9.44-8.25,2.42-2.69,5.32-4.91,8.54-6.54,5.86-2.89,12.39-3.89,18.7-5.37,3.74-.97,7.6-1.36,11.46-1.16,3.61.34,7.18.95,10.7,1.82,4.19,1.07,8.45,1.87,12.75,2.38,13.87-20.02,14.74-46.29,2.23-67.19-.84,1.56-1.83,3.09-2.8,4.62-1.7,2.44-2.86,5.22-3.38,8.14-.32,3.5,0,7.02.96,10.4.71,3.1,1.44,6.23,1.03,9.42-.35,3.01-1.82,5.77-4.11,7.75-2.55,1.97-6.12,2.7-8.31,5.13-1.6,1.78-1.37,3.68-1.48,5.9-.01,1.6-.52,3.16-1.44,4.47-1.52,2.1-3.57,3.91-6.3,3.94-2.81.04-5.45-1.18-8.02-2.19-3.84-1.51-7.33-4.23-11.38-5.17-1.66-.38-3.78-.86-5.45-.26-.94.42-1.82.98-2.6,1.66-2.89,1.96-6.13,3.34-9.54,4.08-3.41.82-6.92,1.11-10.42.88-3.7-.27-7.33-1.22-10.68-2.82-3.49-1.66-7.08-3.1-10.75-4.33-2.14-.51-4.36-.62-6.54-.32-2.79.21-5.56.58-8.32,1.02-.69.11-1.38.23-2.07.34,5.38,15.02,16.31,27.4,30.55,34.58"/>
+                        <path id="Trazado_1227" data-name="Trazado 1227" class="cls-11" d="M83.38,18.68c1.49-.63,3.02-1.15,4.59-1.56,1.81-.42,3.65-.65,5.51-.68,1.88.05,3.74.33,5.61.44,1.77.1,3.54.07,5.31-.1-2.28-2.14-4.72-4.11-7.3-5.88-4.86,3.82-14.28,4.61-19.24,6.97,1.6,1.16,3.66,1.46,5.52.81"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+                <g id="Grupo_1377" data-name="Grupo 1377" class="cls-4">
+                  <g id="Grupo_1376" data-name="Grupo 1376">
+                    <g class="cls-8">
+                      <g id="Grupo_1375" data-name="Grupo 1375">
+                        <path id="Trazado_1228" data-name="Trazado 1228" class="cls-11" d="M14.6,46.35c-4.21-.48-8.46-1.94-12.46-.51-.38,1.39-.7,2.81-.98,4.24,2.01-.27,3.99-.69,5.94-1.26,2.57-.59,5.08-1.41,7.5-2.46"/>
+                        <path id="Trazado_1229" data-name="Trazado 1229" class="cls-11" d="M36.34,55.33c3.25.14,6.24-1.95,8.57-4.13-.21.03-.42.07-.63.12-2.56,1.5-5.22,2.84-7.95,4.01"/>
+                        <path id="Trazado_1230" data-name="Trazado 1230" class="cls-11" d="M47.18,42.07c-.4,0-.8.04-1.2.1-.67.18-1.32.4-1.96.65-.34.2-.66.45-.93.74,3.02.17,5.62-.11,7.98-2.07-1.21.03-2.42.14-3.62.35-.03.13-.14.22-.27.22"/>
+                        <path id="Trazado_1231" data-name="Trazado 1231" class="cls-11" d="M.64,70.89c.06.43.14.86.21,1.3,2.12-.65,4.09-1.72,5.8-3.14-2.09.26-4.13.88-6.01,1.84"/>
+                        <path id="Trazado_1232" data-name="Trazado 1232" class="cls-11" d="M64.99,37.23c1.31-.62,2.51-1.41,3.78-2.05-3.7.48-7.31,1.49-10.73,2.98,2.35-.09,4.79.1,6.95-.93"/>
+                        <path id="Trazado_1233" data-name="Trazado 1233" class="cls-11" d="M21.32,52.12c1.56-.88,2.89-2.09,4.35-3.1-3.32,1.01-6.46,2.55-9.71,3.76,1.87.08,3.76.24,5.36-.66"/>
+                        <path id="Trazado_1234" data-name="Trazado 1234" class="cls-11" d="M37.67,108.13c1.35-.34,3.03-.66,4.09-1.62s1.91-2.01,3-2.82c-4.28.66-8.52,1.57-12.69,2.73-3.12.82-6.06,2.2-8.67,4.08,1.1.88,2.23,1.72,3.39,2.52,2.06-1.78,4.46-3.12,7.06-3.92,1.26-.37,2.55-.65,3.82-.97"/>
+                        <path id="Trazado_1235" data-name="Trazado 1235" class="cls-11" d="M39.93,96.58c1.37-.12,2.75-.17,4.13-.13,2.27.11,4.52-.35,6.57-1.34-3.63-.49-7.33.01-10.7,1.47"/>
+                        <path id="Trazado_1236" data-name="Trazado 1236" class="cls-11" d="M122.74,49.51c-.12-.54-.24-1.08-.36-1.62-1.32.73-2.64,1.46-3.97,2.19,1.45-.16,2.89-.34,4.33-.57"/>
+                        <path id="Trazado_1237" data-name="Trazado 1237" class="cls-11" d="M69.72,88.09c.61-.52,1.18-1.09,1.8-1.53-2.62.29-5.32,1.53-7.81,2.36,2.09.22,4.41.53,6.01-.83"/>
+                        <path id="Trazado_1238" data-name="Trazado 1238" class="cls-11" d="M110.43,71.35c1.94-.47,4.28-.77,5.22-2.64.18-.36.34-.72.51-1.06-2.19.73-4.16,2.01-5.73,3.71"/>
+                        <path id="Trazado_1239" data-name="Trazado 1239" class="cls-11" d="M114.21,79.22c2.62-.16,5.22-.62,7.74-1.37.17-.64.33-1.29.48-1.94-1.27.08-2.53.33-3.73.75-1.55.75-3.05,1.61-4.48,2.56"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+                <g id="Grupo_1380" data-name="Grupo 1380" class="cls-2">
+                  <g id="Grupo_1379" data-name="Grupo 1379">
+                    <g class="cls-10">
+                      <g id="Grupo_1378" data-name="Grupo 1378">
+                        <path id="Trazado_1240" data-name="Trazado 1240" class="cls-12" d="M14.53,94.77c-8.39-13.25-11.27-24.82-11.83-33.71v-.08c-.36-2.81-.49-5.65-.41-8.48-1.62,9.27-1.69,23.91,7.64,40.02,15.77,27.23,45.17,31.51,59.97,28.98,0,0-35.9,4.03-55.37-26.73"/>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

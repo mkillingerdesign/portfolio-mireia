@@ -176,16 +176,16 @@ h1 i {
 }
 
 .project-category#colaboraciones h2 {
-    text-align: left; /* Alinea a la izquierda como las descripciones */
+    text-align: left;
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 16px;
     color: #c9d1d9;
     text-shadow: 0 0 8px rgba(88, 166, 255, 0.3);
-    max-width: 1200px; /* Igual que .collaboration */
-    padding: 0 16px; /* Igual que .collaboration */
-    margin-left: auto; /* Centra el contenedor */
-    margin-right: auto; /* Centra el contenedor */
+    max-width: 1200px;
+    padding: 0 16px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 body.light-mode .project-category#colaboraciones h2 {
@@ -212,16 +212,16 @@ body.light-mode .category-description {
 /* Collaboration */
 .collaboration {
     margin: 0 auto;
-    max-width: 1200px; /* Igual que .container */
-    padding: 0 16px; /* Igual que .container */
+    max-width: 1200px;
+    padding: 0 16px;
 }
 
 .collaboration h3 {
     font-size: 20px;
     font-weight: 600;
     color: #c9d1d9;
-    margin: 0 0 16px; /* Alinea a la izquierda */
-    text-align: left; /* Alinea como las descripciones */
+    margin: 0 0 16px;
+    text-align: left;
 }
 
 body.light-mode .collaboration h3 {
@@ -233,7 +233,7 @@ body.light-mode .collaboration h3 {
     margin: 0 auto 24px;
     color: #8b949e;
     font-size: 16px;
-    text-align: left; /* Mantiene alineación izquierda */
+    text-align: left;
 }
 
 body.light-mode .collaboration p {
@@ -244,7 +244,7 @@ body.light-mode .collaboration p {
 .collab-logo {
     width: 150px;
     height: auto;
-    margin: 0 0 16px; /* Alinea a la izquierda en lugar de centrado */
+    margin: 0 0 16px;
     display: block;
     border-radius: 8px;
 }
@@ -301,7 +301,67 @@ body.light-mode .gallery-item p {
     color: #57606a;
 }
 
-/* Campaña Images (mantener por compatibilidad) */
+/* ============================= */
+/* CATÁLOGO SWS A ANCHO COMPLETO */
+/* ============================= */
+
+.catalog-full {
+    width: 100%;
+    max-width: 1200px;
+    margin: 24px auto 40px;
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.catalog-full:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(88, 166, 255, 0.3);
+}
+
+.catalog-full-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.catalog-full-text {
+    padding: 20px;
+}
+
+.catalog-full-text h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #c9d1d9;
+    margin: 0 0 10px;
+    text-align: left;
+}
+
+.catalog-full-text p {
+    font-size: 14px;
+    color: #8b949e;
+    margin: 0;
+    max-width: 100%;
+    text-align: left;
+}
+
+body.light-mode .catalog-full {
+    background: #ffffff;
+    border-color: #e1e4e8;
+}
+
+body.light-mode .catalog-full-text h3 {
+    color: #24292f;
+}
+
+body.light-mode .catalog-full-text p {
+    color: #57606a;
+}
+
+/* Campaña Images */
 .camp-img {
     width: 100%;
     height: 500px;
@@ -416,14 +476,15 @@ body.light-mode .carousel-next:hover {
 
 /* Hover effect for gallery images in Colaboraciones */
 @media screen and (max-width: 768px) {
-    .gallery-img:hover, .camp-img:hover {
+    .gallery-img:hover,
+    .camp-img:hover {
         transform: none;
         box-shadow: none;
         opacity: 1;
     }
 }
 
-/* Estilo para galería en móvil (para cambio automático) */
+/* Estilo para galería en móvil */
 .gallery.autoplay .gallery-item {
     display: none;
 }
@@ -511,8 +572,12 @@ body.light-mode .footer p {
     margin: 0 6px;
 }
 
-/* Tablet Responsive Styles */
+/* ======================== */
+/* TABLET - MAX 768px */
+/* ======================== */
+
 @media screen and (max-width: 768px) {
+
     .nav {
         position: relative;
         align-items: center;
@@ -631,11 +696,30 @@ body.light-mode .footer p {
         gap: 12px;
     }
 
-    .gallery-img, .camp-img {
+    .gallery-img,
+    .camp-img {
         height: 150px;
     }
 
     .gallery-item p {
+        font-size: 13px;
+    }
+
+    /* Catálogo SWS en tablet */
+    .catalog-full {
+        margin-top: 16px;
+        margin-bottom: 32px;
+    }
+
+    .catalog-full-text {
+        padding: 16px;
+    }
+
+    .catalog-full-text h3 {
+        font-size: 18px;
+    }
+
+    .catalog-full-text p {
         font-size: 13px;
     }
 
@@ -674,8 +758,12 @@ body.light-mode .footer p {
     }
 }
 
-/* Mobile Responsive Styles */
+/* ======================== */
+/* MOBILE - MAX 480px */
+/* ======================== */
+
 @media screen and (max-width: 480px) {
+
     .container {
         padding: 0 10px;
     }
@@ -743,11 +831,30 @@ body.light-mode .footer p {
         gap: 10px;
     }
 
-    .gallery-img, .camp-img {
+    .gallery-img,
+    .camp-img {
         height: 120px;
     }
 
     .gallery-item p {
+        font-size: 12px;
+    }
+
+    /* Catálogo SWS en móvil */
+    .catalog-full {
+        margin-top: 14px;
+        margin-bottom: 24px;
+    }
+
+    .catalog-full-text {
+        padding: 12px;
+    }
+
+    .catalog-full-text h3 {
+        font-size: 16px;
+    }
+
+    .catalog-full-text p {
         font-size: 12px;
     }
 
