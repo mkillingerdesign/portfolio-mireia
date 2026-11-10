@@ -39,7 +39,7 @@
             doc.dataset.theme = next;
             store.set("theme", next);
             const tc = document.querySelector('meta[name="theme-color"]');
-            if (tc) tc.setAttribute("content", next === "light" ? "#f5f3ff" : "#050a1f");
+            if (tc) tc.setAttribute("content", next === "light" ? "#f5f3ff" : "#06050f");
             themeBtn.setAttribute("aria-label", next === "light" ? "Activar modo oscuro" : "Activar modo claro");
         });
     }
@@ -831,7 +831,7 @@
     }
 
     // Brillo que sigue al ratón dentro de las superficies de cristal.
-    const spotSel = ".ai-card, .index-row, .job, .edu-card, .skill-group, .lang, .social, .stat, .showcase__end, .profile, .tile__media, .card__media, .feature";
+    const spotSel = ".service, .ai-card, .index-row, .job, .edu-card, .skill-group, .lang, .social, .stat, .showcase__end, .profile, .tile__media, .card__media, .feature";
     $$(spotSel).forEach((el) => {
         el.classList.add("spot");
         el.addEventListener("pointermove", (e) => {
@@ -865,6 +865,109 @@
             const o = new IntersectionObserver(([en]) => { en.isIntersecting ? play() : v.pause(); }, { threshold: 0.6 });
             o.observe(card);
         }
+    });
+
+
+    /* ---------- Línea "glow": estrellas, onda, proceso y formulario ---------- */
+
+    // Cielo de estrellas suave en el fondo.
+    if (mesh) {
+        const cv = document.createElement("canvas");
+        cv.className = "mesh__stars";
+        mesh.appendChild(cv);
+        const ctx = cv.getContext("2d");
+        let stars = [], W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2);
+        const build = () => {
+            W = cv.clientWidth; H = cv.clientHeight;
+            cv.width = W * dpr; cv.height = H * dpr;
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            const n = Math.round((W * H) / 9000);
+            stars = Array.from({ length: n }, () => ({
+                x: Math.random() * W, y: Math.random() * H,
+                r: Math.random() * 1.1 + 0.2, a: Math.random() * 0.6 + 0.2,
+                s: Math.random() * 0.02 + 0.004, p: Math.random() * Math.PI * 2,
+                c: ["255,255,255", "180,140,255", "255,140,210", "140,180,255"][Math.floor(Math.random() * 4)]
+            }));
+        };
+        let tStar = 0;
+        const draw = () => {
+            ctx.clearRect(0, 0, W, H);
+            tStar += 1;
+            for (const st of stars) {
+                const a = reduced ? st.a : st.a * (0.55 + 0.45 * Math.sin(st.p + tStar * st.s));
+                ctx.fillStyle = `rgba(${st.c},${a})`;
+                ctx.beginPath();
+                ctx.arc(st.x, st.y, st.r, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            if (!reduced && !document.hidden) requestAnimationFrame(draw);
+        };
+        build();
+        draw();
+        document.addEventListener("visibilitychange", () => { if (!document.hidden && !reduced) draw(); });
+        window.addEventListener("resize", () => { clearTimeout(build._t); build._t = setTimeout(() => { build(); if (reduced) draw(); }, 200); });
+    }
+
+    // Onda luminosa animada.
+    $$(".wave").forEach((wave) => {
+        const paths = $$("path", wave);
+        let visible = false, tW = 0;
+        const shape = (time) => {
+            const pts = [];
+            for (let x = 0; x <= 1440; x += 24) {
+                const y = 110
+                    + Math.sin(x / 210 + time * 0.9) * 42
+                    + Math.sin(x / 90 - time * 0.6) * 10
+                    + Math.sin(x / 520 + time * 0.3) * 24;
+                pts.push(`${x},${y.toFixed(1)}`);
+            }
+            return "M" + pts.join(" L");
+        };
+        const tick = () => {
+            if (!visible) return;
+            tW += 0.016;
+            const d = shape(tW);
+            paths.forEach((pa) => pa.setAttribute("d", d));
+            if (!reduced) requestAnimationFrame(tick);
+        };
+        paths.forEach((pa) => pa.setAttribute("d", shape(0)));
+        new IntersectionObserver(([en]) => {
+            const was = visible;
+            visible = en.isIntersecting;
+            if (visible && !was) tick();
+        }).observe(wave);
+    });
+
+    // Línea de tiempo del proceso: se llena al hacer scroll.
+    const tl2 = $(".timeline2");
+    if (tl2) {
+        const line = $(".timeline2__line i", tl2);
+        const upd = () => {
+            const r = tl2.getBoundingClientRect();
+            const vh = window.innerHeight;
+            const p = clamp((vh * 0.6 - r.top) / r.height, 0, 1);
+            line.style.setProperty("--p", reduced ? 1 : p);
+        };
+        window.addEventListener("scroll", upd, { passive: true });
+        upd();
+    }
+
+    // Formulario de contacto: prepara un email con el mensaje.
+    $$("form[data-mailto]").forEach((form) => {
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            if (!form.reportValidity()) return;
+            const f = new FormData(form);
+            const subject = `Proyecto de ${f.get("type")} — ${f.get("name")}`;
+            const bodyTxt = `${f.get("message")}\n\n${f.get("name")}\n${f.get("email")}`;
+            window.location.href = `mailto:${form.dataset.mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyTxt)}`;
+            if (toast) {
+                toast.textContent = "Abriendo tu app de correo…";
+                toast.classList.add("is-visible");
+                clearTimeout(toast._t);
+                toast._t = setTimeout(() => toast.classList.remove("is-visible"), 2600);
+            }
+        });
     });
 
     /* ---------- Refrescar tras cargar imágenes ---------- */
