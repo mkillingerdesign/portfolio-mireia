@@ -39,7 +39,7 @@
             doc.dataset.theme = next;
             store.set("theme", next);
             const tc = document.querySelector('meta[name="theme-color"]');
-            if (tc) tc.setAttribute("content", next === "light" ? "#f5f3ff" : "#06050f");
+            if (tc) tc.setAttribute("content", next === "light" ? "#f5f3ff" : "#0b0710");
             themeBtn.setAttribute("aria-label", next === "light" ? "Activar modo oscuro" : "Activar modo claro");
         });
     }
@@ -146,6 +146,7 @@
         if (progress) progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
         if (header && !body.classList.contains("menu-open")) {
             header.classList.toggle("is-hidden", y > lastY && y > 300);
+            header.classList.toggle("is-scrolled", y > 40);
         }
         lastY = y;
     };

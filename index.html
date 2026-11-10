@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mireia Killinger — Diseño gráfico, UI/UX, web, app y vídeo</title>
     <meta name="description" content="Portfolio de Mireia Killinger, diseñadora gráfica y UI/UX en Barcelona: webs, apps, vídeo e identidad visual, con IA integrada de forma profesional en su flujo de trabajo.">
-    <meta name="theme-color" content="#06050f">
+    <meta name="theme-color" content="#0b0710">
     <meta property="og:title" content="Mireia Killinger — Diseño gráfico, UI/UX, web, app y vídeo">
     <meta property="og:description" content="Producto digital, web, interacción e identidad visual.">
     <meta property="og:image" content="assets/img/mk.webp">
@@ -13,8 +13,8 @@
     <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || (window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css?v=8">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/main.css?v=9">
 </head>
 
 <body class="page-home is-loading">
@@ -43,7 +43,7 @@
 <!-- Header -->
 <header class="header">
     <div class="wrap header__inner">
-        <a href="#top" class="logo" aria-label="Inicio">mireia<b>.design</b></a>
+        <a href="#top" class="logo logo--mono" aria-label="Inicio"><span class="logo__mark">MK</span><span class="logo__name">Mireia Killinger</span></a>
 
         <nav class="nav" aria-label="Principal">
             <a href="#sobre-mi"><span class="roll"><span>Sobre mí</span><span>Sobre mí</span></span></a>
@@ -82,44 +82,29 @@
 <main id="main">
 
     <!-- ============ HERO ============ -->
-    <section class="hero2" id="top">
-        <div class="hero2__glow" aria-hidden="true"></div>
-        <div class="hero__trail" aria-hidden="true"
-             data-images="assets/img/portadajordans.webp, assets/img/oreo3.webp, assets/img/moto10.webp, assets/img/skyline1.webp, assets/img/ktm1.webp, assets/img/portadamusica.webp, assets/img/merch1.webp, assets/img/persona3.webp, assets/img/goco.webp, assets/img/xd2.webp"></div>
-
-        <div class="wrap hero2__inner">
-            <div class="avatar-ring" data-intro>
-                <span class="avatar-ring__spin" aria-hidden="true"></span>
-                <img src="assets/img/mk.webp" alt="Retrato de Mireia Killinger" width="1448" height="1086">
+    <section class="hero3" id="top">
+        <div class="wrap hero3__grid">
+            <div class="hero3__photo" data-intro>
+                <span class="hero3__glow" aria-hidden="true"></span>
+                <img src="assets/img/mk-cut.webp" alt="Mireia Killinger" width="783" height="928" fetchpriority="high">
             </div>
 
-            <span class="pill" data-intro><i></i>Disponible para proyectos</span>
-
-            <h1 class="hero2__title" data-split-intro aria-label="Hola, soy Mireia">
-                <span class="line-mask"><span>Hola, soy</span></span>
-                <span class="line-mask"><span><span class="serif">Mireia.</span></span></span>
-            </h1>
-
-            <p class="kicker kicker--wide" data-intro>Diseñadora gráfica · UI/UX · Web · App · Vídeo</p>
-
-            <p class="hero2__lead" data-intro>
-                Creo webs, apps y vídeo centrados en el usuario, de la idea al prototipo, y sé cómo se programan.
-                Uso la IA de forma profesional en todo mi proceso.
-            </p>
-
-            <ul class="checks" data-intro>
-                <li>Centrado en el usuario</li>
-                <li>Diseño + código</li>
-                <li>IA profesional</li>
-            </ul>
-
-            <div class="hero2__ctas" data-intro>
-                <a href="#trabajo" class="btn btn--solid magnetic">Ver mi trabajo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <a href="#contacto" class="btn magnetic">Contactar</a>
+            <div class="hero3__text">
+                <span class="pill" data-intro><i></i>Disponible para proyectos</span>
+                <h1 class="hero3__title" data-split-intro aria-label="Hola, soy Mireia.">
+                    <span class="line-mask"><span>Hola, soy <span class="serif">Mireia.</span></span></span>
+                </h1>
+                <p class="kicker kicker--wide" data-intro>Diseñadora gráfica · UI/UX · Web · App · Vídeo</p>
+                <p class="hero3__lead" data-intro>
+                    Creo webs, apps y vídeo claros, cuidados y fáciles de usar.
+                    Sé cómo se programan y uso la IA de forma profesional en todo mi proceso.
+                </p>
+                <div class="hero3__ctas" data-intro>
+                    <a href="#trabajo" class="btn btn--solid magnetic">Ver portfolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                    <a href="#contacto" class="btn magnetic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Contactar</a>
+                </div>
             </div>
         </div>
-
-        <div class="horizon" aria-hidden="true"><span></span></div>
     </section>
 
     <!-- ============ EMPRESAS ============ -->
@@ -138,26 +123,30 @@
     </section>
 
     <!-- ============ SOBRE MÍ ============ -->
-    <section class="section about2" id="sobre-mi">
+    <section class="section about3" id="sobre-mi">
         <div class="wrap">
-            <div class="ring-stage">
-                <div class="eclipse" aria-hidden="true"><span></span></div>
-                <div class="ring-stage__content" data-reveal>
+            <div class="about3__grid">
+                <div>
                     <span class="kicker">(01) Sobre mí</span>
-                    <h2 class="h-title">Sobre <span class="serif">mí</span></h2>
-                    <p>
-                        Diseñadora gráfica y UI/UX con base técnica en preimpresión. Diseño webs, apps, identidades y vídeo
-                        desde la idea hasta el resultado final.
+                    <h2 class="h-title" data-split-scroll>
+                        <span class="line-mask"><span>Diseño con</span></span>
+                        <span class="line-mask"><span><span class="serif">criterio,</span></span></span>
+                        <span class="line-mask"><span>de la idea al detalle</span></span>
+                    </h2>
+                </div>
+                <div class="about3__body">
+                    <p class="statement2" data-words>
+                        Me muevo entre el <span class="serif">diseño</span> y la <span class="serif">tecnología</span>:
+                        entiendo a las personas, a la marca y cómo se construye cada pantalla.
                     </p>
-                    <a href="#experiencia" class="btn btn--sm">Mi experiencia</a>
+                    <p class="muted">
+                        Diseñadora gráfica y UI/UX con base técnica en preimpresión. Mi proyecto más completo es
+                        <a href="LIFTY/lifty.html" class="link">Lifty</a>, una app de accesibilidad para personas con
+                        diversidad funcional que diseñé y desarrollé yo misma.
+                    </p>
+                    <a href="#experiencia" class="btn btn--sm">Mi experiencia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                 </div>
             </div>
-
-            <p class="statement2" data-words>
-                Me muevo entre el <span class="serif">diseño</span> y la <span class="serif">tecnología</span>:
-                entiendo a las personas, a la marca y cómo se construye cada pantalla. Mi proyecto más completo es
-                <a href="LIFTY/lifty.html">Lifty</a>, una app de accesibilidad que diseñé y desarrollé yo misma.
-            </p>
 
             <div class="stats">
                 <div class="stat" data-reveal>
@@ -223,23 +212,6 @@
             </div>
         </div>
     </section>
-
-    <div class="wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 220" preserveAspectRatio="none">
-            <defs>
-                <linearGradient id="waveGrad" x1="0" x2="1">
-                    <stop offset="0" stop-color="#6aa0ff" stop-opacity="0"/>
-                    <stop offset="0.25" stop-color="#6aa0ff"/>
-                    <stop offset="0.55" stop-color="#b48cff"/>
-                    <stop offset="0.8" stop-color="#ff6fc0"/>
-                    <stop offset="1" stop-color="#ff6fc0" stop-opacity="0"/>
-                </linearGradient>
-                <filter id="waveGlow" x="-10%" y="-50%" width="120%" height="200%"><feGaussianBlur stdDeviation="6"/></filter>
-            </defs>
-            <path class="wave__glow" d="" fill="none" stroke="url(#waveGrad)" stroke-width="10" filter="url(#waveGlow)"/>
-            <path class="wave__line" d="" fill="none" stroke="url(#waveGrad)" stroke-width="2.2"/>
-        </svg>
-    </div>
 
     <!-- ============ PROYECTOS DESTACADOS ============ -->
     <section class="showcase" aria-labelledby="destacados">
@@ -651,26 +623,13 @@
         </div>
     </section>
 
-    <!-- ============ ECLIPSE ============ -->
-    <section class="arc" aria-labelledby="arc-title">
-        <div class="arc__glow" aria-hidden="true"></div>
-        <div class="wrap arc__inner">
-            <h2 id="arc-title" class="arc__title">Diseño que <span class="serif">conecta</span></h2>
-            <div class="arc__text" data-reveal>
-                <p>Uno diseño gráfico, interfaces, código y vídeo para que cada proyecto se vea bien, se entienda y funcione.</p>
-                <p>La IA me ayuda a ir más rápido; el criterio y las decisiones de diseño son siempre míos.</p>
-                <a href="#contacto" class="btn btn--sm">Empecemos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-            </div>
-        </div>
-    </section>
-
     <!-- ============ CONTACTO ============ -->
     <section class="contact2" id="contacto">
         <div class="contact2__glow" aria-hidden="true"></div>
         <div class="wrap contact2__grid">
             <div class="contact2__info" data-reveal>
                 <span class="kicker">(08) Contacto</span>
-                <h2 class="h-title">Hable<span class="serif">mos</span></h2>
+                <h2 class="h-title">¿Hablamos de tu <span class="serif">proyecto?</span></h2>
                 <p class="muted">Cuéntame tu proyecto con el formulario o escríbeme directamente.</p>
                 <div class="contact2__rows">
                     <div><span class="kicker">Email</span><a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
@@ -734,6 +693,6 @@
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=8" defer></script>
+<script src="assets/js/main.js?v=9" defer></script>
 </body>
 </html>
