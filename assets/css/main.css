@@ -552,16 +552,16 @@ button:hover .roll span + span {
     height: 7px;
     border-radius: 50%;
     margin-right: 8px;
-    background: #4dff88;
-    box-shadow: 0 0 0 0 rgba(77, 255, 136, 0.6);
+    background: var(--accent);
+    box-shadow: 0 0 0 0 rgba(var(--hl-rgb), 0.6);
     animation: pulse 2s infinite;
     vertical-align: 1px;
 }
 
 @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(77, 255, 136, 0.55); }
-    70% { box-shadow: 0 0 0 10px rgba(77, 255, 136, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(77, 255, 136, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(var(--hl-rgb), 0.55); }
+    70% { box-shadow: 0 0 0 10px rgba(var(--hl-rgb), 0); }
+    100% { box-shadow: 0 0 0 0 rgba(var(--hl-rgb), 0); }
 }
 
 .theme-toggle {
@@ -3054,8 +3054,8 @@ body {
 .label::before {
     width: 7px;
     height: 7px;
-    background: #3dffa8;
-    box-shadow: 0 0 10px #3dffa8;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
 }
 
 /* ---------- Cristal ---------- */
@@ -3819,7 +3819,7 @@ body {
 }
 
 .job__date--now {
-    color: #3dffa8;
+    color: var(--accent);
 }
 
 .job__toggle {
@@ -4320,8 +4320,8 @@ body {
 
 [data-theme="light"] .mesh i { filter: blur(70px); opacity: 0.9; }
 [data-theme="light"] .mesh__grid { opacity: 0.4; }
-[data-theme="light"] .label::before { background: #22c47a; box-shadow: 0 0 8px rgba(34, 196, 122, 0.6); }
-[data-theme="light"] .job__date--now { color: #129c5e; }
+[data-theme="light"] .label::before { background: var(--accent); box-shadow: 0 0 8px rgba(var(--hl-rgb), 0.6); }
+[data-theme="light"] .job__date--now { color: var(--accent); }
 [data-theme="light"] .lightbox { background: rgba(20, 18, 46, 0.88); }
 [data-theme="light"] .index-row::before { background: linear-gradient(100deg, rgba(107, 77, 255, 0.12), rgba(47, 168, 255, 0.08)); }
 [data-theme="light"] .feature { background: linear-gradient(120deg, rgba(200, 184, 255, 0.6), rgba(168, 228, 255, 0.5) 60%, rgba(255, 201, 184, 0.5)); }
