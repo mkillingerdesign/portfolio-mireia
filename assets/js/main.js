@@ -829,7 +829,7 @@
     }
 
     // Brillo que sigue al ratón dentro de las superficies de cristal.
-    const spotSel = ".index-row, .job, .edu-card, .skill-group, .lang, .social, .stat, .showcase__end, .profile, .tile__media, .card__media, .feature";
+    const spotSel = ".ai-card, .index-row, .job, .edu-card, .skill-group, .lang, .social, .stat, .showcase__end, .profile, .tile__media, .card__media, .feature";
     $$(spotSel).forEach((el) => {
         el.classList.add("spot");
         el.addEventListener("pointermove", (e) => {
