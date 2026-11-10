@@ -1,129 +1,205 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mireia Killinger - Proyectos de Apps</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="lifty.css">
+    <title>Lifty · Apps — Mireia Killinger</title>
+    <meta name="description" content="Lifty: app de accesibilidad con inteligencia artificial diseñada por Mireia Killinger.">
+    <meta name="theme-color" content="#3d3dff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233d3dff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
+    <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || "dark";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body class="dark-mode">
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav">
-                <a href="../index.html" class="logo">Mireia Killinger</a>
-                <button class="hamburger" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="#descripcion">Descripción</a></li>
-                        <li><a href="#interactividad">Interactividad</a></li>
-                        <li><a href="#video-promo">Video Promocional</a></li>
-                        <li><a href="#web">Web</a></li>
-                    </ul>
-                </nav>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun"></i>
-                </button>
-            </div>
+
+<body class="page-sub">
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="page-transition is-entering" aria-hidden="true"></div>
+
+<header class="header">
+    <div class="wrap header__inner">
+        <a href="../index.html" class="logo" aria-label="Volver al inicio">MK<sup>©</sup></a>
+
+        <nav class="nav" aria-label="Áreas">
+            <a href="../WEBS/webs.html"><span class="roll"><span>Webs</span><span>Webs</span></span></a>
+            <a href="../LIFTY/lifty.html" aria-current="page" style="opacity:.45"><span class="roll"><span>Apps</span><span>Apps</span></span></a>
+            <a href="../DISEÑO/diseño.html"><span class="roll"><span>Diseño</span><span>Diseño</span></span></a>
+            <a href="../MULTIMEDIA/foto.html"><span class="roll"><span>Multimedia</span><span>Multimedia</span></span></a>
+        </nav>
+
+        <div class="header__right">
+            <span class="clock"><span class="status-dot"></span>BCN <span data-clock>--:--</span></span>
+            <button class="theme-toggle" type="button" aria-label="Cambiar tema"></button>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+                Menú <span class="menu-btn__icon"></span>
+            </button>
         </div>
-    </header>
+    </div>
+</header>
 
-    <!-- Apps Section -->
-    <main>
-        <section class="app-projects" data-aos="fade-up">
-            <div class="container">
-                <h1>
-                    <img src="../img/lifty2.png" alt="Logo de Lifty" class="lifty-logo">
-                    <br>
-                    <span class="slogan">Hacemos fácil lo que parece difícil</span>
-                </h1>
-
-                <!-- Descripción -->
-                <div class="project-category" id="descripcion">
-                    <h2 data-aos="fade-up">Descripción de Lifty</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">
-                        Lifty es una aplicación móvil innovadora diseñada para fomentar la autonomía y la inclusión de niños, jóvenes y adultos con discapacidades funcionales, como síndrome de Down, Microcefalia, Discapacidad intelectual y Alzheimer. Utilizando inteligencia artificial, Lifty ofrece soporte personalizado en el aprendizaje escolar y las tareas diarias, con herramientas sencillas adaptadas a cada usuario. La app ayuda a organizarse, aprender a su ritmo y sentirse más seguros, mientras proporciona a cuidadores y familias información en tiempo real para su tranquilidad. Con una interfaz intuitiva, colores suaves y un diseño inspirado en una temática espacial, Lifty es accesible y amigable para todos. Desarrollada con HTML, CSS y JavaScript. Lifty busca empoderar a las personas y promover un mundo más inclusivo.
-                    </p>
-                </div>
-
-                <!-- Interactividad -->
-                <div class="project-category" id="interactividad">
-                    <h2 data-aos="fade-up">Interactividad de Lifty</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Prototipos interactivos en Adobe XD que muestran la navegación dinámica, filtros de accesibilidad y funcionalidades clave de Lifty, listos para su desarrollo.</p>
-                    <div class="preview-gallery" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="preview-item">
-                            <a href="https://xd.adobe.com/view/a9ca9e99-473c-4bd1-af97-eb98fc6c72a9-fc99/?fullscreen&hints=off" target="_blank" aria-label="Ver prototipo interactivo de Lifty en Figma">
-                                <img src="../img/xd2.png" alt="Vista previa de prototipo interactivo en Figma" class="preview-img-lifty">
-                            </a>
-                        </div>
-                        <div class="preview-item">
-                            <a href="https://xd.adobe.com/view/bf093615-6390-4c03-b2ff-7e456c192b62-ea5a/?fullscreen&hints=off" target="_blank" aria-label="Ver prototipo de filtros en Figma">
-                                <img src="../img/xd1.png" alt="Vista previa de filtros en Figma" class="preview-img-lifty">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Video Promocional -->
-                <div class="project-category" id="video-promo">
-                    <h2 data-aos="fade-up">Video Promocional</h2>
-                    <video class="promo-video" autoplay muted loop playsinline data-aos="fade-up" data-aos-delay="100">
-                        <source src="../img/promo.mp4" type="video/mp4">
-                        Tu navegador no soporta el elemento de video.
-                    </video>
-                    <p data-aos="fade-up" data-aos-delay="200">
-                        Este video promocional destaca la misión de Lifty: facilitar la accesibilidad para todos. Muestra la interfaz intuitiva y las funcionalidades clave de la app, transmitiendo inclusión y empoderamiento. Fue creado con herramientas de edición como Adobe Premiere, integrando animaciones y grabaciones reales para captar la esencia de la app.
-                    </p>
-                </div>
-
-                <!-- Web -->
-                <div class="project-category" id="web">
-                    <h2 data-aos="fade-up">Web de Lifty</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">
-                        La landing page de Lifty, fue creada con HTML, CSS y JavaScript, ofreciendo un diseño responsivo y accesible. La web promociona la app, destacando sus funcionalidades. Utilicé una paleta de colores suaves, tipografía clara y animaciones sutiles para mejorar la experiencia de usuario. El desarrollo incluyó prototipado en Adobe XD, pruebas de accesibilidad.
-                    </p>
-                </div>
-
-                <!-- Banner -->
-<div class="banner" data-aos="fade-up" data-aos-delay="200">
-    <img src="../img/banner lifty_Mesa de trabajo 1.jpg" alt="Banner de Lifty" class="banner-img">
-
-    <div class="banner-text">
-        <h3>¡Explora Lifty!</h3>
-        <p>Tu guía para un mundo más accesible.</p>
-
-        <a href="../lifty-main/index.html" target="_blank" class="banner-cta">
-            Visita la Web
-        </a>
+<div class="menu" id="menu">
+    <ul class="menu__list">
+        <li><a href="../index.html"><small>00</small>Inicio</a></li>
+        <li><a href="../WEBS/webs.html"><small>01</small>Webs</a></li>
+        <li><a href="../LIFTY/lifty.html" aria-current="page"><small>02</small>Apps</a></li>
+        <li><a href="../DISEÑO/diseño.html"><small>03</small>Diseño</a></li>
+        <li><a href="../MULTIMEDIA/foto.html"><small>04</small>Multimedia</a></li>
+    </ul>
+    <div class="menu__foot mono">
+        <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
+        <span>Barcelona · <span data-clock>--:--</span></span>
     </div>
 </div>
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">×</span>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
-    </div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 Mireia Killinger</p>
+<main id="main">
+
+    <section class="page-hero" id="top">
+        <div class="wrap">
+            <a href="../index.html#trabajo" class="back-link mono" data-intro><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Volver al portfolio</a>
+            <span class="label" data-intro>Área 02</span>
+            <h1 class="page-hero__title display h-xl" data-split-intro style="margin-top: 18px;">
+                <span class="line-mask"><span>Lifty<span class="serif accent">.</span></span></span>
+                <span class="line-mask"><span><span class="serif">fácil lo difícil</span></span></span>
+            </h1>
+            <div class="page-hero__foot">
+                <p class="page-hero__lead" data-intro>Una app que fomenta la autonomía y la inclusión de niños, jóvenes y adultos con diversidad funcional, con apoyo de inteligencia artificial y una estética espacial, amable y accesible.</p>
+                <nav class="page-hero__nav" aria-label="Secciones" data-intro><a href="#descripcion">Descripción</a><a href="#interactividad">Interactividad</a><a href="#video">Vídeo</a><a href="#web">Web</a></nav>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="lifty.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 800,
-        });
-    </script>
+    <section class="block" id="descripcion">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">01 — Concepto</span>
+                <h2 class="block__title" data-split-scroll>Descrip<span class="serif">ción</span></h2>
+            </div>
+            <div class="prose">
+                <p class="prose__lead" data-reveal>
+                    Lifty acompaña a personas con síndrome de Down, microcefalia, discapacidad intelectual o Alzheimer en el
+                    aprendizaje escolar y las tareas diarias, con herramientas sencillas adaptadas a cada usuario.
+                </p>
+                <div class="prose__side" data-reveal data-delay="0.1">
+                    <p>Ayuda a organizarse, aprender a su ritmo y sentirse más seguros, mientras ofrece a cuidadores y familias información en tiempo real. Interfaz intuitiva, colores suaves y una temática espacial que la hace accesible y cercana.</p>
+                    <div class="facts mono">
+                        <div><span>Tipo</span><span>App móvil + web</span></div>
+                        <div><span>Rol</span><span>UX/UI · Branding · Desarrollo</span></div>
+                        <div><span>Herramientas</span><span>XD · HTML · CSS · IA</span></div>
+                        <div><span>Enfoque</span><span>Accesibilidad + IA</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="interactividad">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">02 — Prototipo</span>
+                <h2 class="block__title" data-split-scroll>Inter<span class="serif">actividad</span></h2>
+                <p class="block__desc" data-reveal>Prototipos interactivos en Adobe XD con navegación dinámica, filtros de accesibilidad y las funcionalidades clave.</p>
+            </div>
+            <div class="grid grid--2">
+            <a class="tile " href="https://xd.adobe.com/view/a9ca9e99-473c-4bd1-af97-eb98fc6c72a9-fc99/?fullscreen&hints=off" target="_blank" rel="noopener" data-cursor="XD ↗" data-reveal>
+                <div class="tile__media tile__media--fixed" style="--ar: 16 / 10">
+                    <img src="../assets/img/xd2.webp" alt="Prototipo interactivo de Lifty" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>Flujo principal</h3><p>Prototipo navegable · Adobe XD</p></div>
+            </a>
+            <a class="tile " href="https://xd.adobe.com/view/bf093615-6390-4c03-b2ff-7e456c192b62-ea5a/?fullscreen&hints=off" target="_blank" rel="noopener" data-cursor="XD ↗" data-reveal data-delay="0.1">
+                <div class="tile__media tile__media--fixed" style="--ar: 16 / 10">
+                    <img src="../assets/img/xd1.webp" alt="Prototipo de filtros de accesibilidad de Lifty" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>Filtros de accesibilidad</h3><p>Prototipo navegable · Adobe XD</p></div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="video">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">03 — Motion</span>
+                <h2 class="block__title" data-split-scroll>Vídeo <span class="serif">promocional</span></h2>
+                <p class="block__desc" data-reveal>Editado en Adobe Premiere, combina animaciones y grabaciones reales para transmitir la misión de Lifty: inclusión y empoderamiento.</p>
+            </div>
+            <div class="promo" data-reveal>
+                <video autoplay muted loop playsinline preload="metadata" poster="../assets/img/lifty-banner.webp" controls>
+                    <source src="../img/promo.mp4" type="video/mp4">
+                    Tu navegador no soporta vídeo HTML5.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="web">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">04 — Landing</span>
+                <h2 class="block__title" data-split-scroll>La <span class="serif">web</span></h2>
+                <p class="block__desc" data-reveal>Landing responsive y accesible con HTML, CSS y JavaScript: paleta suave, tipografía clara y animaciones sutiles. Prototipada en Adobe XD y con pruebas de accesibilidad.</p>
+            </div>
+            <div class="feature" data-reveal>
+                <div class="feature__text">
+                    <h3>¡Explora Lifty!</h3>
+                    <p>Tu guía para un mundo más accesible.</p>
+                    <a href="../lifty-main/index.html" target="_blank" rel="noopener" class="btn magnetic">Visitar la web <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+                <div class="feature__media">
+                    <img src="../assets/img/iniciolifty.webp" alt="Página de inicio de la web de Lifty" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <a href="../DISEÑO/diseño.html" class="next" data-cursor="Siguiente">
+        <div class="wrap">
+            <p class="next__label label">Siguiente área</p>
+            <p class="next__title">Diseño gráfico <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+        </div>
+    </a>
+</main>
+
+<footer class="footer">
+    <div class="wrap footer__inner mono">
+        <span>© 2026 Mireia Killinger</span>
+        <a href="mailto:mkillingerdesign@gmail.com" class="muted">mkillingerdesign@gmail.com</a>
+        <a href="#top" class="to-top">Volver arriba <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+</footer>
+
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" aria-hidden="true">
+    <div class="lightbox__top mono">
+        <span class="lightbox__count">01 / 01</span>
+        <button type="button" class="lightbox__btn lightbox__close" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+    </div>
+    <div class="lightbox__stage"><img class="lightbox__img" src="data:," alt=""></div>
+    <div class="lightbox__bottom">
+        <p class="lightbox__caption"></p>
+        <div class="lightbox__nav">
+            <button type="button" class="lightbox__btn lightbox__prev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button type="button" class="lightbox__btn lightbox__next" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+    </div>
+</div>
+
+<div class="toast mono" role="status" aria-live="polite"></div>
+
+<script src="../assets/vendor/gsap.min.js" defer></script>
+<script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../assets/vendor/lenis.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

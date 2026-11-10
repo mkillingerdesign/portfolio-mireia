@@ -1,334 +1,334 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mireia Killinger - Proyectos de Diseño Gráfico</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="diseño.css">
-
-    
-    <!-- Estilos inline para el carrusel automático -->
-    <style>
-        .auto-carousel {
-            position: relative;
-            width: 100%;
-            height: 700px;
-            overflow: hidden;
-            border-radius: 8px;
-            border: 1px solid #30363d;
-            background: #1c2526;
-        }
-        body.light-mode .auto-carousel {
-            border-color: #e1e4e8;
-            background: #f6f8fa;
-        }
-        .auto-carousel-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            animation: fadeAuto 15s infinite;
-        }
-        @keyframes fadeAuto {
-            0%, 15% { opacity: 0; } /* Oculta al inicio */
-            20%, 35% { opacity: 1; } /* Visible durante su turno */
-            40%, 100% { opacity: 0; } /* Oculta después */
-        }
-        .auto-carousel-img:nth-child(1) { animation-delay: 0s; }
-        .auto-carousel-img:nth-child(2) { animation-delay: 3s; }
-        .auto-carousel-img:nth-child(3) { animation-delay: 6s; }
-        .auto-carousel-img:nth-child(4) { animation-delay: 9s; }
-        .auto-carousel-img:nth-child(5) { animation-delay: 12s; }
-        /* Ajustes para móviles */
-        @media screen and (max-width: 768px) {
-            .auto-carousel {
-                height: 200px;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            .auto-carousel {
-                height: 150px;
-            }
-        }
-    </style>
+    <title>Diseño gráfico — Mireia Killinger</title>
+    <meta name="description" content="Branding, campañas, editorial y colaboraciones de diseño gráfico de Mireia Killinger.">
+    <meta name="theme-color" content="#3d3dff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233d3dff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
+    <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || "dark";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body class="dark-mode">
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="nav">
-                <a href="../index.html" class="logo">Mireia Killinger</a>
-                <button class="hamburger" aria-label="Toggle menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav class="nav-menu">
-                    <ul>
-                        <li><a href="#diseños">Diseños</a></li>
-                        <li><a href="#campañas">Campañas</a></li>
-                        <li><a href="#colaboraciones">Colaboraciones</a></li>
-                    </ul>
-                </nav>
-                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
-                    <i class="fas fa-sun"></i>
-                </button>
-            </div>
-        </div>
-    </header>
 
-    <!-- Graphic Design Projects Section -->
-    <main>
-        <section class="graphic-design-projects" data-aos="fade-up">
-            <div class="container">
-                <h1><i class=""></i> Proyectos de Diseño Gráfico</h1>
+<body class="page-sub">
 
-                <!-- Diseños -->
-                <div class="project-category" id="diseños">
-                    <h2 data-aos="fade-up">Diseños</h2>
-                    <p class="category-description" data-aos="fade-up" data-aos-delay="100">Creaciones únicas que abarcan desde anuncios publicitarios hasta portadas creativas, diseñadas con Adobe Illustrator y Photoshop para captar la atención.</p>
-                    <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
-                        <div class="gallery-item">
-                            <img src="../img/portadajordans.png" alt="Anuncio publicitario para Jordans" class="gallery-img">
-                            <p>Anuncio vibrante para la campaña de zapatillas Jordans, con foco en colores audaces.</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="../img/portadapeli.JPG" alt="Portada de película" class="gallery-img">
-                            <p>Portada cinematográfica con composición dramática para una película ficticia.</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="../img/portadamusica.png" alt="Portada de disco musical" class="gallery-img">
-                            <p>Portada de álbum musical con estética retro para un disco.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-container">
-                        <h3>Portada de Videojuego: Épocas del Año</h3>
-                        <p class="carousel-description">Diseño de portada para un videojuego conceptual que representa las cuatro estaciones, creado con ilustraciones detalladas en Illustrator.</p>
-                        <div class="auto-carousel" data-aos="zoom-in" data-aos-delay="200">
-                            <img src="../img/skylin2.png" alt="Portada Épocas del Año - Primavera" class="auto-carousel-img">
-                            <img src="../img/skyline1.png" alt="Portada Épocas del Año - Verano" class="auto-carousel-img">
-                            <img src="../img/skyline3.png" alt="Portada Épocas del Año - Otoño" class="auto-carousel-img">
-                            <img src="../img/skyline4.png" alt="Portada Épocas del Año - Invierno" class="auto-carousel-img">
-                            <img src="../img/skyline5.png" alt="Portada Épocas del Año - Variación" class="auto-carousel-img">
-                        </div>
-                    </div>
-                </div>
+<a class="skip-link" href="#main">Saltar al contenido</a>
 
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="page-transition is-entering" aria-hidden="true"></div>
 
-                <!-- Campañas -->
-<div class="project-category" id="campañas">
-    <h2 data-aos="fade-up">Campañas</h2>
-    <p class="category-description" data-aos="fade-up" data-aos-delay="100">Estrategia de marketing para redes sociales de Oreo, diseñada en Adobe Illustrator y Photoshop, que abarca cinco etapas clave: Awareness, Consideration, Conversion, Fidelity y Loyalty, para maximizar la visibilidad, interacción y fidelidad a la marca.</p>
-    <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
-        <!-- Primera fila: 3 imágenes -->
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <img src="../img/oreo1.PNG" alt="Campaña Oreo - Awareness" class="camp-img">
-                <p><strong>Awareness</strong><br>Dar a conocer la promoción de un año gratis de Netflix, atrayendo seguidores y generando alta interacción.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/oreo2.PNG" alt="Campaña Oreo - Consideration" class="camp-img">
-                <p><strong>Consideration</strong><br>Aprovechar un comentario de Ibai en Twitter para motivar a sus seguidores a probar Oreo.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/oreo3.JPEG" alt="Campaña Oreo - Conversion" class="camp-img">
-                <p><strong>Conversion</strong><br>Motivar a los usuarios a aprovechar una oferta 2x1 en packs de Oreo, creando urgencia.</p>
-            </div>
-        </div>
-        <!-- Segunda fila: 2 imágenes -->
-        <div class="gallery-row">
-            <div class="gallery-item">
-                <img src="../img/oreo4.JPEG" alt="Campaña Oreo - Fidelity" class="camp-img">
-                <p><strong>Fidelity</strong><br>Incentivar la participación en el Club Exclusivo de Oreo con beneficios vía QR.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/oreo5.JPEG" alt="Campaña Oreo - Loyalty" class="camp-img">
-                <p><strong>Loyalty</strong><br>Agradecer públicamente al cliente más leal, destacando su compromiso.</p>
-            </div>
+<header class="header">
+    <div class="wrap header__inner">
+        <a href="../index.html" class="logo" aria-label="Volver al inicio">MK<sup>©</sup></a>
+
+        <nav class="nav" aria-label="Áreas">
+            <a href="../WEBS/webs.html"><span class="roll"><span>Webs</span><span>Webs</span></span></a>
+            <a href="../LIFTY/lifty.html"><span class="roll"><span>Apps</span><span>Apps</span></span></a>
+            <a href="../DISEÑO/diseño.html" aria-current="page" style="opacity:.45"><span class="roll"><span>Diseño</span><span>Diseño</span></span></a>
+            <a href="../MULTIMEDIA/foto.html"><span class="roll"><span>Multimedia</span><span>Multimedia</span></span></a>
+        </nav>
+
+        <div class="header__right">
+            <span class="clock"><span class="status-dot"></span>BCN <span data-clock>--:--</span></span>
+            <button class="theme-toggle" type="button" aria-label="Cambiar tema"></button>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+                Menú <span class="menu-btn__icon"></span>
+            </button>
         </div>
     </div>
+</header>
+
+<div class="menu" id="menu">
+    <ul class="menu__list">
+        <li><a href="../index.html"><small>00</small>Inicio</a></li>
+        <li><a href="../WEBS/webs.html"><small>01</small>Webs</a></li>
+        <li><a href="../LIFTY/lifty.html"><small>02</small>Apps</a></li>
+        <li><a href="../DISEÑO/diseño.html" aria-current="page"><small>03</small>Diseño</a></li>
+        <li><a href="../MULTIMEDIA/foto.html"><small>04</small>Multimedia</a></li>
+    </ul>
+    <div class="menu__foot mono">
+        <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
+        <span>Barcelona · <span data-clock>--:--</span></span>
+    </div>
 </div>
+
+<main id="main">
+
+    <section class="page-hero" id="top">
+        <div class="wrap">
+            <a href="../index.html#trabajo" class="back-link mono" data-intro><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Volver al portfolio</a>
+            <span class="label" data-intro>Área 03</span>
+            <h1 class="page-hero__title display h-xl" data-split-intro style="margin-top: 18px;">
+                <span class="line-mask"><span>Diseño</span></span>
+                <span class="line-mask"><span><span class="serif">gráfico</span></span></span>
+            </h1>
+            <div class="page-hero__foot">
+                <p class="page-hero__lead" data-intro>Identidades visuales, campañas y piezas editoriales para soportes digitales e impresos: del concepto al arte final listo para producción.</p>
+                <nav class="page-hero__nav" aria-label="Secciones" data-intro><a href="#disenos">Diseños</a><a href="#campanas">Campañas</a><a href="#colaboraciones">SWS</a><a href="#graape">Graape Art</a></nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="disenos">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">01 — Piezas</span>
+                <h2 class="block__title" data-split-scroll>Porta<span class="serif">das</span></h2>
+                <p class="block__desc" data-reveal>Anuncios y portadas creadas con Illustrator y Photoshop para captar la atención a primera vista.</p>
+            </div>
+            <div class="grid grid--3">
+            <button type="button" class="tile " data-lightbox="covers" data-caption="Air Jordan — Anuncio con contraste extremo y foco en el producto." data-cursor="Ampliar" data-reveal>
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 5">
+                    <img src="../assets/img/portadajordans.webp" alt="Anuncio para Air Jordan" loading="lazy">
                 </div>
-
-               <!-- Colaboraciones -->
-<div class="project-category" id="colaboraciones">
-    <h2 data-aos="fade-up">Colaboraciones</h2>
-
-    <div class="collaboration" data-aos="zoom-in" data-aos-delay="100">
-        <h3>Supermoto World Shop</h3>
-
-        <img
-            src="../02_SWS/IDENTIDAD/LOGO SWS.png"
-            alt="Logo de SWS SupermotoWorldShop"
-            class="collab-logo"
-        >
-
-        <p>
-            Colaboración con SWS, una empresa especializada en vinilos y accesorios para motos de supermoto, creando diseños personalizados para sus productos.
-        </p>
-
-        <!-- Primera fila -->
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
-            <div class="gallery-item">
-                <img
-                    src="../img/ktm1.jpg"
-                    alt="Vinilo para KTM"
-                    class="gallery-img"
-                    data-hover-img="../img/ktm2.png"
-                >
-                <p>
-                    Vinilo personalizado para KTM, con diseño agresivo en naranja y negro.
-                </p>
+                <div class="tile__caption"><h3>Air Jordan</h3><p>Anuncio con contraste extremo y foco en el producto.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="covers" data-caption="Cartel de cine — Composición dramática para una película ficticia." data-cursor="Ampliar" data-reveal data-delay="0.08">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 5">
+                    <img src="../assets/img/portadapeli.webp" alt="Portada de película" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Cartel de cine</h3><p>Composición dramática para una película ficticia.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="covers" data-caption="Dime Line — Cartel de evento musical con estética retro-synth." data-cursor="Ampliar" data-reveal data-delay="0.16">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 5">
+                    <img src="../assets/img/portadamusica.webp" alt="Portada de disco" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Dime Line</h3><p>Cartel de evento musical con estética retro-synth.</p></div>
+            </button>
             </div>
 
-            <div class="gallery-item">
-                <img
-                    src="../img/husky1.jpg"
-                    alt="Vinilo para Husqvarna"
-                    class="gallery-img"
-                    data-hover-img="../img/husky2.png"
-                >
-                <p>
-                    Vinilo para Husqvarna, con patrones geométricos en azul y blanco.
-                </p>
-            </div>
-
-            <div class="gallery-item">
-                <img
-                    src="../img/gasgas1.png"
-                    alt="Vinilo para GasGas"
-                    class="gallery-img"
-                    data-hover-img="../img/gasgas2.png"
-                >
-                <p>
-                    Vinilo para GasGas, con una estética en tonos rojos y grises.
-                </p>
+            <div style="margin-top: clamp(56px, 7vw, 110px);" class="prose">
+                <div style="grid-column: 1 / -1;">
+                    <div class="fader" data-reveal data-cursor="Épocas">
+                        <img src="../assets/img/skylin2.webp" alt="Épocas del Año — primavera">
+                        <img src="../assets/img/skyline1.webp" alt="Épocas del Año — verano">
+                        <img src="../assets/img/skyline3.webp" alt="Épocas del Año — otoño">
+                        <img src="../assets/img/skyline4.webp" alt="Épocas del Año — invierno">
+                        <img src="../assets/img/skyline5.webp" alt="Épocas del Año — variación">
+                        <div class="fader__ui mono"><span>Épocas del Año · <span class="fader__count">01 / 05</span></span><div class="fader__dots"></div></div>
+                    </div>
+                    <div class="tile__caption" style="max-width: 60ch;">
+                        <h3>Épocas del Año</h3>
+                        <p>Portada para un videojuego conceptual que recorre las estaciones a través de un mismo skyline, ilustrado en Illustrator.</p>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Segunda fila -->
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="300">
-            <div class="gallery-item">
-                <img
-                    src="../img/sudadera1.png"
-                    alt="Merchandising de SWS"
-                    class="gallery-img"
-                    data-hover-img="../img/camisetaparteatras.png"
-                >
-                <p>
-                    Diseño de sudadera y camiseta para la marca SWS.
-                </p>
+    <section class="block" id="campanas">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">02 — Social</span>
+                <h2 class="block__title" data-split-scroll>Oreo <span class="serif">× campaña</span></h2>
+                <p class="block__desc" data-reveal>Estrategia para redes sociales en cinco etapas —de awareness a loyalty— para maximizar visibilidad, interacción y fidelidad.</p>
             </div>
-
-            <div class="gallery-item">
-                <img
-                    src="../02_SWS/IDENTIDAD/tarjeta1.png"
-                    alt="Tarjeta de visita SWS"
-                    class="gallery-img"
-                    data-hover-img="../02_SWS/IDENTIDAD/tarjeta2.png"
-                >
-                <p>
-                    Tarjeta de visita profesional para SWS.
-                </p>
-            </div>
-
-            <div class="gallery-item">
-                <img
-                    src="../img/infosws1.png"
-                    alt="Datos de contacto SWS"
-                    class="gallery-img"
-                    data-hover-img="../img/infosws2.png"
-                >
-                <p>
-                    Diseño de material con datos de contacto para SWS.
-                </p>
+            <div class="grid grid--5 stages">
+            <button type="button" class="tile stage" data-lightbox="oreo" data-caption="Awareness — Dar a conocer la promoción de un año gratis de Netflix, atrayendo seguidores y generando interacción." data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media tile__media--fixed" style="--ar: 1 / 1">
+                    <img src="../assets/img/oreo1.webp" alt="Campaña Oreo — Awareness" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Awareness</h3><p>Dar a conocer la promoción de un año gratis de Netflix, atrayendo seguidores y generando interacción.</p></div>
+            </button>
+            <button type="button" class="tile stage" data-lightbox="oreo" data-caption="Consideration — Aprovechar un comentario de Ibai en Twitter para animar a sus seguidores a probar Oreo." data-cursor="Ampliar" data-reveal data-delay="0.06">
+                <div class="tile__media tile__media--fixed" style="--ar: 1 / 1">
+                    <img src="../assets/img/oreo2.webp" alt="Campaña Oreo — Consideration" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Consideration</h3><p>Aprovechar un comentario de Ibai en Twitter para animar a sus seguidores a probar Oreo.</p></div>
+            </button>
+            <button type="button" class="tile stage" data-lightbox="oreo" data-caption="Conversion — Impulsar la oferta 2x1 en packs de Oreo creando sensación de urgencia." data-cursor="Ampliar" data-reveal data-delay="0.12">
+                <div class="tile__media tile__media--fixed" style="--ar: 1 / 1">
+                    <img src="../assets/img/oreo3.webp" alt="Campaña Oreo — Conversion" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Conversion</h3><p>Impulsar la oferta 2x1 en packs de Oreo creando sensación de urgencia.</p></div>
+            </button>
+            <button type="button" class="tile stage" data-lightbox="oreo" data-caption="Fidelity — Incentivar la participación en el Club Exclusivo de Oreo con beneficios vía QR." data-cursor="Ampliar" data-reveal data-delay="0.18">
+                <div class="tile__media tile__media--fixed" style="--ar: 1 / 1">
+                    <img src="../assets/img/oreo4.webp" alt="Campaña Oreo — Fidelity" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Fidelity</h3><p>Incentivar la participación en el Club Exclusivo de Oreo con beneficios vía QR.</p></div>
+            </button>
+            <button type="button" class="tile stage" data-lightbox="oreo" data-caption="Loyalty — Agradecer públicamente al cliente más leal, destacando su compromiso." data-cursor="Ampliar" data-reveal data-delay="0.24">
+                <div class="tile__media tile__media--fixed" style="--ar: 1 / 1">
+                    <img src="../assets/img/oreo5.webp" alt="Campaña Oreo — Loyalty" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Loyalty</h3><p>Agradecer públicamente al cliente más leal, destacando su compromiso.</p></div>
+            </button>
             </div>
         </div>
+    </section>
 
-        <div class="catalog-full" data-aos="zoom-in" data-aos-delay="400">
+    <section class="block" id="colaboraciones">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">03 — Colaboración</span>
+                <h2 class="block__title" data-split-scroll>Supermoto <span class="serif">World Shop</span></h2>
+                <p class="block__desc" data-reveal>Vinilos y accesorios para motos de supermoto: diseños personalizados, merchandising, papelería y catálogo.</p>
+            </div>
+            <div class="brand" data-reveal>
+                <div class="brand__logo brand__logo--dark"><img src="../assets/img/sws-logo.webp" alt="Logo de Supermoto World Shop" loading="lazy"></div>
+                <div class="brand__text">
+                    <h3>SWS</h3>
+                    <p>Colaboración con una empresa especializada en vinilos y accesorios para supermoto. Pasa el ratón por cada pieza para ver la vista alternativa.</p>
+                </div>
+            </div>
+            <div class="grid grid--3">
+            <button type="button" class="tile " data-lightbox="sws" data-caption="KTM — Diseño agresivo en naranja y negro." data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/ktm1.webp" alt="Vinilo para KTM" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/ktm2.webp" alt="Vinilo para KTM (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>KTM</h3><p>Diseño agresivo en naranja y negro.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="sws" data-caption="Husqvarna — Patrones geométricos en azul y blanco." data-cursor="Ampliar" data-reveal data-delay="0.08">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/husky1.webp" alt="Vinilo para Husqvarna" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/husky2.webp" alt="Vinilo para Husqvarna (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Husqvarna</h3><p>Patrones geométricos en azul y blanco.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="sws" data-caption="GasGas — Estética en tonos rojos y grises." data-cursor="Ampliar" data-reveal data-delay="0.16">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/gasgas1.webp" alt="Vinilo para GasGas" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/gasgas2.webp" alt="Vinilo para GasGas (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>GasGas</h3><p>Estética en tonos rojos y grises.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="sws" data-caption="Merchandising — Sudadera y camiseta de la marca." data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/sudadera1.webp" alt="Merchandising de SWS" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/camisetaparteatras.webp" alt="Merchandising de SWS (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Merchandising</h3><p>Sudadera y camiseta de la marca.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="sws" data-caption="Tarjeta de visita — Papelería profesional a doble cara." data-cursor="Ampliar" data-reveal data-delay="0.08">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/sws-tarjeta1.webp" alt="Tarjeta de visita de SWS" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/sws-tarjeta2.webp" alt="Tarjeta de visita de SWS (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Tarjeta de visita</h3><p>Papelería profesional a doble cara.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="sws" data-caption="Info de contacto — Pieza con los datos de contacto de la marca." data-cursor="Ampliar" data-reveal data-delay="0.16">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/infosws1.webp" alt="Material de contacto de SWS" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/infosws2.webp" alt="Material de contacto de SWS (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Info de contacto</h3><p>Pieza con los datos de contacto de la marca.</p></div>
+            </button>
+            </div>
 
-    <a href="../02_SWS/Catalogo SWS.pdf" target="_blank" aria-label="Ver catálogo completo de Supermoto World Shop">
-        <img
-            src="../02_SWS/Catalogo SWS.pdf"
-            alt="Portada del catálogo de Supermoto World Shop"
-            class="catalog-full-img"
-        >
+            <div class="feature" data-reveal>
+                <div class="feature__text">
+                    <span class="mono" style="opacity:.7">PDF · Catálogo comercial</span>
+                    <h3 style="margin-top:14px;">Catálogo SWS Graphics</h3>
+                    <p>Diseño y maquetación del catálogo corporativo y comercial para presentar productos, colecciones y servicios de la marca.</p>
+                    <a href="../02_SWS/Catalogo%20SWS.pdf" target="_blank" rel="noopener" class="btn magnetic">Ver catálogo completo <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                </div>
+                <a class="feature__media" href="../02_SWS/Catalogo%20SWS.pdf" target="_blank" rel="noopener" data-cursor="PDF ↗">
+                    <img src="../assets/img/sws-catalogo.webp" alt="Portada del catálogo de Supermoto World Shop" loading="lazy">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="graape">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">04 — Branding</span>
+                <h2 class="block__title" data-split-scroll>Graape <span class="serif">Art</span></h2>
+                <p class="block__desc" data-reveal>Identidad completa para una marca ficticia de materiales de artes gráficas.</p>
+            </div>
+            <div class="brand" data-reveal>
+                <div class="brand__logo"><img src="../assets/img/logograape.webp" alt="Logo de Graape Art" loading="lazy"></div>
+                <div class="brand__text">
+                    <h3>Graape</h3>
+                    <p>Del logotipo al sistema: manual de identidad, memoria corporativa, web, merchandising y papelería con una paleta azul y una tipografía redondeada y amable.</p>
+                </div>
+            </div>
+            <div class="grid grid--3">
+            <button type="button" class="tile " data-lightbox="graape" data-caption="Web — Estética moderna y funcional." data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/web1.webp" alt="Web de Graape Art" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/web2.webp" alt="Web de Graape Art (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Web</h3><p>Estética moderna y funcional.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="graape" data-caption="Merchandising — Sudaderas, USB y accesorios." data-cursor="Ampliar" data-reveal data-delay="0.08">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/merch1.webp" alt="Merchandising de Graape Art" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/merch2.webp" alt="Merchandising de Graape Art (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Merchandising</h3><p>Sudaderas, USB y accesorios.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="graape" data-caption="Memoria corporativa — Proyectos y valores de la marca." data-cursor="Ampliar" data-reveal data-delay="0.16">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/memoria1.webp" alt="Memoria corporativa de Graape Art" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/memoria2.webp" alt="Memoria corporativa de Graape Art (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Memoria corporativa</h3><p>Proyectos y valores de la marca.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="graape" data-caption="Manual de identidad — Normas de uso de la identidad visual." data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <span class="tile__flip-hint">Hover ↻</span><img src="../assets/img/manual1.webp" alt="Manual corporativo de Graape Art" loading="lazy">
+                        <img class="tile__alt" src="../assets/img/manual2.webp" alt="Manual corporativo de Graape Art (vista alternativa)" loading="lazy" style="position:absolute;inset:0;">
+                </div>
+                <div class="tile__caption"><h3>Manual de identidad</h3><p>Normas de uso de la identidad visual.</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="graape" data-caption="Tarjetas — Papelería con diseño profesional." data-cursor="Ampliar" data-reveal data-delay="0.08">
+                <div class="tile__media tile__media--fixed" style="--ar: 4 / 3">
+                    <img src="../assets/img/29.webp" alt="Tarjetas corporativas de Graape Art" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Tarjetas</h3><p>Papelería con diseño profesional.</p></div>
+            </button>
+            </div>
+        </div>
+    </section>
+
+    <a href="../MULTIMEDIA/foto.html" class="next" data-cursor="Siguiente">
+        <div class="wrap">
+            <p class="next__label label">Siguiente área</p>
+            <p class="next__title">Multimedia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
+        </div>
     </a>
+</main>
 
-    <div class="catalog-full-text">
-        <h3>Catálogo Supermoto World Shop</h3>
-
-        <p>
-            Diseño y maquetación de catálogo corporativo y comercial para presentar productos, colecciones y servicios de la marca.
-        </p>
-
-        <a href="../02_SWS/Catalogo SWS.pdf" target="_blank" class="catalog-btn">
-            Ver catálogo completo
-        </a>
+<footer class="footer">
+    <div class="wrap footer__inner mono">
+        <span>© 2026 Mireia Killinger</span>
+        <a href="mailto:mkillingerdesign@gmail.com" class="muted">mkillingerdesign@gmail.com</a>
+        <a href="#top" class="to-top">Volver arriba <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
+</footer>
 
-</div>
-</div>
-    <div class="collaboration" data-aos="zoom-in" data-aos-delay="400">
-        <h3>Graape Art</h3>
-        <img src="../img/logograape.png" alt="Logo de Graape Art" class="collab-logo">
-        <p>Colaboración con Graape Art, una empresa ficticia de materiales de artes gráficas.</p>
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="500">
-            <div class="gallery-item">
-                <img src="../img/web1.png" alt="Web de Graape Art" class="gallery-img" data-hover-img="../img/web2.png">
-                <p>Diseño de la página web para Graape Art, con estética moderna y funcional.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/merch1.png" alt="Merchandising Graape Art" class="gallery-img" data-hover-img="../img/merch2.png">
-                <p>Diseño de merchandising para Graape Art, incluyendo sudaderas y accesorios.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/memoria1.png" alt="Memoria corporativa Graape Art" class="gallery-img" data-hover-img="../img/memoria2.png">
-                <p>Memoria corporativa para Graape Art, destacando sus proyectos y valores.</p>
-            </div>
-        </div>
-        <div class="gallery" data-aos="zoom-in" data-aos-delay="600">
-            <div class="gallery-item">
-                <img src="../img/manual1.png" alt="Manual corporativo Graape Art" class="gallery-img" data-hover-img="../img/manual2.png">
-                <p>Manual corporativo para Graape Art, definiendo su identidad visual.</p>
-            </div>
-            <div class="gallery-item">
-                <img src="../img/29.PNG" alt="Tarjetas corporativas Graape Art" class="gallery-img">
-                <p>Tarjetas corporativas para Graape Art, con un diseño profesional.</p>
-            </div>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" aria-hidden="true">
+    <div class="lightbox__top mono">
+        <span class="lightbox__count">01 / 01</span>
+        <button type="button" class="lightbox__btn lightbox__close" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+    </div>
+    <div class="lightbox__stage"><img class="lightbox__img" src="data:," alt=""></div>
+    <div class="lightbox__bottom">
+        <p class="lightbox__caption"></p>
+        <div class="lightbox__nav">
+            <button type="button" class="lightbox__btn lightbox__prev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button type="button" class="lightbox__btn lightbox__next" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
     </div>
 </div>
-            </div>
-        </section>
-    </main>
 
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">×</span>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
-    </div>
+<div class="toast mono" role="status" aria-live="polite"></div>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 Mireia Killinger</p>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="diseño.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 800,
-        });
-    </script>
+<script src="../assets/vendor/gsap.min.js" defer></script>
+<script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../assets/vendor/lenis.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>

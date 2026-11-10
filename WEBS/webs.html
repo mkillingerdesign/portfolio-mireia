@@ -1,153 +1,221 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="no-js" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mireia Killinger - Proyectos Web</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
-    <link rel="stylesheet" href="webs.css">
+    <title>Proyectos web — Mireia Killinger</title>
+    <meta name="description" content="Wireframes, prototipos interactivos y webs funcionales diseñadas por Mireia Killinger.">
+    <meta name="theme-color" content="#3d3dff">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233d3dff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
+    <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || "dark";</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/main.css">
 </head>
-<body class="dark-mode">
-   <!-- Header -->
+
+<body class="page-sub">
+
+<a class="skip-link" href="#main">Saltar al contenido</a>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"></div>
+<div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
+<div class="cursor-dot" aria-hidden="true"></div>
+<div class="page-transition is-entering" aria-hidden="true"></div>
+
 <header class="header">
-    <div class="container">
-        <div class="nav">
-            <a href="../index.html" class="logo">Mireia Killinger</a>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#wireframes">Wireframes</a></li>
-                    <li><a href="#interactivo">Interactivo</a></li>
-                    <li><a href="#webs-funcionales">Webs Funcionales</a></li>
-                </ul>
-            </nav>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
-                <i class="fas fa-sun"></i>
+    <div class="wrap header__inner">
+        <a href="../index.html" class="logo" aria-label="Volver al inicio">MK<sup>©</sup></a>
+
+        <nav class="nav" aria-label="Áreas">
+            <a href="../WEBS/webs.html" aria-current="page" style="opacity:.45"><span class="roll"><span>Webs</span><span>Webs</span></span></a>
+            <a href="../LIFTY/lifty.html"><span class="roll"><span>Apps</span><span>Apps</span></span></a>
+            <a href="../DISEÑO/diseño.html"><span class="roll"><span>Diseño</span><span>Diseño</span></span></a>
+            <a href="../MULTIMEDIA/foto.html"><span class="roll"><span>Multimedia</span><span>Multimedia</span></span></a>
+        </nav>
+
+        <div class="header__right">
+            <span class="clock"><span class="status-dot"></span>BCN <span data-clock>--:--</span></span>
+            <button class="theme-toggle" type="button" aria-label="Cambiar tema"></button>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
+                Menú <span class="menu-btn__icon"></span>
             </button>
         </div>
     </div>
 </header>
 
-    <!-- Web Projects Section -->
-    <main>
-        <section class="web-projects" data-aos="fade-up">
-            <div class="container">
-                <h1><i class="fas fa-globe"></i> Proyectos Web</h1>
-
-                <!-- Prototipos de Estructura -->
-                <div class="project-category" id="wireframes">
-                    <h2 data-aos="fade-up">Prototipos de Estructura (Figma/XD)</h2>
-                    <p data-aos="fade-up" data-aos-delay="100">Creación de wireframes y estructuras iniciales en Figma y Adobe XD, enfocados en usabilidad, navegación intuitiva y diseño funcional para diversos tipos de sitios web.</p>
-                    <div class="gallery" data-aos="zoom-in" data-aos-delay="200">
-                        <img src="../img/1 web.png" alt="Wireframe de tienda online en Figma" class="gallery-img">
-                        <img src="../img/2 web.jpg" alt="Wireframe de blog en Adobe XD" class="gallery-img">
-                        <img src="../img/3 web.png" alt="Prototipo de dashboard en Figma" class="gallery-img">
-                        <img src="../img/4 web.png" alt="Wireframe de landing page en XD" class="gallery-img">
-                    </div>
-                </div>
-
-              <!-- Prototipos con Imágenes -->
-<div class="project-category" id="interactivo">
-    <h2 data-aos="fade-up">Prototipos con Imágenes y Detalles</h2>
-    <p data-aos="fade-up" data-aos-delay="100">Diseños avanzados en Figma y Adobe XD que incluyen mockups con imágenes, paletas de colores, tipografías y animaciones, listos para desarrollo.</p>
-    <div class="preview-gallery" data-aos="zoom-in" data-aos-delay="200">
-        <div class="preview-item">
-            <a href="https://www.figma.com/proto/08kxlgdZGUGJtCoa5KFXuo/Mi-pagina-web?node-id=0-1&t=7RNr8Xp1179SL6eI-1" target="_blank" aria-label="Ver mockup de portfolio en Figma">
-                <img src="../img/inicioweb.png" alt="Vista previa de portfolio en Figma" class="preview-img-portfolio">
-            </a>
-        </div>
-        <div class="preview-item">
-            <a href="https://xd.adobe.com/view/bf093615-6390-4c03-b2ff-7e456c192b62-ea5a/?fullscreen&hints=off" target="_blank" aria-label="Ver landing page de startup en Adobe XD">
-                <img src="../img/inicioliftywireframe.png" alt="Vista previa de landing page en Adobe XD" class="preview-img-lifty">
-            </a>
-        </div>
-        <div class="preview-item">
-            <a href="https://www.figma.com/proto/09y4KZlpRGPdKJCr0jMkIp/Web-Pol-ferrer?node-id=1-1313&t=wvSzaVxaX1DIoVZD-1" target="_blank" aria-label="Ver interfaz de app web en Figma">
-                <img src="../img/iniciopol.png" alt="Vista previa de app web en Figma" class="preview-img-app">
-            </a>
-        </div>
-        <div class="preview-item">
-            <a href="https://xd.adobe.com/view/ede9cbb7-262b-4dd9-a27d-736d517212c3-b8ba/?fullscreen" target="_blank" aria-label="Ver mockup de tienda online en Adobe XD">
-                <img src="../img/iniciobart.png" alt="Vista previa de tienda online en Adobe XD" class="preview-img-bart">
-            </a>
-        </div>
+<div class="menu" id="menu">
+    <ul class="menu__list">
+        <li><a href="../index.html"><small>00</small>Inicio</a></li>
+        <li><a href="../WEBS/webs.html" aria-current="page"><small>01</small>Webs</a></li>
+        <li><a href="../LIFTY/lifty.html"><small>02</small>Apps</a></li>
+        <li><a href="../DISEÑO/diseño.html"><small>03</small>Diseño</a></li>
+        <li><a href="../MULTIMEDIA/foto.html"><small>04</small>Multimedia</a></li>
+    </ul>
+    <div class="menu__foot mono">
+        <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
+        <span>Barcelona · <span data-clock>--:--</span></span>
     </div>
 </div>
 
-                <!-- Webs Funcionales -->
-<div class="project-category" id="webs-funcionales">
-    <h2 data-aos="fade-up">Webs Funcionales</h2>
+<main id="main">
 
-    <p data-aos="fade-up" data-aos-delay="100">
-        Sitios web completamente desarrollados con HTML, CSS, JavaScript y plataformas como WordPress, con diseño responsive y funcionalidades interactivas.
-    </p>
-
-    <div class="functional-gallery" data-aos="zoom-in" data-aos-delay="200">
-
-        <!-- GOCO AUTOESCOLA -->
-        <div class="functional-item">
-            <a href="https://goco.es" target="_blank" aria-label="Visitar GOCO Autoescola">
-                <div class="functional-image-container">
-                    <img
-                        src="../img/goco.png"
-                        alt="Captura de la web de GOCO Autoescola"
-                        class="functional-img"
-                    >
-                </div>
-            </a>
-
-            <h3>GOCO Autoescola</h3>
-
-            <p>
-                Diseño y desarrollo web para GOCO Autoescola, creando una experiencia visual clara y funcional para presentar sus permisos, servicios, equipo e información de contacto.
-            </p>
+    <section class="page-hero" id="top">
+        <div class="wrap">
+            <a href="../index.html#trabajo" class="back-link mono" data-intro><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Volver al portfolio</a>
+            <span class="label" data-intro>Área 01</span>
+            <h1 class="page-hero__title display h-xl" data-split-intro style="margin-top: 18px;">
+                <span class="line-mask"><span>Proyectos</span></span>
+                <span class="line-mask"><span><span class="serif">web</span></span></span>
+            </h1>
+            <div class="page-hero__foot">
+                <p class="page-hero__lead" data-intro>Del wireframe a la web publicada: estructura, usabilidad e identidad visual adaptadas a cada marca. Diseño en Figma y Adobe XD, desarrollo en HTML, CSS, JavaScript y WordPress.</p>
+                <nav class="page-hero__nav" aria-label="Secciones" data-intro><a href="#wireframes">Wireframes</a><a href="#prototipos">Prototipos</a><a href="#funcionales">Webs funcionales</a></nav>
+            </div>
         </div>
+    </section>
 
+    <section class="block" id="wireframes">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">01 — Estructura</span>
+                <h2 class="block__title" data-split-scroll>Wire<span class="serif">frames</span></h2>
+                <p class="block__desc" data-reveal>Estructuras iniciales en Figma y Adobe XD, centradas en usabilidad, navegación intuitiva y diseño funcional.</p>
+            </div>
+            <div class="grid grid--4">
+            <button type="button" class="tile " data-lightbox="wire" data-caption="Tienda online — Figma" data-cursor="Ampliar" data-reveal>
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 9 / 16">
+                    <img src="../assets/img/1-web.webp" alt="Wireframe de tienda online" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Tienda online</h3><p>Figma</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="wire" data-caption="Blog — Adobe XD" data-cursor="Ampliar" data-reveal data-delay="0.08">
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 9 / 16">
+                    <img src="../assets/img/2-web.webp" alt="Wireframe de blog" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Blog</h3><p>Adobe XD</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="wire" data-caption="Dashboard — Figma" data-cursor="Ampliar" data-reveal data-delay="0.16">
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 9 / 16">
+                    <img src="../assets/img/3-web.webp" alt="Wireframe de dashboard" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Dashboard</h3><p>Figma</p></div>
+            </button>
+            <button type="button" class="tile " data-lightbox="wire" data-caption="Landing page — Adobe XD" data-cursor="Ampliar" data-reveal data-delay="0.24">
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 9 / 16">
+                    <img src="../assets/img/4-web.webp" alt="Wireframe de landing page" loading="lazy">
+                </div>
+                <div class="tile__caption"><h3>Landing page</h3><p>Adobe XD</p></div>
+            </button>
+            </div>
+        </div>
+    </section>
 
-        <!-- LIFTY -->
-        <div class="functional-item">
-    <a href="../lifty-main/index.html" target="_blank" aria-label="Visitar Lifty">
-        <div class="functional-image-container">
-            <img
-                src="../img/INICIOlifty.png"
-                alt="Captura de la web de Lifty"
-                class="functional-img"
-            >
+    <section class="block" id="prototipos">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">02 — Interactivo</span>
+                <h2 class="block__title" data-split-scroll>Prototipos <span class="serif">en alta</span></h2>
+                <p class="block__desc" data-reveal>Mockups con imágenes, paletas de color, tipografías y animaciones, listos para desarrollo. Haz clic para navegarlos.</p>
+            </div>
+            <div class="grid grid--2">
+            <a class="tile " href="https://www.figma.com/proto/08kxlgdZGUGJtCoa5KFXuo/Mi-pagina-web?node-id=0-1&t=7RNr8Xp1179SL6eI-1" target="_blank" rel="noopener" data-cursor="Figma ↗" data-reveal>
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 16 / 10">
+                    <img src="../assets/img/inicioweb.webp" alt="Prototipo de portfolio en Figma" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>Portfolio personal</h3><p>Prototipo navegable · Figma</p></div>
+            </a>
+            <a class="tile " href="https://xd.adobe.com/view/bf093615-6390-4c03-b2ff-7e456c192b62-ea5a/?fullscreen&hints=off" target="_blank" rel="noopener" data-cursor="XD ↗" data-reveal data-delay="0.1">
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 16 / 10">
+                    <img src="../assets/img/inicioliftywireframe.webp" alt="Prototipo de la landing de Lifty en Adobe XD" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>Lifty · Landing</h3><p>Prototipo navegable · Adobe XD</p></div>
+            </a>
+            <a class="tile " href="https://www.figma.com/proto/09y4KZlpRGPdKJCr0jMkIp/Web-Pol-ferrer?node-id=1-1313&t=wvSzaVxaX1DIoVZD-1" target="_blank" rel="noopener" data-cursor="Figma ↗" data-reveal>
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 16 / 10">
+                    <img src="../assets/img/iniciopol.webp" alt="Prototipo web de Pol Ferrer Stunt Academy en Figma" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>Pol Ferrer Stunt Academy</h3><p>Prototipo navegable · Figma</p></div>
+            </a>
+            <a class="tile " href="https://xd.adobe.com/view/ede9cbb7-262b-4dd9-a27d-736d517212c3-b8ba/?fullscreen" target="_blank" rel="noopener" data-cursor="XD ↗" data-reveal data-delay="0.1">
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 16 / 10">
+                    <img src="../assets/img/iniciobart.webp" alt="Prototipo de tienda online en Adobe XD" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>Tienda online</h3><p>Prototipo navegable · Adobe XD</p></div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="funcionales">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">03 — En producción</span>
+                <h2 class="block__title" data-split-scroll>Webs <span class="serif">funcionales</span></h2>
+                <p class="block__desc" data-reveal>Sitios desarrollados con HTML, CSS, JavaScript y WordPress, responsive y con funcionalidades interactivas.</p>
+            </div>
+            <div class="grid grid--2">
+            <a class="tile " href="https://goco.es" target="_blank" rel="noopener" data-cursor="Visitar ↗" data-reveal>
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 16 / 10">
+                    <img src="../assets/img/goco.webp" alt="Web de GOCO Autoescola" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>GOCO Autoescola</h3><p>Diseño y desarrollo web para presentar permisos, servicios, equipo y contacto con una experiencia clara y funcional.</p></div>
+            </a>
+            <a class="tile " href="../lifty-main/index.html" target="_blank" rel="noopener" data-cursor="Visitar ↗" data-reveal data-delay="0.1">
+                <div class="tile__media tile__media--fixed tile__media--top" style="--ar: 16 / 10">
+                    <img src="../assets/img/iniciolifty.webp" alt="Web de Lifty" loading="lazy">
+                    <span class="tile__open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                </div>
+                <div class="tile__caption"><h3>Lifty</h3><p>Plataforma de accesibilidad para personas con diversidad funcional, con HTML, CSS, JavaScript y funcionalidades de IA.</p></div>
+            </a>
+            </div>
+        </div>
+    </section>
+
+    <a href="../LIFTY/lifty.html" class="next" data-cursor="Siguiente">
+        <div class="wrap">
+            <p class="next__label label">Siguiente área</p>
+            <p class="next__title">Apps <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></p>
         </div>
     </a>
+</main>
 
-    <h3>Lifty</h3>
-
-    <p>
-        Diseño y desarrollo de una plataforma web de accesibilidad para personas con diversidad funcional, creada con HTML, CSS y JavaScript e integrada con funcionalidades basadas en inteligencia artificial.
-    </p>
-</div>
-    <!-- Lightbox -->
-    <div class="lightbox" id="lightbox">
-        <span class="lightbox-close" id="lightbox-close">×</span>
-        <img class="lightbox-img" id="lightbox-img" src="" alt="Imagen ampliada">
+<footer class="footer">
+    <div class="wrap footer__inner mono">
+        <span>© 2026 Mireia Killinger</span>
+        <a href="mailto:mkillingerdesign@gmail.com" class="muted">mkillingerdesign@gmail.com</a>
+        <a href="#top" class="to-top">Volver arriba <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
+</footer>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2026 Mireia Killinger</p>
+<div class="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imágenes" aria-hidden="true">
+    <div class="lightbox__top mono">
+        <span class="lightbox__count">01 / 01</span>
+        <button type="button" class="lightbox__btn lightbox__close" aria-label="Cerrar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+    </div>
+    <div class="lightbox__stage"><img class="lightbox__img" src="data:," alt=""></div>
+    <div class="lightbox__bottom">
+        <p class="lightbox__caption"></p>
+        <div class="lightbox__nav">
+            <button type="button" class="lightbox__btn lightbox__prev" aria-label="Anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+            <button type="button" class="lightbox__btn lightbox__next" aria-label="Siguiente"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
         </div>
-    </footer>
+    </div>
+</div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="webs.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 800,
-        });
-    </script>
+<div class="toast mono" role="status" aria-live="polite"></div>
+
+<script src="../assets/vendor/gsap.min.js" defer></script>
+<script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
+<script src="../assets/vendor/lenis.min.js" defer></script>
+<script src="../assets/js/main.js" defer></script>
 </body>
 </html>
