@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multimedia — Mireia Killinger</title>
-    <meta name="description" content="Fotografía de paisaje, retrato y motor, y vídeo cinematográfico de Mireia Killinger.">
-    <meta name="theme-color" content="#3d3dff">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233d3dff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
+    <title>Vídeo y foto — Mireia Killinger</title>
+    <meta name="description" content="Vídeo cinematográfico y fotografía de Mireia Killinger: edición, color, retrato, paisaje y motor.">
+    <meta name="theme-color" content="#070a1a">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%237f6bff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
     <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || "dark";</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/main.css">
 </head>
 
@@ -18,6 +18,7 @@
 
 <a class="skip-link" href="#main">Saltar al contenido</a>
 
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i><span class="mesh__grid"></span></div>
 <div class="grain" aria-hidden="true"></div>
 <div class="progress" aria-hidden="true"></div>
 <div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
@@ -26,13 +27,13 @@
 
 <header class="header">
     <div class="wrap header__inner">
-        <a href="../index.html" class="logo" aria-label="Volver al inicio">MK<sup>©</sup></a>
+        <a href="../index.html" class="logo" aria-label="Volver al inicio">mireia<b>.design</b></a>
 
         <nav class="nav" aria-label="Áreas">
             <a href="../WEBS/webs.html"><span class="roll"><span>Webs</span><span>Webs</span></span></a>
             <a href="../LIFTY/lifty.html"><span class="roll"><span>Apps</span><span>Apps</span></span></a>
             <a href="../DISEÑO/diseño.html"><span class="roll"><span>Diseño</span><span>Diseño</span></span></a>
-            <a href="../MULTIMEDIA/foto.html" aria-current="page" style="opacity:.45"><span class="roll"><span>Multimedia</span><span>Multimedia</span></span></a>
+            <a href="../MULTIMEDIA/foto.html" aria-current="page" style="opacity:.45"><span class="roll"><span>Vídeo & foto</span><span>Vídeo & foto</span></span></a>
         </nav>
 
         <div class="header__right">
@@ -51,7 +52,7 @@
         <li><a href="../WEBS/webs.html"><small>01</small>Webs</a></li>
         <li><a href="../LIFTY/lifty.html"><small>02</small>Apps</a></li>
         <li><a href="../DISEÑO/diseño.html"><small>03</small>Diseño</a></li>
-        <li><a href="../MULTIMEDIA/foto.html" aria-current="page"><small>04</small>Multimedia</a></li>
+        <li><a href="../MULTIMEDIA/foto.html" aria-current="page"><small>04</small>Vídeo & foto</a></li>
     </ul>
     <div class="menu__foot mono">
         <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
@@ -66,91 +67,59 @@
             <a href="../index.html#trabajo" class="back-link mono" data-intro><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Volver al portfolio</a>
             <span class="label" data-intro>Área 04</span>
             <h1 class="page-hero__title display h-xl" data-split-intro style="margin-top: 18px;">
-                <span class="line-mask"><span>Multi</span></span>
-                <span class="line-mask"><span><span class="serif">media</span></span></span>
+                <span class="line-mask"><span>Vídeo</span></span>
+                <span class="line-mask"><span><span class="serif">&amp; foto</span></span></span>
             </h1>
             <div class="page-hero__foot">
-                <p class="page-hero__lead" data-intro>Fotografía, vídeo y postproducción para comunicación, redes sociales y proyectos de marca.</p>
-                <nav class="page-hero__nav" aria-label="Secciones" data-intro><a href="#paisajes">Paisajes</a><a href="#retratos">Retratos</a><a href="#motos">Motos</a><a href="#videos">Vídeos</a></nav>
+                <p class="page-hero__lead" data-intro>Grabación, montaje, color y fotografía para marcas, redes sociales y proyectos propios. Edito con Premiere Pro y After Effects.</p>
+                <nav class="page-hero__nav" aria-label="Secciones" data-intro><a href="#videos">Vídeos</a><a href="#motos">Motos</a><a href="#retratos">Retratos</a><a href="#paisajes">Paisajes</a></nav>
             </div>
         </div>
     </section>
 
-    <section class="block" id="paisajes">
+    <section class="block" id="videos">
         <div class="wrap">
             <div class="block__head">
-                <span class="block__num label">01 — Naturaleza</span>
-                <h2 class="block__title" data-split-scroll>Pai<span class="serif">sajes</span></h2>
-                <p class="block__desc" data-reveal>La belleza de la naturaleza en distintos entornos, con atención a la luz y la textura.</p>
+                <span class="block__num label">01 — Vídeo</span>
+                <h2 class="block__title" data-split-scroll>Ví<span class="serif">deos</span></h2>
+                <p class="block__desc" data-reveal>Piezas cinematográficas para redes que destacan acrobacias y experiencias en moto. Grabación, montaje y color.</p>
             </div>
-            <div class="masonry">
-            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
-                <div class="tile__media">
-                    <img src="../assets/img/foto1.webp" alt="Fotografía de paisaje 1" loading="lazy">
+            <div class="video-hero">
+                <div class="video-tile" data-reveal data-delay="0.00" data-cursor="Play">
+                    <video preload="none" playsinline poster="../assets/img/3.webp">
+                        <source src="../img/alex1.mp4" type="video/mp4">
+                    </video>
+                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Alex · 01"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
+                    <span class="video-tile__label mono">Alex · 01</span>
                 </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
-                <div class="tile__media">
-                    <img src="../assets/img/foto2.webp" alt="Fotografía de paisaje 2" loading="lazy">
+                <div class="video-tile" data-reveal data-delay="0.06" data-cursor="Play">
+                    <video preload="none" playsinline poster="../assets/img/4.webp">
+                        <source src="../img/polstunt1.mp4" type="video/mp4">
+                    </video>
+                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Pol Ferrer · 01"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
+                    <span class="video-tile__label mono">Pol Ferrer · 01</span>
                 </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.12">
-                <div class="tile__media">
-                    <img src="../assets/img/foto3.webp" alt="Fotografía de paisaje 3" loading="lazy">
+                <div class="video-tile" data-reveal data-delay="0.12" data-cursor="Play">
+                    <video preload="none" playsinline poster="../assets/img/moto7.webp">
+                        <source src="../img/polstunt2.mp4" type="video/mp4">
+                    </video>
+                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Pol Ferrer · 02"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
+                    <span class="video-tile__label mono">Pol Ferrer · 02</span>
                 </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
-                <div class="tile__media">
-                    <img src="../assets/img/foto4.webp" alt="Fotografía de paisaje 4" loading="lazy">
+                <div class="video-tile" data-reveal data-delay="0.00" data-cursor="Play">
+                    <video preload="none" playsinline poster="../assets/img/2.webp">
+                        <source src="../img/adri1.mp4" type="video/mp4">
+                    </video>
+                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Adri · 01"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
+                    <span class="video-tile__label mono">Adri · 01</span>
                 </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
-                <div class="tile__media">
-                    <img src="../assets/img/paisaje5.webp" alt="Fotografía de paisaje 5" loading="lazy">
+                <div class="video-tile" data-reveal data-delay="0.06" data-cursor="Play">
+                    <video preload="none" playsinline poster="../assets/img/1.webp">
+                        <source src="../img/adri2.mp4" type="video/mp4">
+                    </video>
+                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Adri · 02"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
+                    <span class="video-tile__label mono">Adri · 02</span>
                 </div>
-            </button>
-            </div>
-        </div>
-    </section>
-
-    <section class="block" id="retratos">
-        <div class="wrap">
-            <div class="block__head">
-                <span class="block__num label">02 — Personas</span>
-                <h2 class="block__title" data-split-scroll>Retra<span class="serif">tos</span></h2>
-                <p class="block__desc" data-reveal>Retrato urbano y de estudio: actitud, composición y color.</p>
-            </div>
-            <div class="masonry">
-            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
-                <div class="tile__media">
-                    <img src="../assets/img/persona3.webp" alt="Retrato 1" loading="lazy">
-                </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
-                <div class="tile__media">
-                    <img src="../assets/img/persona5.webp" alt="Retrato 2" loading="lazy">
-                </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.12">
-                <div class="tile__media">
-                    <img src="../assets/img/persona8.webp" alt="Retrato 3" loading="lazy">
-                </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
-                <div class="tile__media">
-                    <img src="../assets/img/fotopersona1.webp" alt="Retrato 4" loading="lazy">
-                </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
-                <div class="tile__media">
-                    <img src="../assets/img/fotopersona3.webp" alt="Retrato 5" loading="lazy">
-                </div>
-            </button>
-            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.12">
-                <div class="tile__media">
-                    <img src="../assets/img/persona6.webp" alt="Retrato 6" loading="lazy">
-                </div>
-            </button>
             </div>
         </div>
     </section>
@@ -158,7 +127,7 @@
     <section class="block" id="motos">
         <div class="wrap">
             <div class="block__head">
-                <span class="block__num label">03 — Motor</span>
+                <span class="block__num label">02 — Motor</span>
                 <h2 class="block__title" data-split-scroll>Mo<span class="serif">tos</span></h2>
                 <p class="block__desc" data-reveal>Motocicletas y stunt capturados en acción: velocidad, humo y precisión.</p>
             </div>
@@ -202,49 +171,81 @@
         </div>
     </section>
 
-    <section class="block" id="videos">
+    <section class="block" id="retratos">
         <div class="wrap">
             <div class="block__head">
-                <span class="block__num label">04 — Vídeo</span>
-                <h2 class="block__title" data-split-scroll>Ví<span class="serif">deos</span></h2>
-                <p class="block__desc" data-reveal>Piezas cinematográficas para redes que destacan acrobacias y experiencias en moto. Grabación, montaje y color.</p>
+                <span class="block__num label">03 — Personas</span>
+                <h2 class="block__title" data-split-scroll>Retra<span class="serif">tos</span></h2>
+                <p class="block__desc" data-reveal>Retrato urbano y de estudio: actitud, composición y color.</p>
             </div>
-            <div class="grid grid--5">
-                <div class="video-tile" data-reveal data-delay="0.00" data-cursor="Play">
-                    <video preload="none" playsinline poster="../assets/img/4.webp">
-                        <source src="../img/polstunt1.mp4" type="video/mp4">
-                    </video>
-                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Pol Ferrer · 01"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
-                    <span class="video-tile__label mono">Pol Ferrer · 01</span>
+            <div class="masonry">
+            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media">
+                    <img src="../assets/img/persona3.webp" alt="Retrato 1" loading="lazy">
                 </div>
-                <div class="video-tile" data-reveal data-delay="0.06" data-cursor="Play">
-                    <video preload="none" playsinline poster="../assets/img/moto7.webp">
-                        <source src="../img/polstunt2.mp4" type="video/mp4">
-                    </video>
-                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Pol Ferrer · 02"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
-                    <span class="video-tile__label mono">Pol Ferrer · 02</span>
+            </button>
+            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
+                <div class="tile__media">
+                    <img src="../assets/img/persona5.webp" alt="Retrato 2" loading="lazy">
                 </div>
-                <div class="video-tile" data-reveal data-delay="0.12" data-cursor="Play">
-                    <video preload="none" playsinline poster="../assets/img/2.webp">
-                        <source src="../img/adri1.mp4" type="video/mp4">
-                    </video>
-                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Adri · 01"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
-                    <span class="video-tile__label mono">Adri · 01</span>
+            </button>
+            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.12">
+                <div class="tile__media">
+                    <img src="../assets/img/persona8.webp" alt="Retrato 3" loading="lazy">
                 </div>
-                <div class="video-tile" data-reveal data-delay="0.18" data-cursor="Play">
-                    <video preload="none" playsinline poster="../assets/img/1.webp">
-                        <source src="../img/adri2.mp4" type="video/mp4">
-                    </video>
-                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Adri · 02"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
-                    <span class="video-tile__label mono">Adri · 02</span>
+            </button>
+            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media">
+                    <img src="../assets/img/fotopersona1.webp" alt="Retrato 4" loading="lazy">
                 </div>
-                <div class="video-tile" data-reveal data-delay="0.24" data-cursor="Play">
-                    <video preload="none" playsinline poster="../assets/img/3.webp">
-                        <source src="../img/alex1.mp4" type="video/mp4">
-                    </video>
-                    <button type="button" class="video-tile__play" aria-label="Reproducir vídeo Alex · 01"><span><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6 4l14 8-14 8z"/></svg></span></button>
-                    <span class="video-tile__label mono">Alex · 01</span>
+            </button>
+            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
+                <div class="tile__media">
+                    <img src="../assets/img/fotopersona3.webp" alt="Retrato 5" loading="lazy">
                 </div>
+            </button>
+            <button type="button" class="tile " data-lightbox="retratos" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.12">
+                <div class="tile__media">
+                    <img src="../assets/img/persona6.webp" alt="Retrato 6" loading="lazy">
+                </div>
+            </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="block" id="paisajes">
+        <div class="wrap">
+            <div class="block__head">
+                <span class="block__num label">04 — Naturaleza</span>
+                <h2 class="block__title" data-split-scroll>Pai<span class="serif">sajes</span></h2>
+                <p class="block__desc" data-reveal>La belleza de la naturaleza en distintos entornos, con atención a la luz y la textura.</p>
+            </div>
+            <div class="masonry">
+            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media">
+                    <img src="../assets/img/foto1.webp" alt="Fotografía de paisaje 1" loading="lazy">
+                </div>
+            </button>
+            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
+                <div class="tile__media">
+                    <img src="../assets/img/foto2.webp" alt="Fotografía de paisaje 2" loading="lazy">
+                </div>
+            </button>
+            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.12">
+                <div class="tile__media">
+                    <img src="../assets/img/foto3.webp" alt="Fotografía de paisaje 3" loading="lazy">
+                </div>
+            </button>
+            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.00">
+                <div class="tile__media">
+                    <img src="../assets/img/foto4.webp" alt="Fotografía de paisaje 4" loading="lazy">
+                </div>
+            </button>
+            <button type="button" class="tile " data-lightbox="paisajes" data-caption="" data-cursor="Ampliar" data-reveal data-delay="0.06">
+                <div class="tile__media">
+                    <img src="../assets/img/paisaje5.webp" alt="Fotografía de paisaje 5" loading="lazy">
+                </div>
+            </button>
             </div>
         </div>
     </section>

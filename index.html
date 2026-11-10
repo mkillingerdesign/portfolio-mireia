@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mireia Killinger — Diseñadora UX/UI y gráfica</title>
-    <meta name="description" content="Portfolio de Mireia Killinger, diseñadora UX/UI y gráfica en Barcelona: producto digital, diseño web, interacción, accesibilidad, identidad visual e integración con IA.">
-    <meta name="theme-color" content="#3d3dff">
-    <meta property="og:title" content="Mireia Killinger — Diseñadora UX/UI y gráfica">
+    <title>Mireia Killinger — Diseño gráfico, UI/UX, web, app y vídeo</title>
+    <meta name="description" content="Portfolio de Mireia Killinger, diseñadora gráfica y UI/UX en Barcelona: webs, apps, vídeo, identidad visual y producto digital.">
+    <meta name="theme-color" content="#070a1a">
+    <meta property="og:title" content="Mireia Killinger — Diseño gráfico, UI/UX, web, app y vídeo">
     <meta property="og:description" content="Producto digital, web, interacción e identidad visual.">
     <meta property="og:image" content="assets/img/mk.webp">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%233d3dff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%237f6bff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
     <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || "dark";</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
@@ -21,6 +21,7 @@
 
 <a class="skip-link" href="#main">Saltar al contenido</a>
 
+<div class="mesh" aria-hidden="true"><i></i><i></i><i></i><span class="mesh__grid"></span></div>
 <div class="grain" aria-hidden="true"></div>
 <div class="progress" aria-hidden="true"></div>
 <div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
@@ -34,7 +35,7 @@
         <span>Barcelona</span>
     </div>
     <div class="preloader__bottom">
-        <div class="preloader__name"><span>M</span><span>i</span><span>r</span><span>e</span><span>i</span><span>a</span><span>&nbsp;</span><span>K</span><span>.</span></div>
+        <div class="preloader__name"><span>m</span><span>i</span><span>r</span><span>e</span><span>i</span><span>a</span><span>.</span></div>
         <div class="preloader__count">000</div>
     </div>
 </div>
@@ -42,7 +43,7 @@
 <!-- Header -->
 <header class="header">
     <div class="wrap header__inner">
-        <a href="#top" class="logo" aria-label="Inicio">MK<sup>©</sup></a>
+        <a href="#top" class="logo" aria-label="Inicio">mireia<b>.design</b></a>
 
         <nav class="nav" aria-label="Principal">
             <a href="#sobre-mi"><span class="roll"><span>Sobre mí</span><span>Sobre mí</span></span></a>
@@ -84,64 +85,66 @@
         <div class="hero__trail" aria-hidden="true"
              data-images="assets/img/portadajordans.webp, assets/img/oreo3.webp, assets/img/moto10.webp, assets/img/skyline1.webp, assets/img/ktm1.webp, assets/img/portadamusica.webp, assets/img/merch1.webp, assets/img/persona3.webp, assets/img/goco.webp, assets/img/foto1.webp, assets/img/memoria1.webp, assets/img/portadapeli.webp"></div>
 
-        <div class="wrap hero__meta mono">
-            <span data-intro>Portfolio ©2026</span>
-            <span data-intro class="muted">Mueve el ratón · cada trazo es un proyecto</span>
-            <span data-intro><span class="status-dot"></span>Disponible para proyectos</span>
-        </div>
+        <div class="wrap">
+            <div class="hero__layout">
+                <div>
+                    <span class="label" data-intro>Disponible para proyectos</span>
+                    <h1 class="hero__title display" data-split-intro aria-label="Diseño productos digitales claros y humanos">
+                        <span class="line-mask"><span>Diseño productos</span></span>
+                        <span class="line-mask"><span>digitales <span class="serif">claros</span></span></span>
+                        <span class="line-mask"><span><span class="serif">y humanos.</span></span></span>
+                    </h1>
+                    <p class="hero__lead" data-intro>
+                        Soy <strong>Mireia Killinger</strong>, diseñadora gráfica y UI/UX en Barcelona.
+                        Creo <strong>webs, apps y vídeo</strong> centrados en el usuario, de la idea al prototipo, y sé cómo se programan.
+                    </p>
+                    <div class="hero__ctas" data-intro>
+                        <a href="#trabajo" class="btn btn--solid magnetic">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                        <a href="#contacto" class="btn magnetic">Contactar</a>
+                    </div>
+                </div>
 
-        <h1 class="wrap hero__title display h-xl" data-split-intro aria-label="Mireia Killinger, diseñadora UX/UI y gráfica">
-            <span class="row">
-                <span class="line-mask"><span>Mireia</span></span>
-                <span class="serif" data-intro>diseñadora UX/UI &amp; gráfica</span>
-            </span>
-            <span class="row row--2">
-                <span class="line-mask"><span>Killinger</span></span>
-            </span>
-        </h1>
+                <aside class="profile glass" data-intro data-tilt>
+                    <div class="profile__img">
+                        <img src="assets/img/mk.webp" alt="Retrato de Mireia Killinger" width="1448" height="1086">
+                    </div>
+                    <div class="profile__rows">
+                        <div><b>Mireia Killinger</b><span>Barcelona</span></div>
+                        <div><span>Ahora</span><span>GOCO · SWS</span></div>
+                        <div><span>Hago</span><span>Gráfica · UI/UX · Web · App · Vídeo</span></div>
+                    </div>
+                </aside>
+            </div>
 
-        <div class="wrap hero__bottom">
-            <p class="hero__intro" data-intro>
-                Diseño webs y productos digitales centrados en el usuario, desde la idea hasta el diseño final,
-                y entiendo cómo se programan.
-            </p>
-
-            <p class="rotator" data-intro>
-                Diseño
-                <span class="rotator__window">
-                    <span class="rotator__list">
-                        <span>UX/UI.</span>
-                        <span>de producto.</span>
-                        <span>web.</span>
-                        <span>accesible.</span>
-                        <span>gráfico.</span>
-                        <span>con IA.</span>
+            <div class="hero__foot">
+                <p class="rotator" data-intro>
+                    Diseño
+                    <span class="rotator__window">
+                        <span class="rotator__list">
+                            <span>gráfico.</span>
+                            <span>UI/UX.</span>
+                            <span>web.</span>
+                            <span>de apps.</span>
+                            <span>en vídeo.</span>
+                            <span>con IA.</span>
+                        </span>
                     </span>
-                </span>
-            </p>
-
-            <a href="#trabajo" class="badge magnetic" data-strength="0.5" aria-label="Ver trabajo" data-intro>
-                <svg class="badge__ring" viewBox="0 0 100 100" aria-hidden="true">
-                    <defs><path id="circle" d="M50,50 m-40,0 a40,40 0 1,1 80,0 a40,40 0 1,1 -80,0"/></defs>
-                    <text><textPath href="#circle" textLength="248" lengthAdjust="spacing">Ver trabajo ✦ Ver trabajo ✦ </textPath></text>
-                </svg>
-                <span class="badge__arrow">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
-                </span>
-            </a>
+                </p>
+                <span class="scroll-hint" data-intro><span></span>Desliza para ver más</span>
+            </div>
         </div>
     </section>
 
     <!-- ============ MARQUEE ============ -->
-    <div class="marquee" data-speed="0.7" aria-hidden="true">
+    <div class="marquee" data-speed="0.6" aria-hidden="true">
         <div class="marquee__track">
             <div class="marquee__group">
-                <span class="marquee__item">UX/UI <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
-                <span class="marquee__item"><span class="serif">Diseño web</span> <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
-                <span class="marquee__item">Accesibilidad <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+                <span class="marquee__item">Diseño gráfico <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+                <span class="marquee__item"><span class="serif">UI/UX</span> <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+                <span class="marquee__item">Web <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+                <span class="marquee__item"><span class="serif">Apps</span> <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+                <span class="marquee__item">Vídeo <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
                 <span class="marquee__item"><span class="serif">Identidad visual</span> <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
-                <span class="marquee__item">Interacción <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
-                <span class="marquee__item"><span class="serif">Producto digital</span> <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
                 <span class="marquee__item">IA aplicada <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
             </div>
         </div>
@@ -160,7 +163,7 @@
 
             <div class="about__grid">
                 <div class="about__portrait">
-                    <div class="about__sticker" aria-hidden="true">print<br>&amp; pixel</div>
+                    <div class="about__sticker" aria-hidden="true">UI/UX<br>+ vídeo</div>
                     <div class="portrait" data-reveal="clip" data-cursor="Hola!">
                         <img src="assets/img/mk.webp" alt="Retrato de Mireia Killinger" data-speed="0.6" loading="lazy" width="1448" height="1086">
                         <span class="portrait__tag mono">Barcelona · ES</span>
@@ -169,7 +172,7 @@
 
                 <div class="about__body">
                     <p class="statement" data-words>
-                        Soy diseñadora UX/UI con base en diseño gráfico. Diseño webs y productos digitales
+                        Soy diseñadora gráfica y UI/UX. Diseño webs, apps y vídeo
                         <span class="serif accent">centrados en el usuario</span>, desde la idea hasta el diseño final,
                         y entiendo <span class="serif accent">cómo se programan</span>.
                     </p>
@@ -182,7 +185,7 @@
                         </p>
                         <p data-reveal data-delay="0.1">
                             Me motivan las experiencias digitales creativas y fuera de lo común. Me gusta trabajar en equipo,
-                            recibir feedback y seguir aprendiendo. Trabajo con Figma, Adobe, HTML, CSS, WordPress y herramientas de IA.
+                            recibir feedback y seguir aprendiendo. Trabajo con Figma, Photoshop, Illustrator, Premiere Pro, After Effects, HTML, CSS, WordPress y herramientas de IA.
                         </p>
                     </div>
 
@@ -216,7 +219,7 @@
                 <span class="section-head__label label">(02) Trabajo</span>
                 <h2 class="section-head__title display h-lg" data-split-scroll>
                     <span class="line-mask"><span>Cuatro áreas,</span></span>
-                    <span class="line-mask"><span><span class="serif">una</span> mirada</span></span>
+                    <span class="line-mask"><span><span class="serif">una mirada</span></span></span>
                 </h2>
             </div>
 
@@ -241,8 +244,8 @@
                 </a>
                 <a href="MULTIMEDIA/foto.html" class="index-row" data-key="media" data-cursor="Explorar">
                     <span class="index-row__num">04</span>
-                    <span class="index-row__title">Multimedia</span>
-                    <span class="index-row__tags"><span>Fotografía</span><span>Vídeo</span><span>Postproducción</span></span>
+                    <span class="index-row__title">Vídeo &amp; foto</span>
+                    <span class="index-row__tags"><span>Vídeo</span><span>Premiere</span><span>After Effects</span><span>Fotografía</span></span>
                     <span class="index-row__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
                 </a>
             </div>
@@ -270,9 +273,9 @@
             <div class="wrap showcase__intro">
                 <div>
                     <span class="label">Selección</span>
-                    <h2 id="destacados" class="display h-md" style="margin-top: 14px;">Proyectos <span class="serif accent" style="text-transform:none">destacados</span></h2>
+                    <h2 id="destacados" class="display h-md" style="margin-top: 14px;">Proyectos <span class="serif">destacados</span></h2>
                 </div>
-                <p class="mono muted">Desliza hacia abajo → la galería avanza</p>
+                <p class="muted">Sigue bajando: la galería avanza en horizontal</p>
             </div>
 
             <div class="showcase__track">
@@ -288,6 +291,20 @@
                     <p class="card__desc">Proyecto destacado: app web de accesibilidad para ganar independencia. UX/UI, desarrollo HTML/CSS e IA.</p>
                 </a>
 
+                <a href="MULTIMEDIA/foto.html#videos" class="card" data-cursor="Ver vídeo" data-hover-video>
+                    <div class="card__media">
+                        <span class="card__chip mono">Vídeo · Edición · Color</span>
+                        <video muted loop playsinline preload="none" poster="assets/img/moto10.webp">
+                            <source src="img/polstunt1.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="card__info">
+                        <h3 class="card__title">Stunt &amp; Motion</h3>
+                        <span class="card__num mono">02</span>
+                    </div>
+                    <p class="card__desc">Vídeo cinematográfico para redes: grabación, montaje y color. Pasa el ratón para verlo.</p>
+                </a>
+
                 <a href="WEBS/webs.html#funcionales" class="card" data-cursor="Ver web">
                     <div class="card__media">
                         <span class="card__chip mono">Web · WordPress</span>
@@ -295,7 +312,7 @@
                     </div>
                     <div class="card__info">
                         <h3 class="card__title">GOCO Autoescola</h3>
-                        <span class="card__num mono">02</span>
+                        <span class="card__num mono">03</span>
                     </div>
                     <p class="card__desc">Diseño, mantenimiento y mejora de la web en WordPress, con ajustes en HTML y CSS.</p>
                 </a>
@@ -307,7 +324,7 @@
                     </div>
                     <div class="card__info">
                         <h3 class="card__title">Supermoto World Shop</h3>
-                        <span class="card__num mono">03</span>
+                        <span class="card__num mono">04</span>
                     </div>
                     <p class="card__desc">Webs, campañas (banners, pop-ups y emails), vinilos, papelería y catálogo.</p>
                 </a>
@@ -319,7 +336,7 @@
                     </div>
                     <div class="card__info">
                         <h3 class="card__title">Oreo × Social</h3>
-                        <span class="card__num mono">04</span>
+                        <span class="card__num mono">05</span>
                     </div>
                     <p class="card__desc">Estrategia en cinco etapas: de awareness a loyalty.</p>
                 </a>
@@ -331,7 +348,7 @@
                     </div>
                     <div class="card__info">
                         <h3 class="card__title">Graape Art</h3>
-                        <span class="card__num mono">05</span>
+                        <span class="card__num mono">06</span>
                     </div>
                     <p class="card__desc">Identidad completa: manual, memoria corporativa, web y merchandising.</p>
                 </a>
@@ -343,31 +360,21 @@
                     </div>
                     <div class="card__info">
                         <h3 class="card__title">Épocas del Año</h3>
-                        <span class="card__num mono">06</span>
+                        <span class="card__num mono">07</span>
                     </div>
                     <p class="card__desc">Portada conceptual de videojuego a través de las estaciones.</p>
                 </a>
 
-                <a href="MULTIMEDIA/foto.html" class="card" data-cursor="Ver">
-                    <div class="card__media">
-                        <span class="card__chip mono">Foto · Vídeo</span>
-                        <img src="assets/img/moto10.webp" alt="Fotografía de stunt en moto" loading="lazy">
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">Stunt &amp; Motion</h3>
-                        <span class="card__num mono">07</span>
-                    </div>
-                    <p class="card__desc">Fotografía y vídeo cinematográfico de acrobacias en moto.</p>
-                </a>
 
                 <div class="showcase__end">
-                    <p class="display h-md">¿Más<span class="serif accent" style="text-transform:none"> trabajo</span>?</p>
+                    <p class="display h-md">¿Más <span class="serif">trabajo</span>?</p>
                     <p class="muted">Cada área tiene su propia página con procesos, prototipos y galerías completas.</p>
                     <div><a href="DISEÑO/diseño.html" class="btn magnetic">Ver diseño gráfico
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
                 </div>
             </div>
         </div>
+        <div class="showcase__bar" aria-hidden="true"><i></i></div>
         <div style="height: clamp(40px, 5vw, 72px);"></div>
     </section>
 
@@ -411,10 +418,10 @@
                         </div>
                     </div>
                     <div class="skill-group" data-reveal>
-                        <h3><span>Software</span><span>02</span></h3>
+                        <h3><span>Software &amp; vídeo</span><span>02</span></h3>
                         <div class="chips">
                             <span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">InDesign</span>
-                            <span class="chip">Premiere Pro</span><span class="chip">After Effects</span>
+                            <span class="chip">Premiere Pro</span><span class="chip">After Effects</span><span class="chip">Edición y color</span><span class="chip">Fotografía</span>
                         </div>
                     </div>
                     <div class="skill-group" data-reveal>
@@ -597,8 +604,8 @@
         <div class="marquee marquee--plain" data-speed="0.5" data-dir="right" aria-hidden="true">
             <div class="marquee__track">
                 <div class="marquee__group">
-                    <span class="marquee__item">¿Tienes un proyecto? <svg class="marquee__star accent" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
-                    <span class="marquee__item"><span class="serif">Hagámoslo bonito</span> <svg class="marquee__star accent" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+                    <span class="marquee__item">¿Tienes un proyecto? <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+                    <span class="marquee__item"><span class="serif">Hagámoslo realidad</span> <svg class="marquee__star" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
                 </div>
             </div>
         </div>
@@ -606,13 +613,13 @@
         <div class="wrap" style="padding-top: clamp(64px, 9vw, 140px);">
             <span class="label">(06) Contacto</span>
             <h2 class="contact__big" data-slide-x="6" style="margin-top: 28px;">
-                Hablemos<span class="serif">,</span><br>
-                <span class="serif">va —</span> ¡hola!
+                Hablemos<br>
+                <span class="serif">de tu proyecto</span>
             </h2>
 
             <div class="contact__grid">
                 <p class="contact__lead" data-reveal>
-                    Disponible para proyectos de producto digital, UX/UI, web e identidad visual.
+                    Disponible para proyectos de diseño gráfico, UI/UX, webs, apps y vídeo.
                     Escríbeme y lo convertimos en algo claro, útil y que se recuerde.
                 </p>
 
