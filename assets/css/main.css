@@ -5,26 +5,26 @@
 
 :root,
 [data-theme="dark"] {
-    --bg: #03110e;
-    --bg-2: rgba(230, 255, 246, 0.05);
-    --fg: #e6fff6;
-    --muted: #9cc9b9;
-    --line: rgba(160, 255, 220, 0.12);
-    --accent: #3dffa8;
-    --accent-2: #19c6ff;
-    --accent-3: #2b6bff;
-    --accent-fg: #03110e;
-    --accent-soft: rgba(61, 255, 168, 0.16);
-    --hl-rgb: 61, 255, 168;
-    --grad: linear-gradient(90deg, #3dffa8, #19c6ff);
-    --grad-btn: linear-gradient(100deg, #3dffa8, #2ee6c8 55%, #19c6ff);
-    --glass: rgba(230, 255, 246, 0.05);
-    --glass-strong: rgba(230, 255, 246, 0.09);
-    --glass-border: rgba(160, 255, 220, 0.16);
+    --bg: #050a1f;
+    --bg-2: rgba(230, 235, 255, 0.05);
+    --fg: #eef0ff;
+    --muted: #a3acd6;
+    --line: rgba(180, 190, 255, 0.12);
+    --accent: #b49cff;
+    --accent-2: #6fa8ff;
+    --accent-3: #4d6bff;
+    --accent-fg: #ffffff;
+    --accent-soft: rgba(157, 123, 255, 0.2);
+    --hl-rgb: 157, 123, 255;
+    --grad: linear-gradient(90deg, #c4b0ff, #8f86ff 45%, #5aa2ff);
+    --grad-btn: linear-gradient(100deg, #9d7bff, #7b7dff 50%, #4d8bff);
+    --glass: rgba(230, 235, 255, 0.05);
+    --glass-strong: rgba(230, 235, 255, 0.09);
+    --glass-border: rgba(180, 190, 255, 0.16);
     --glass-shadow: none;
-    --glow-1: rgba(18, 214, 140, 0.5);
-    --glow-2: rgba(25, 198, 255, 0.35);
-    --glow-3: rgba(43, 107, 255, 0.3);
+    --glow-1: rgba(140, 110, 255, 0.5);
+    --glow-2: rgba(70, 140, 255, 0.38);
+    --glow-3: rgba(80, 90, 255, 0.3);
 
     --f-display: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
     --f-serif: "Space Grotesk", "Helvetica Neue", Arial, sans-serif;
@@ -4264,7 +4264,7 @@ body {
 :root:not([data-theme="light"]) .mesh i:nth-child(1) {
     top: -10vh;
     bottom: auto;
-    background: linear-gradient(90deg, transparent, rgba(18, 214, 140, 0.34) 30%, rgba(25, 198, 255, 0.28) 60%, transparent);
+    background: linear-gradient(90deg, transparent, rgba(150, 110, 255, 0.36) 30%, rgba(70, 140, 255, 0.3) 60%, transparent);
     animation: aurora 12s ease-in-out infinite alternate;
 }
 
@@ -4272,14 +4272,14 @@ body {
     top: 30vh;
     bottom: auto;
     height: 30vh;
-    background: linear-gradient(90deg, transparent, rgba(43, 107, 255, 0.2) 35%, rgba(61, 255, 168, 0.14) 65%, transparent);
+    background: linear-gradient(90deg, transparent, rgba(80, 100, 255, 0.22) 35%, rgba(190, 150, 255, 0.16) 65%, transparent);
     animation: aurora 16s ease-in-out infinite alternate-reverse;
 }
 
 :root:not([data-theme="light"]) .mesh i:nth-child(3) {
     top: auto;
     bottom: -14vh;
-    background: linear-gradient(90deg, transparent, rgba(25, 198, 255, 0.1) 40%, rgba(18, 214, 140, 0.1) 70%, transparent);
+    background: linear-gradient(90deg, transparent, rgba(90, 160, 255, 0.12) 40%, rgba(160, 120, 255, 0.12) 70%, transparent);
     animation: aurora 20s ease-in-out infinite alternate;
 }
 
@@ -4290,7 +4290,7 @@ body {
 
 /* Botón principal con brillo neón en oscuro */
 :root:not([data-theme="light"]) .btn--solid {
-    box-shadow: 0 0 30px rgba(61, 255, 168, 0.4);
+    box-shadow: 0 0 30px rgba(var(--hl-rgb), 0.45);
 }
 
 /* Cursor según el tema */
@@ -4328,3 +4328,19 @@ body {
 [data-theme="light"] .card__media--blue { background: linear-gradient(135deg, rgba(200, 184, 255, 0.7), rgba(168, 228, 255, 0.6)); }
 [data-theme="light"] .preloader::before,
 [data-theme="light"] .menu::before { opacity: 0.9; }
+
+
+/* Modo oscuro azul y lila: etiquetas y fechas con el acento */
+:root:not([data-theme="light"]) .label::before {
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+:root:not([data-theme="light"]) .job__date--now {
+    color: var(--accent);
+}
+
+:root:not([data-theme="light"]) .sticker--e {
+    background: linear-gradient(100deg, #6fa8ff, #9d7bff);
+    color: #ffffff;
+}
