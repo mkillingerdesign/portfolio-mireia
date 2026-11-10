@@ -258,10 +258,11 @@
 
     /* ---------- Títulos que entran letra a letra al hacer scroll ---------- */
     const scrollTitles = $$("[data-split-scroll]");
+    const hasGradient = (line) => !!line.querySelector(".serif");
     scrollTitles.forEach((el) => {
         if (reduced || !hasGSAP) return;
         $$(".line-mask > span", el).forEach((line) => {
-            const chars = splitChars(line);
+            const chars = hasGradient(line) ? [line] : splitChars(line);
             gsap.set(chars, { yPercent: 110 });
             const run = () => gsap.to(chars, { yPercent: 0, duration: 1.1, ease: "expo.out", stagger: 0.022 });
             if (hasST) ScrollTrigger.create({ trigger: el, start: "top 85%", once: true, onEnter: run });
@@ -271,7 +272,10 @@
 
     /* ---------- Intro de página (hero) ---------- */
     const heroChars = [];
-    $$("[data-split-intro] .line-mask > span").forEach((line) => heroChars.push(...splitChars(line)));
+    $$("[data-split-intro] .line-mask > span").forEach((line) => {
+        if (line.querySelector(".serif")) heroChars.push(line);
+        else heroChars.push(...splitChars(line));
+    });
     if (hasGSAP && !reduced) {
         gsap.set(heroChars, { yPercent: 115 });
         gsap.set("[data-intro]", { y: 30, opacity: 0 });
@@ -803,6 +807,63 @@
             tx = null;
         });
     }
+
+
+    /* ---------- Estilo digital: luces, brillo y vídeos ---------- */
+
+    // Las luces del fondo se desplazan un poco con el ratón.
+    const mesh = $(".mesh");
+    if (mesh && finePointer && !reduced) {
+        const m = { x: 0, y: 0, cx: 0, cy: 0 };
+        window.addEventListener("mousemove", (e) => {
+            m.x = (e.clientX / window.innerWidth - 0.5) * 40;
+            m.y = (e.clientY / window.innerHeight - 0.5) * 40;
+        }, { passive: true });
+        const meshLoop = () => {
+            m.cx = lerp(m.cx, m.x, 0.04);
+            m.cy = lerp(m.cy, m.y, 0.04);
+            mesh.style.transform = `translate3d(${m.cx}px, ${m.cy}px, 0)`;
+            requestAnimationFrame(meshLoop);
+        };
+        meshLoop();
+    }
+
+    // Brillo que sigue al ratón dentro de las superficies de cristal.
+    const spotSel = ".index-row, .job, .edu-card, .skill-group, .lang, .social, .stat, .showcase__end, .profile, .tile__media, .card__media, .feature";
+    $$(spotSel).forEach((el) => {
+        el.classList.add("spot");
+        el.addEventListener("pointermove", (e) => {
+            const r = el.getBoundingClientRect();
+            el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+            el.style.setProperty("--my", (e.clientY - r.top) + "px");
+        });
+    });
+
+    // Tarjeta de perfil con inclinación 3D.
+    $$("[data-tilt]").forEach((el) => {
+        if (!finePointer || reduced) return;
+        el.addEventListener("mousemove", (e) => {
+            const r = el.getBoundingClientRect();
+            const rx = ((e.clientY - r.top) / r.height - 0.5) * -8;
+            const ry = ((e.clientX - r.left) / r.width - 0.5) * 8;
+            el.style.transform = `perspective(1000px) rotateX(${rx}deg) rotateY(${ry}deg)`;
+        });
+        el.addEventListener("mouseleave", () => { el.style.transform = ""; });
+    });
+
+    // Vídeos de las tarjetas: se reproducen al pasar el ratón (o al verse, en móvil).
+    $$("[data-hover-video]").forEach((card) => {
+        const v = $("video", card);
+        if (!v) return;
+        const play = () => { const pr = v.play(); if (pr && pr.catch) pr.catch(() => {}); };
+        if (finePointer) {
+            card.addEventListener("mouseenter", play);
+            card.addEventListener("mouseleave", () => v.pause());
+        } else if (!reduced) {
+            const o = new IntersectionObserver(([en]) => { en.isIntersecting ? play() : v.pause(); }, { threshold: 0.6 });
+            o.observe(card);
+        }
+    });
 
     /* ---------- Refrescar tras cargar imágenes ---------- */
     window.addEventListener("load", () => { if (hasST) ScrollTrigger.refresh(); });
