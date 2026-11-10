@@ -4157,3 +4157,78 @@ body {
     justify-self: start;
     align-self: start;
 }
+
+
+/* ---------- IA en mi trabajo ---------- */
+.ai__lead {
+    max-width: 62ch;
+    margin: 0 0 clamp(32px, 4vw, 56px) auto;
+    font-size: clamp(18px, 1.6vw, 24px);
+    line-height: 1.45;
+    font-weight: 300;
+    color: var(--muted);
+}
+
+.ai__lead strong {
+    color: var(--fg);
+    font-weight: 500;
+}
+
+.ai__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.ai-card {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding: clamp(22px, 2.2vw, 30px);
+    border-radius: var(--radius);
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    transition: border-color 0.4s, transform 0.6s var(--ease-out), box-shadow 0.4s;
+}
+
+.ai-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(127, 107, 255, 0.6);
+    box-shadow: 0 30px 60px -30px rgba(127, 107, 255, 0.7);
+}
+
+.ai-card__num {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 14px;
+    background: var(--grad-btn);
+    color: #fff;
+    box-shadow: 0 0 30px rgba(127, 107, 255, 0.45);
+}
+
+.ai-card h3 {
+    font-family: var(--f-display);
+    font-weight: 600;
+    font-size: clamp(22px, 1.9vw, 30px);
+    letter-spacing: -0.035em;
+    line-height: 1.05;
+}
+
+.ai-card p {
+    color: var(--muted);
+    font-size: 15px;
+    flex: 1;
+}
+
+@media (max-width: 1100px) {
+    .ai__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .ai__grid { grid-template-columns: 1fr; }
+    .ai__lead { margin-left: 0; }
+}
