@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css?v=9">
+    <link rel="stylesheet" href="assets/css/main.css?v=10">
 </head>
 
 <body class="page-home is-loading">
@@ -84,9 +84,22 @@
     <!-- ============ HERO ============ -->
     <section class="hero3" id="top">
         <div class="wrap hero3__grid">
-            <div class="hero3__photo" data-intro>
+            <div class="hero3__stack" data-intro aria-label="Proyectos destacados">
                 <span class="hero3__glow" aria-hidden="true"></span>
-                <img src="assets/img/mk-cut.webp" alt="Mireia Killinger" width="783" height="928" fetchpriority="high">
+                <a href="LIFTY/lifty.html" class="stack-card stack-card--1" data-depth="18" data-cursor="Ver app">
+                    <img src="assets/img/xd2.webp" alt="Prototipo de la app Lifty">
+                    <span class="stack-card__tag">Lifty · App UI/UX</span>
+                </a>
+                <a href="DISEÑO/diseño.html#disenos" class="stack-card stack-card--2" data-depth="34" data-cursor="Ver">
+                    <img src="assets/img/portadajordans.webp" alt="Cartel de Air Jordan">
+                    <span class="stack-card__tag">Cartel · Air Jordan</span>
+                </a>
+                <a href="WEBS/webs.html#funcionales" class="stack-card stack-card--3" data-depth="26" data-cursor="Ver web">
+                    <img src="assets/img/goco.webp" alt="Web de GOCO Autoescola">
+                    <span class="stack-card__tag">GOCO · Web</span>
+                </a>
+                <span class="stack-chip stack-chip--a" data-depth="44" aria-hidden="true">✦ UI/UX</span>
+                <span class="stack-chip stack-chip--b" data-depth="40" aria-hidden="true">▶ Vídeo</span>
             </div>
 
             <div class="hero3__text">
@@ -693,6 +706,6 @@
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=9" defer></script>
+<script src="assets/js/main.js?v=10" defer></script>
 </body>
 </html>
