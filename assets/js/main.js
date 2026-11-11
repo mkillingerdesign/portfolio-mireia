@@ -971,6 +971,28 @@
         });
     });
 
+
+    /* ---------- Composición de la portada: profundidad con el ratón ---------- */
+    const stack = $(".hero3__stack");
+    if (stack && finePointer && !reduced) {
+        const layers = $$("[data-depth]", stack);
+        const st = { x: 0, y: 0, cx: 0, cy: 0 };
+        stack.closest("section").addEventListener("mousemove", (e) => {
+            st.x = e.clientX / window.innerWidth - 0.5;
+            st.y = e.clientY / window.innerHeight - 0.5;
+        });
+        const loopStack = () => {
+            st.cx = lerp(st.cx, st.x, 0.06);
+            st.cy = lerp(st.cy, st.y, 0.06);
+            layers.forEach((l) => {
+                const d = parseFloat(l.dataset.depth);
+                l.style.transform = `translate3d(${(-st.cx * d).toFixed(2)}px, ${(-st.cy * d).toFixed(2)}px, 0)`;
+            });
+            requestAnimationFrame(loopStack);
+        };
+        loopStack();
+    }
+
     /* ---------- Refrescar tras cargar imágenes ---------- */
     window.addEventListener("load", () => { if (hasST) ScrollTrigger.refresh(); });
 })();
