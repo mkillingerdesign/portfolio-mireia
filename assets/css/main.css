@@ -6125,3 +6125,207 @@ body {
     .stack-me { width: 58%; margin-left: -29%; }
     .stack-card--3 { bottom: 12%; }
 }
+
+
+/* ---------- Portada tipo revista: nombre enorme detrás y retrato delante ---------- */
+.hero4 {
+    position: relative;
+    min-height: 100svh;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.hero4__glow {
+    position: absolute;
+    left: 50%;
+    bottom: -10%;
+    width: min(1100px, 110vw);
+    aspect-ratio: 1.2;
+    translate: -50% 0;
+    z-index: 0;
+    background:
+        radial-gradient(32% 38% at 50% 50%, rgba(var(--pink-rgb), 0.9), transparent 70%),
+        radial-gradient(28% 34% at 32% 46%, rgba(var(--lila-rgb), 0.6), transparent 72%),
+        radial-gradient(28% 34% at 68% 56%, rgba(var(--blue-rgb), 0.5), transparent 72%);
+    filter: blur(50px);
+    animation: glow-breathe 8s ease-in-out infinite alternate;
+    pointer-events: none;
+}
+
+.hero4__inner {
+    position: relative;
+    z-index: 1;
+    min-height: 100svh;
+    padding-top: calc(var(--header-h) + 24px);
+}
+
+.hero4__top {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    justify-items: center;
+    gap: 14px;
+    text-align: center;
+}
+
+.hero4__hello {
+    font-family: var(--f-display);
+    font-size: clamp(24px, 2.4vw, 38px);
+    line-height: 1;
+}
+
+.hero4__name {
+    position: relative;
+    z-index: 1;
+    margin-top: clamp(-6px, -0.5vw, 0px);
+    text-align: center;
+    line-height: 0.82;
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.hero4__name-in {
+    display: inline-block;
+    font-size: clamp(96px, 21vw, 360px);
+    letter-spacing: -0.02em;
+    padding: 0 0.06em;
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    opacity: 0.95;
+}
+
+.hero4__me {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: min(66svh, 720px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.hero4__me img {
+    height: 100%;
+    width: auto;
+    max-width: none;
+}
+
+/* Fundido de la base del retrato */
+.hero4__inner::after {
+    content: "";
+    position: absolute;
+    left: -10vw;
+    right: -10vw;
+    bottom: 0;
+    height: 22%;
+    z-index: 3;
+    background: linear-gradient(180deg, transparent, var(--bg) 85%);
+    pointer-events: none;
+}
+
+.hero4__left,
+.hero4__right {
+    position: absolute;
+    bottom: clamp(40px, 9vh, 110px);
+    z-index: 4;
+    display: grid;
+    gap: 16px;
+}
+
+.hero4__left {
+    left: var(--gutter);
+    max-width: 300px;
+}
+
+.hero4__lead {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+.hero4__right {
+    right: var(--gutter);
+    justify-items: end;
+}
+
+.hero4__right .btn {
+    min-width: 190px;
+    justify-content: center;
+}
+
+.hero4__place {
+    margin-top: 4px;
+}
+
+@media (max-width: 1100px) {
+    .hero4__inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+
+    .hero4__me {
+        position: relative;
+        height: 52svh;
+        margin-top: -14vw;
+        width: 100%;
+    }
+
+    .hero4__inner::after {
+        display: none;
+    }
+
+    .hero4__me::after {
+        content: "";
+        position: absolute;
+        left: -20%;
+        right: -20%;
+        bottom: 0;
+        height: 30%;
+        background: linear-gradient(180deg, transparent, var(--bg) 90%);
+    }
+
+    .hero4__left,
+    .hero4__right {
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        justify-items: center;
+        text-align: center;
+        max-width: 420px;
+        margin-top: 8px;
+    }
+
+    .hero4__right {
+        grid-auto-flow: row;
+        margin-top: 22px;
+    }
+
+    .hero4__glow {
+        bottom: auto;
+        top: 18%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero4__glow { animation: none; }
+}
+
+@media (max-width: 1100px) {
+    .hero4__me::after { display: none; }
+    .hero4__me img {
+        -webkit-mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
+        mask-image: linear-gradient(180deg, #000 72%, transparent 100%);
+    }
+}
+
+@media (max-width: 600px) {
+    .hero4__me { height: 42svh; margin-top: -12vw; }
+}

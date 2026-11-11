@@ -973,7 +973,7 @@
 
 
     /* ---------- Composición de la portada: profundidad con el ratón ---------- */
-    const stack = $(".hero3__stack");
+    const stack = $(".hero3__stack") || $(".hero4");
     if (stack && finePointer && !reduced) {
         const layers = $$("[data-depth]", stack);
         const st = { x: 0, y: 0, cx: 0, cy: 0 };
