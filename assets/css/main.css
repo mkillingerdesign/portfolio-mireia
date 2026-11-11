@@ -6047,3 +6047,81 @@ body {
 @media (prefers-reduced-motion: reduce) {
     .stack-card { animation: none; }
 }
+
+
+/* ---------- Retrato integrado en la composición (tamaño medio) ---------- */
+.hero3__stack {
+    aspect-ratio: 1 / 0.9;
+}
+
+.stack-me {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 52%;
+    margin-left: -26%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.stack-me img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Funde la base del retrato con el fondo */
+.hero3__stack::after {
+    content: "";
+    position: absolute;
+    left: -12%;
+    right: -12%;
+    bottom: -2px;
+    height: 24%;
+    z-index: 3;
+    background: linear-gradient(180deg, transparent, var(--bg) 88%);
+    pointer-events: none;
+}
+
+/* Proyectos alrededor y detrás */
+.stack-card--1 {
+    width: 46%;
+    left: -2%;
+    top: 10%;
+    --rot: -9deg;
+    z-index: 1;
+}
+
+.stack-card--2 {
+    width: 28%;
+    right: 0;
+    top: 2%;
+    left: auto;
+    --rot: 8deg;
+    z-index: 1;
+}
+
+.stack-card--3 {
+    width: 40%;
+    left: auto;
+    right: -2%;
+    bottom: 16%;
+    --rot: 5deg;
+    z-index: 4;
+}
+
+.stack-chip { z-index: 5; }
+.stack-chip--a { left: 2%; bottom: 22%; }
+.stack-chip--b { right: 30%; bottom: 8%; }
+
+.hero3__stack .hero3__glow {
+    background:
+        radial-gradient(30% 36% at 50% 52%, rgba(var(--pink-rgb), 0.95), transparent 70%),
+        radial-gradient(30% 36% at 30% 44%, rgba(var(--lila-rgb), 0.6), transparent 72%),
+        radial-gradient(28% 34% at 72% 62%, rgba(var(--blue-rgb), 0.5), transparent 72%);
+}
+
+@media (max-width: 860px) {
+    .stack-me { width: 58%; margin-left: -29%; }
+    .stack-card--3 { bottom: 12%; }
+}
