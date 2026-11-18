@@ -4,8 +4,11 @@ Portfolio personal de Mireia Killinger, diseñadora gráfica y digital.
 
 ## Estructura
 
-- `index.html`: home (hero, sobre mí, áreas, proyectos destacados, habilidades, experiencia, formación y contacto)
-- `WEBS/`, `LIFTY/`, `DISEÑO/`, `MULTIMEDIA/`: una página por área
+- `index.html`: portada (presentación y acceso a los apartados)
+- `WEBS/`, `LIFTY/`, `DISEÑO/`, `MULTIMEDIA/`: un apartado por área de trabajo
+- `SOBRE-MI/`: sobre mí, habilidades, formación e idiomas
+- `EXPERIENCIA/`: experiencia profesional y empresas
+- `PROCESO/`: cómo trabajo y uso de la IA
 - `assets/css/main.css`: sistema de diseño compartido (estilo digital: cristal, luces y degradados; modo oscuro y claro)
 - `assets/js/main.js`: interacciones y animaciones (preloader, cursor, scroll suave, galerías, lightbox…)
 - `assets/vendor/`: GSAP, ScrollTrigger y Lenis (incluidas en local, sin depender de CDN)

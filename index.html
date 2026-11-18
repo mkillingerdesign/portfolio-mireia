@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css?v=13">
+    <link rel="stylesheet" href="assets/css/main.css?v=14">
 </head>
 
 <body class="page-home is-loading">
@@ -46,11 +46,10 @@
         <a href="#top" class="logo logo--mono" aria-label="Inicio"><span class="logo__mark">MK</span><span class="logo__name">Mireia Killinger</span></a>
 
         <nav class="nav" aria-label="Principal">
-            <a href="#sobre-mi"><span class="roll"><span>Sobre mí</span><span>Sobre mí</span></span></a>
-            <a href="#trabajo"><span class="roll"><span>Qué hago</span><span>Qué hago</span></span></a>
-            <a href="#proceso"><span class="roll"><span>Proceso</span><span>Proceso</span></span></a>
-            <a href="#ia"><span class="roll"><span>IA</span><span>IA</span></span></a>
-            <a href="#experiencia"><span class="roll"><span>Experiencia</span><span>Experiencia</span></span></a>
+            <a href="index.html#apartados"><span class="roll"><span>Trabajo</span><span>Trabajo</span></span></a>
+            <a href="SOBRE-MI/sobre-mi.html"><span class="roll"><span>Sobre mí</span><span>Sobre mí</span></span></a>
+            <a href="EXPERIENCIA/experiencia.html"><span class="roll"><span>Experiencia</span><span>Experiencia</span></span></a>
+            <a href="PROCESO/proceso.html"><span class="roll"><span>Proceso e IA</span><span>Proceso e IA</span></span></a>
         </nav>
 
         <div class="header__right">
@@ -66,12 +65,14 @@
 
 <div class="menu" id="menu">
     <ul class="menu__list">
-        <li><a href="#sobre-mi"><small>01</small>Sobre mí</a></li>
-        <li><a href="#trabajo"><small>02</small>Qué hago</a></li>
-        <li><a href="#proceso"><small>03</small>Proceso</a></li>
-        <li><a href="#ia"><small>04</small>IA</a></li>
-        <li><a href="#experiencia"><small>05</small>Experiencia</a></li>
-        <li><a href="#contacto"><small>06</small>Contacto</a></li>
+        <li><a href="index.html"><small>00</small>Inicio</a></li>
+        <li><a href="WEBS/webs.html"><small>01</small>Webs</a></li>
+        <li><a href="LIFTY/lifty.html"><small>02</small>Apps</a></li>
+        <li><a href="DISEÑO/diseño.html"><small>03</small>Diseño gráfico</a></li>
+        <li><a href="MULTIMEDIA/foto.html"><small>04</small>Vídeo & foto</a></li>
+        <li><a href="SOBRE-MI/sobre-mi.html"><small>05</small>Sobre mí</a></li>
+        <li><a href="EXPERIENCIA/experiencia.html"><small>06</small>Experiencia</a></li>
+        <li><a href="PROCESO/proceso.html"><small>07</small>Proceso e IA</a></li>
     </ul>
     <div class="menu__foot mono">
         <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
@@ -105,81 +106,19 @@
             </div>
 
             <div class="hero4__right" data-intro>
-                <a href="#trabajo" class="btn btn--solid magnetic">Ver portfolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+                <a href="#apartados" class="btn btn--solid magnetic">Ver portfolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
                 <a href="#contacto" class="btn magnetic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Contactar</a>
                 <span class="hero4__place kicker">Barcelona · <span data-clock>--:--</span></span>
             </div>
         </div>
     </section>
 
-    <!-- ============ EMPRESAS ============ -->
-    <section class="clients" aria-label="Empresas y proyectos con los que he trabajado">
-        <div class="wrap">
-            <p class="kicker kicker--wide">Empresas y proyectos con los que he trabajado</p>
-            <div class="clients__row" data-reveal>
-                <span class="client client--a">GOCO<small>autoescola</small></span>
-                <span class="client client--b">Map to Moon</span>
-                <img class="client client--img" src="assets/img/sws-logo.webp" alt="SWS">
-                <span class="client client--c">glifing</span>
-                <span class="client client--d">VÉRTICE</span>
-                <span class="client client--e">Stunt Academy</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ SOBRE MÍ ============ -->
-    <section class="section about3" id="sobre-mi">
-        <div class="wrap">
-            <div class="about3__grid">
-                <div>
-                    <span class="kicker">(01) Sobre mí</span>
-                    <h2 class="h-title" data-split-scroll>
-                        <span class="line-mask"><span>Diseño con</span></span>
-                        <span class="line-mask"><span><span class="serif">criterio,</span></span></span>
-                        <span class="line-mask"><span>de la idea al detalle</span></span>
-                    </h2>
-                </div>
-                <div class="about3__body">
-                    <p class="statement2" data-words>
-                        Me muevo entre el <span class="serif">diseño</span> y la <span class="serif">tecnología</span>:
-                        entiendo a las personas, a la marca y cómo se construye cada pantalla.
-                    </p>
-                    <p class="muted">
-                        Diseñadora gráfica y UI/UX con base técnica en preimpresión. Mi proyecto más completo es
-                        <a href="LIFTY/lifty.html" class="link">Lifty</a>, una app de accesibilidad para personas con
-                        diversidad funcional que diseñé y desarrollé yo misma.
-                    </p>
-                    <a href="#experiencia" class="btn btn--sm">Mi experiencia <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                </div>
-            </div>
-
-            <div class="stats">
-                <div class="stat" data-reveal>
-                    <span class="stat__num"><span data-count="6">6</span><sup>+</sup></span>
-                    <span class="mono muted">Empresas y clientes</span>
-                </div>
-                <div class="stat" data-reveal data-delay="0.08">
-                    <span class="stat__num"><span data-count="5">5</span></span>
-                    <span class="mono muted">Disciplinas</span>
-                </div>
-                <div class="stat" data-reveal data-delay="0.16">
-                    <span class="stat__num"><span data-count="2">2</span></span>
-                    <span class="mono muted">Ciclos formativos</span>
-                </div>
-                <div class="stat" data-reveal data-delay="0.24">
-                    <span class="stat__num"><span data-count="4">4</span></span>
-                    <span class="mono muted">Idiomas</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ QUÉ HAGO ============ -->
-    <section class="section work2" id="trabajo">
+    <!-- ============ APARTADOS ============ -->
+    <section class="section apartados" id="apartados">
         <div class="wrap">
             <div class="center-head">
-                <span class="kicker">(02) Qué hago</span>
-                <h2 class="h-title" data-split-scroll><span class="line-mask"><span>Qué <span class="serif">hago</span></span></span></h2>
+                <span class="kicker kicker--wide">Apartados</span>
+                <h2 class="h-title" data-split-scroll><span class="line-mask"><span>Explora mi <span class="serif">trabajo</span></span></span></h2>
             </div>
             <div class="services">
                 <a href="WEBS/webs.html" class="service" data-reveal data-delay="0.00" data-cursor="Explorar">
@@ -215,440 +154,51 @@
                     <span class="btn btn--sm btn--light">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
                 </a>
             </div>
-        </div>
-    </section>
 
-    <!-- ============ PROYECTOS DESTACADOS ============ -->
-    <section class="showcase" aria-labelledby="destacados">
-        <div class="section" style="padding-bottom: 0; padding-top: clamp(40px, 6vw, 80px);">
-            <div class="wrap showcase__intro">
-                <div>
-                    <span class="kicker">Selección</span>
-                    <h2 id="destacados" class="display h-md" style="margin-top: 14px;">Proyectos <span class="serif">destacados</span></h2>
-                </div>
-                <p class="muted">Sigue bajando: la galería avanza en horizontal</p>
-            </div>
-
-            <div class="showcase__track">
-                <a href="LIFTY/lifty.html" class="card card--wide" data-cursor="Ver app">
-                    <div class="card__media card__media--blue">
-                        <span class="card__chip mono">App · UX/UI · IA</span>
-                        <img src="assets/img/xd2.webp" alt="Prototipo de la app Lifty" loading="lazy">
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">Lifty</h3>
-                        <span class="card__num mono">01</span>
-                    </div>
-                    <p class="card__desc">Proyecto destacado: app web de accesibilidad para ganar independencia. UX/UI, desarrollo HTML/CSS e IA.</p>
+            <div class="more-cards">
+                <a href="SOBRE-MI/sobre-mi.html" class="more-card" data-reveal data-delay="0.00" data-cursor="Abrir">
+                    <span class="kicker">05</span>
+                    <h3>Sobre mí</h3>
+                    <p class="muted">Quién soy, habilidades, formación e idiomas.</p>
+                    <span class="more-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
                 </a>
-
-                <a href="MULTIMEDIA/foto.html#videos" class="card" data-cursor="Ver vídeo" data-hover-video>
-                    <div class="card__media">
-                        <span class="card__chip mono">Vídeo · Edición · Color</span>
-                        <video muted loop playsinline preload="none" poster="assets/img/moto10.webp">
-                            <source src="img/polstunt1.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">Stunt &amp; Motion</h3>
-                        <span class="card__num mono">02</span>
-                    </div>
-                    <p class="card__desc">Vídeo cinematográfico para redes: grabación, montaje y color. Pasa el ratón para verlo.</p>
+                <a href="EXPERIENCIA/experiencia.html" class="more-card" data-reveal data-delay="0.08" data-cursor="Abrir">
+                    <span class="kicker">06</span>
+                    <h3>Experiencia</h3>
+                    <p class="muted">Empresas y proyectos con los que he trabajado.</p>
+                    <span class="more-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
                 </a>
-
-                <a href="WEBS/webs.html#funcionales" class="card" data-cursor="Ver web">
-                    <div class="card__media">
-                        <span class="card__chip mono">Web · WordPress</span>
-                        <img src="assets/img/goco.webp" alt="Web de GOCO Autoescola" loading="lazy" style="object-position: left;">
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">GOCO Autoescola</h3>
-                        <span class="card__num mono">03</span>
-                    </div>
-                    <p class="card__desc">Diseño, mantenimiento y mejora de la web en WordPress, con ajustes en HTML y CSS.</p>
+                <a href="PROCESO/proceso.html" class="more-card" data-reveal data-delay="0.16" data-cursor="Abrir">
+                    <span class="kicker">07</span>
+                    <h3>Proceso e IA</h3>
+                    <p class="muted">Cómo trabajo, paso a paso, y cómo uso la IA.</p>
+                    <span class="more-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
                 </a>
-
-                <a href="DISEÑO/diseño.html#colaboraciones" class="card" data-cursor="Ver marca">
-                    <div class="card__media">
-                        <span class="card__chip mono">Identidad · Vinilos · Catálogo</span>
-                        <img src="assets/img/ktm1.webp" alt="Vinilo para KTM de Supermoto World Shop" loading="lazy">
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">Supermoto World Shop</h3>
-                        <span class="card__num mono">04</span>
-                    </div>
-                    <p class="card__desc">Webs, campañas (banners, pop-ups y emails), vinilos, papelería y catálogo.</p>
-                </a>
-
-                <a href="DISEÑO/diseño.html#campanas" class="card" data-cursor="Ver campaña">
-                    <div class="card__media">
-                        <span class="card__chip mono">Campaña · Social</span>
-                        <img src="assets/img/oreo3.webp" alt="Campaña de Oreo para redes sociales" loading="lazy">
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">Oreo × Social</h3>
-                        <span class="card__num mono">05</span>
-                    </div>
-                    <p class="card__desc">Estrategia en cinco etapas: de awareness a loyalty.</p>
-                </a>
-
-                <a href="DISEÑO/diseño.html#graape" class="card card--wide" data-cursor="Ver marca">
-                    <div class="card__media">
-                        <span class="card__chip mono">Branding · Web · Merch</span>
-                        <img src="assets/img/merch1.webp" alt="Merchandising de Graape Art" loading="lazy">
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">Graape Art</h3>
-                        <span class="card__num mono">06</span>
-                    </div>
-                    <p class="card__desc">Identidad completa: manual, memoria corporativa, web y merchandising.</p>
-                </a>
-
-                <a href="DISEÑO/diseño.html#disenos" class="card" data-cursor="Ver">
-                    <div class="card__media">
-                        <span class="card__chip mono">Ilustración</span>
-                        <img src="assets/img/skyline1.webp" alt="Portada de videojuego Épocas del Año" loading="lazy">
-                    </div>
-                    <div class="card__info">
-                        <h3 class="card__title">Épocas del Año</h3>
-                        <span class="card__num mono">07</span>
-                    </div>
-                    <p class="card__desc">Portada conceptual de videojuego a través de las estaciones.</p>
-                </a>
-
-
-                <div class="showcase__end">
-                    <p class="display h-md">¿Más <span class="serif">trabajo</span>?</p>
-                    <p class="muted">Cada área tiene su propia página con procesos, prototipos y galerías completas.</p>
-                    <div><a href="DISEÑO/diseño.html" class="btn magnetic">Ver diseño gráfico
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
-                </div>
-            </div>
-        </div>
-        <div class="showcase__bar" aria-hidden="true"><i></i></div>
-        <div style="height: clamp(40px, 5vw, 72px);"></div>
-    </section>
-
-    <!-- ============ PROCESO ============ -->
-    <section class="section process" id="proceso">
-        <div class="wrap">
-            <div class="center-head">
-                <span class="kicker kicker--wide">(03) Paso a paso</span>
-                <h2 class="h-title" data-split-scroll><span class="line-mask"><span>Cómo <span class="serif">trabajo</span></span></span></h2>
-            </div>
-            <div class="timeline2">
-                <span class="timeline2__line" aria-hidden="true"><i></i></span>
-                <div class="step step--left" data-reveal>
-                    <div class="step__text"><h3>Escucho y defino</h3><p>Entiendo la marca, el público y el objetivo antes de abrir Figma.</p></div>
-                    <span class="step__dot">1</span>
-                    <div class="step__visual"><div class="mock"><i class="mock__bar"></i><i class="mock__line w80"></i><i class="mock__line w60"></i><i class="mock__line w70"></i><span class="mock__btn">Brief</span></div></div>
-                </div>
-                <div class="step step--right" data-reveal>
-                    <div class="step__text"><h3>Diseño y prototipo</h3><p>Wireframes, identidad visual y prototipos navegables en Figma o Adobe XD.</p></div>
-                    <span class="step__dot">2</span>
-                    <div class="step__visual"><div class="mock mock--stack"><div class="mock__card"><i class="mock__sq"></i><i class="mock__line w60"></i></div><div class="mock__card"><i class="mock__sq"></i><i class="mock__line w80"></i></div><div class="mock__card"><i class="mock__sq"></i><i class="mock__line w50"></i></div></div></div>
-                </div>
-                <div class="step step--left" data-reveal>
-                    <div class="step__text"><h3>Produzco</h3><p>Desarrollo la web en HTML, CSS o WordPress, preparo artes finales o edito el vídeo.</p></div>
-                    <span class="step__dot">3</span>
-                    <div class="step__visual"><div class="mock mock--code"><i class="mock__dots"></i><code>&lt;section class="hero"&gt;</code><code>&nbsp;&nbsp;&lt;h1&gt;Hola&lt;/h1&gt;</code><code>&lt;/section&gt;</code></div></div>
-                </div>
-                <div class="step step--right" data-reveal>
-                    <div class="step__text"><h3>Entrego y mejoro</h3><p>Reviso contigo cada detalle y ajusto hasta que funciona y se ve como debe.</p></div>
-                    <span class="step__dot">4</span>
-                    <div class="step__visual"><div class="mock mock--done"><span class="mock__check">✓</span><i class="mock__line w70"></i><i class="mock__line w50"></i></div></div>
-                </div>
             </div>
         </div>
     </section>
-
-    <!-- ============ IA ============ -->
-    <section class="section ai" id="ia">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="section-head__label label">(04) IA</span>
-                <h2 class="section-head__title display h-lg" data-split-scroll>
-                    <span class="line-mask"><span>IA en mi</span></span>
-                    <span class="line-mask"><span><span class="serif">trabajo diario</span></span></span>
-                </h2>
-            </div>
-
-            <p class="ai__lead" data-reveal>
-                Uso la inteligencia artificial de forma profesional en cada fase: para idear, crear recursos,
-                programar y dentro de los propios productos. <strong>La IA acelera el proceso; las decisiones de diseño son mías.</strong>
-            </p>
-
-            <div class="ai__grid">
-                <article class="ai-card" data-reveal data-delay="0.00">
-                    <span class="ai-card__num mono">01</span>
-                    <h3>Ideación</h3>
-                    <p>Exploro conceptos, referencias y alternativas en menos tiempo, y llego antes a las propuestas que merecen la pena.</p>
-                    <div class="chips"><span class="chip">Claude</span><span class="chip">ChatGPT</span><span class="chip">Gemini</span></div>
-                </article>
-                <article class="ai-card" data-reveal data-delay="0.08">
-                    <span class="ai-card__num mono">02</span>
-                    <h3>Imagen</h3>
-                    <p>Genero, amplío y retoco recursos visuales para campañas, mockups y redes sin perder la coherencia de marca.</p>
-                    <div class="chips"><span class="chip">Adobe Firefly</span><span class="chip">Photoshop</span></div>
-                </article>
-                <article class="ai-card" data-reveal data-delay="0.16">
-                    <span class="ai-card__num mono">03</span>
-                    <h3>Código</h3>
-                    <p>Prototipo y desarrollo interfaces en HTML y CSS con asistencia de IA, para pasar del diseño a algo que funciona.</p>
-                    <div class="chips"><span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">VS Code</span></div>
-                </article>
-                <article class="ai-card" data-reveal data-delay="0.24">
-                    <span class="ai-card__num mono">04</span>
-                    <h3>Producto</h3>
-                    <p>Integro IA dentro de los productos que diseño, como en Lifty, una app de accesibilidad con funciones basadas en IA.</p>
-                    <div class="chips"><span class="chip">Integración con IA</span><span class="chip">UX/UI</span></div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ HABILIDADES ============ -->
-    <section class="section skills" id="habilidades">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="section-head__label label">(05) Habilidades</span>
-                <h2 class="section-head__title display h-lg" data-split-scroll>
-                    <span class="line-mask"><span>Caja de</span></span>
-                    <span class="line-mask"><span><span class="serif">herramientas</span></span></span>
-                </h2>
-            </div>
-
-            <div class="skills__layout">
-                <div class="playground" data-reveal aria-label="Herramientas arrastrables">
-                    <span class="playground__hint mono muted">↳ Arrastra las piezas · <button type="button" data-shuffle style="text-decoration: underline; text-transform: uppercase; letter-spacing: inherit; font: inherit;">mezclar</button></span>
-                    <span class="sticker sticker--a">Photoshop</span>
-                    <span class="sticker sticker--b">Illustrator</span>
-                    <span class="sticker sticker--d">Figma</span>
-                    <span class="sticker sticker--c">InDesign</span>
-                    <span class="sticker sticker--round sticker--e">IA ✦</span>
-                    <span class="sticker sticker--b">Premiere Pro</span>
-                    <span class="sticker sticker--a">After Effects</span>
-                    <span class="sticker sticker--c">WordPress</span>
-                    <span class="sticker sticker--d">Claude</span>
-                    <span class="sticker sticker--c">HTML / CSS</span>
-                    <span class="sticker sticker--b">ChatGPT</span>
-                    <span class="sticker sticker--round sticker--a">UX/UI</span>
-                    <span class="sticker sticker--e">Firefly</span>
-                    <span class="sticker sticker--c">VS Code</span>
-                    <span class="sticker sticker--d">Gemini</span>
-                </div>
-
-                <div class="skills__groups">
-                    <div class="skill-group" data-reveal>
-                        <h3><span>Diseño &amp; producto</span><span>01</span></h3>
-                        <div class="chips">
-                            <span class="chip">Diseño UX/UI</span><span class="chip">Accesibilidad</span><span class="chip">Diseño web</span>
-                            <span class="chip">Responsive</span><span class="chip">Diseño gráfico</span><span class="chip">Identidad visual</span>
-                        </div>
-                    </div>
-                    <div class="skill-group" data-reveal>
-                        <h3><span>Software &amp; vídeo</span><span>02</span></h3>
-                        <div class="chips">
-                            <span class="chip">Figma</span><span class="chip">Photoshop</span><span class="chip">Illustrator</span><span class="chip">InDesign</span>
-                            <span class="chip">Premiere Pro</span><span class="chip">After Effects</span><span class="chip">Edición y color</span><span class="chip">Fotografía</span>
-                        </div>
-                    </div>
-                    <div class="skill-group" data-reveal>
-                        <h3><span>Código &amp; IA</span><span>03</span></h3>
-                        <div class="chips">
-                            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">VS Code</span><span class="chip">WordPress</span>
-                            <span class="chip">Integración con IA</span><span class="chip">Claude</span><span class="chip">ChatGPT</span>
-                            <span class="chip">Gemini</span><span class="chip">Firefly</span>
-                        </div>
-                    </div>
-                    <div class="skill-group" data-reveal>
-                        <h3><span>Competencias</span><span>04</span></h3>
-                        <div class="chips">
-                            <span class="chip">Diseño centrado en el usuario</span><span class="chip">Creatividad aplicada a la tecnología</span>
-                            <span class="chip">Comunicación con clientes</span><span class="chip">Trabajo en equipo y feedback</span>
-                            <span class="chip">Varios proyectos a la vez</span><span class="chip">Ganas de aprender</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ EXPERIENCIA ============ -->
-    <section class="section experience" id="experiencia">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="section-head__label label">(06) Experiencia</span>
-                <h2 class="section-head__title display h-lg" data-split-scroll>
-                    <span class="line-mask"><span>Dónde he</span></span>
-                    <span class="line-mask"><span><span class="serif">trabajado</span></span></span>
-                </h2>
-            </div>
-
-            <div class="jobs">
-                <article class="job is-open" data-reveal>
-                    <button class="job__head" type="button" aria-expanded="true">
-                        <span class="job__num mono muted">01</span>
-                        <span class="job__company">Map to Moon</span>
-                        <span class="job__role">Diseñadora gráfica y web UX/UI · Freelance · Andorra</span>
-                        <span class="job__date">Freelance</span>
-                        <span class="job__toggle" aria-hidden="true"></span>
-                    </button>
-                    <div class="job__body"><div>
-                        <div class="job__content">
-                            <ul>
-                                <li>Diseño web con criterio UX/UI, logotipos e identidad visual para empresas clientes.</li>
-                                <li>Presentación de propuestas y seguimiento directo con cada cliente.</li>
-                            </ul>
-                            <div class="chips">
-                                <span class="chip">UX/UI</span><span class="chip">Web</span><span class="chip">Logotipos</span><span class="chip">Identidad visual</span><span class="chip">Clientes</span>
-                            </div>
-                        </div>
-                    </div></div>
-                </article>
-
-                <article class="job" data-reveal>
-                    <button class="job__head" type="button" aria-expanded="false">
-                        <span class="job__num mono muted">02</span>
-                        <span class="job__company">GOCO Autoescola</span>
-                        <span class="job__role">Diseñadora gráfica y web</span>
-                        <span class="job__date job__date--now"><span class="status-dot"></span>Actualidad</span>
-                        <span class="job__toggle" aria-hidden="true"></span>
-                    </button>
-                    <div class="job__body"><div>
-                        <div class="job__content">
-                            <ul>
-                                <li>Diseño, mantenimiento y mejora de la web en <strong>WordPress</strong>, con ajustes en HTML y CSS.</li>
-                                <li>Material gráfico y contenido digital para comunicación y redes sociales.</li>
-                            </ul>
-                            <div class="chips">
-                                <span class="chip">WordPress</span><span class="chip">HTML/CSS</span><span class="chip">Contenido digital</span><span class="chip">Redes sociales</span>
-                            </div>
-                        </div>
-                    </div></div>
-                </article>
-
-                <article class="job" data-reveal>
-                    <button class="job__head" type="button" aria-expanded="false">
-                        <span class="job__num mono muted">03</span>
-                        <span class="job__company">SWS</span>
-                        <span class="job__role">Diseñadora gráfica y web · Colaboración</span>
-                        <span class="job__date job__date--now"><span class="status-dot"></span>Actualidad</span>
-                        <span class="job__toggle" aria-hidden="true"></span>
-                    </button>
-                    <div class="job__body"><div>
-                        <div class="job__content">
-                            <ul>
-                                <li>Diseño y mantenimiento de webs; <strong>banners, pop-ups y emails</strong> para campañas.</li>
-                                <li>Diseño de vinilos y atención al cliente.</li>
-                            </ul>
-                            <div class="chips">
-                                <span class="chip">Web</span><span class="chip">Email marketing</span><span class="chip">Vinilos</span><span class="chip">Atención al cliente</span>
-                            </div>
-                        </div>
-                    </div></div>
-                </article>
-
-                <article class="job" data-reveal>
-                    <button class="job__head" type="button" aria-expanded="false">
-                        <span class="job__num mono muted">04</span>
-                        <span class="job__company" style="font-size: clamp(22px, 2.3vw, 38px);">Stunt Academy<br>Glifing · Vértice</span>
-                        <span class="job__role">Diseño web y gráfico</span>
-                        <span class="job__date">Anteriores</span>
-                        <span class="job__toggle" aria-hidden="true"></span>
-                    </button>
-                    <div class="job__body"><div>
-                        <div class="job__content">
-                            <ul>
-                                <li>Diseño web, contenido digital y piezas gráficas para soportes digitales e impresos.</li>
-                            </ul>
-                            <div class="chips">
-                                <span class="chip">Web</span><span class="chip">Contenido digital</span><span class="chip">Print</span>
-                            </div>
-                        </div>
-                    </div></div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============ FORMACIÓN + IDIOMAS ============ -->
-    <section class="section education" id="formacion">
-        <div class="wrap">
-            <div class="section-head">
-                <span class="section-head__label label">(07) Formación &amp; idiomas</span>
-                <h2 class="section-head__title display h-lg" data-split-scroll>
-                    <span class="line-mask"><span>Base</span></span>
-                    <span class="line-mask"><span><span class="serif">técnica</span></span></span>
-                </h2>
-            </div>
-
-            <div class="edu__grid">
-                <div class="edu__list">
-                    <article class="edu-card" data-reveal>
-                        <span class="edu-card__glow" aria-hidden="true"></span>
-                        <div class="edu-card__top mono">
-                            <span class="accent">CFGS</span>
-                            <span class="muted">Grado superior · 2 años</span>
-                        </div>
-                        <h3>Diseño y Edición de Publicaciones Impresas y Multimedia</h3>
-                        <p>Escola Antoni Algueró. Comunicación visual, diseño gráfico y publicaciones multimedia.</p>
-                    </article>
-                    <article class="edu-card" data-reveal data-delay="0.1">
-                        <span class="edu-card__glow" aria-hidden="true"></span>
-                        <div class="edu-card__top mono">
-                            <span class="accent">CFGM</span>
-                            <span class="muted">Grado medio · 2 años</span>
-                        </div>
-                        <h3>Preimpresión Digital</h3>
-                        <p>Escola Antoni Algueró. Preimpresión digital, diseño gráfico, composición visual y preparación técnica de archivos para producción e impresión.</p>
-                    </article>
-                </div>
-
-                <div class="langs">
-                    <h3 class="label">Idiomas</h3>
-                    <div class="lang">
-                        <div class="lang__row"><span class="lang__name">Castellano</span><span class="mono muted">Nativo</span></div>
-                        <div class="lang__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
-                    </div>
-                    <div class="lang">
-                        <div class="lang__row"><span class="lang__name">Catalán</span><span class="mono muted">Nativo</span></div>
-                        <div class="lang__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
-                    </div>
-                    <div class="lang">
-                        <div class="lang__row"><span class="lang__name">Inglés</span><span class="mono muted">B2</span></div>
-                        <div class="lang__bar"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i></div>
-                    </div>
-                    <div class="lang">
-                        <div class="lang__row"><span class="lang__name">Alemán</span><span class="mono muted">A1</span></div>
-                        <div class="lang__bar"><i class="on"></i><i></i><i></i><i></i><i></i><i></i></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
 </main>
 
 <footer class="footer2" id="contacto">
     <div class="wrap footer2__grid">
         <div>
-            <a href="#top" class="logo">mireia<b>.design</b></a>
+            <a href="index.html" class="logo logo--mono"><span class="logo__mark">MK</span><span class="logo__name">Mireia Killinger</span></a>
             <p class="muted">Diseño gráfico, UI/UX, web, app y vídeo.</p>
         </div>
         <div>
-            <span class="kicker">Áreas</span>
+            <span class="kicker">Trabajo</span>
             <a href="WEBS/webs.html">Webs</a><a href="LIFTY/lifty.html">Apps</a><a href="DISEÑO/diseño.html">Diseño gráfico</a><a href="MULTIMEDIA/foto.html">Vídeo &amp; foto</a>
         </div>
         <div>
-            <span class="kicker">Secciones</span>
-            <a href="#sobre-mi">Sobre mí</a><a href="#proceso">Proceso</a><a href="#ia">IA</a><a href="#experiencia">Experiencia</a>
+            <span class="kicker">Sobre mí</span>
+            <a href="SOBRE-MI/sobre-mi.html">Sobre mí</a><a href="EXPERIENCIA/experiencia.html">Experiencia</a><a href="PROCESO/proceso.html">Proceso e IA</a>
         </div>
         <div>
             <span class="kicker">Contacto</span>
             <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
             <a href="https://linkedin.com/in/mireiakillinger" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://instagram.com/mireiakillinger" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://github.com/mkillingerdesign" target="_blank" rel="noopener">GitHub</a>
         </div>
     </div>
     <div class="wrap footer2__bottom mono muted">
@@ -662,6 +212,6 @@
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=13" defer></script>
+<script src="assets/js/main.js?v=14" defer></script>
 </body>
 </html>
