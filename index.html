@@ -3,62 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mireia Killinger — Diseño gráfico, UI/UX, web, app y vídeo</title>
-    <meta name="description" content="Portfolio de Mireia Killinger, diseñadora gráfica y UI/UX en Barcelona: webs, apps, vídeo e identidad visual, con IA integrada de forma profesional en su flujo de trabajo.">
-    <meta name="theme-color" content="#0b0710">
-    <meta property="og:title" content="Mireia Killinger — Diseño gráfico, UI/UX, web, app y vídeo">
-    <meta property="og:description" content="Producto digital, web, interacción e identidad visual.">
-    <meta property="og:image" content="assets/img/mk.webp">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%239d7bff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
+    <title>Mireia Killinger — Diseño gráfico y comunicación visual</title>
+    <meta name="description" content="Portfolio de Mireia Killinger, diseñadora gráfica en Barcelona: catálogos y fichas de producto, flyers, artes finales, piezas para web y redes, retoque fotográfico y vídeo.">
+    <meta name="theme-color" content="#0e0b10">
+    <meta property="og:title" content="Mireia Killinger — Diseño gráfico y comunicación visual">
+    <meta property="og:description" content="Catálogos, fichas de producto, flyers, artes finales, web, redes y vídeo.">
+    <meta property="og:image" content="assets/img/sws-cat5.webp">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%230e0b10' stroke='%23e9a8c6' stroke-width='2'/%3E%3Ctext x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='24' fill='%23f3ece6'%3EMK%3C/text%3E%3C/svg%3E">
     <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || (window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/main.css?v=14">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/site.css?v=1">
 </head>
 
-<body class="page-home is-loading">
+<body class="page-home">
 
 <a class="skip-link" href="#main">Saltar al contenido</a>
-
-<div class="mesh" aria-hidden="true"><i></i><i></i><i></i><span class="mesh__grid"></span></div>
-<div class="grain" aria-hidden="true"></div>
 <div class="progress" aria-hidden="true"></div>
-<div class="cursor" aria-hidden="true"><span class="cursor__label">Ver</span></div>
-<div class="cursor-dot" aria-hidden="true"></div>
 <div class="page-transition" aria-hidden="true"></div>
 
-<!-- Preloader -->
-<div class="preloader" aria-hidden="true">
-    <div class="preloader__top mono">
-        <span>Portfolio ©2026</span>
-        <span>Barcelona</span>
-    </div>
-    <div class="preloader__bottom">
-        <div class="preloader__name"><span>m</span><span>i</span><span>r</span><span>e</span><span>i</span><span>a</span><span>.</span></div>
-        <div class="preloader__count">000</div>
-    </div>
-</div>
-
-<!-- Header -->
 <header class="header">
     <div class="wrap header__inner">
-        <a href="#top" class="logo logo--mono" aria-label="Inicio"><span class="logo__mark">MK</span><span class="logo__name">Mireia Killinger</span></a>
-
+        <a href="#top" class="logo" aria-label="Inicio"><span class="logo__mark">MK</span><span class="logo__name">Mireia Killinger</span></a>
         <nav class="nav" aria-label="Principal">
-            <a href="index.html#apartados"><span class="roll"><span>Trabajo</span><span>Trabajo</span></span></a>
-            <a href="SOBRE-MI/sobre-mi.html"><span class="roll"><span>Sobre mí</span><span>Sobre mí</span></span></a>
-            <a href="EXPERIENCIA/experiencia.html"><span class="roll"><span>Experiencia</span><span>Experiencia</span></span></a>
-            <a href="PROCESO/proceso.html"><span class="roll"><span>Proceso e IA</span><span>Proceso e IA</span></span></a>
+            <a href="#apartados">Trabajo</a>
+            <a href="SOBRE-MI/sobre-mi.html">Sobre mí</a>
+            <a href="EXPERIENCIA/experiencia.html">Experiencia</a>
+            <a href="PROCESO/proceso.html">Proceso e IA</a>
         </nav>
-
         <div class="header__right">
-            <span class="clock"><span class="status-dot"></span>BCN <span data-clock>--:--</span></span>
-            <a href="#contacto" class="btn btn--solid btn--sm header__cta">Hablemos</a>
-            <button class="theme-toggle" type="button" aria-label="Cambiar tema"></button>
-            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
-                Menú <span class="menu-btn__icon"></span>
-            </button>
+            <a href="#contacto" class="header__cta">Hablemos</a>
+            <button class="theme-toggle" type="button" aria-label="Cambiar entre modo oscuro y claro"></button>
+            <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">Menú <span class="menu-btn__icon"></span></button>
         </div>
     </div>
 </header>
@@ -66,114 +43,189 @@
 <div class="menu" id="menu">
     <ul class="menu__list">
         <li><a href="index.html"><small>00</small>Inicio</a></li>
-        <li><a href="WEBS/webs.html"><small>01</small>Webs</a></li>
-        <li><a href="LIFTY/lifty.html"><small>02</small>Apps</a></li>
-        <li><a href="DISEÑO/diseño.html"><small>03</small>Diseño gráfico</a></li>
-        <li><a href="MULTIMEDIA/foto.html"><small>04</small>Vídeo & foto</a></li>
+        <li><a href="DISEÑO/diseño.html"><small>01</small>Diseño gráfico</a></li>
+        <li><a href="MULTIMEDIA/foto.html"><small>02</small>Vídeo & foto</a></li>
+        <li><a href="WEBS/webs.html"><small>03</small>Webs</a></li>
+        <li><a href="LIFTY/lifty.html"><small>04</small>Apps</a></li>
         <li><a href="SOBRE-MI/sobre-mi.html"><small>05</small>Sobre mí</a></li>
         <li><a href="EXPERIENCIA/experiencia.html"><small>06</small>Experiencia</a></li>
         <li><a href="PROCESO/proceso.html"><small>07</small>Proceso e IA</a></li>
     </ul>
-    <div class="menu__foot mono">
+    <div class="menu__foot caps">
         <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
-        <span>Barcelona · <span data-clock>--:--</span></span>
+        <span>Barcelona</span>
     </div>
 </div>
 
 <main id="main">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero4" id="top">
-        <span class="hero4__glow" aria-hidden="true"></span>
-
-        <div class="wrap hero4__inner">
-            <div class="hero4__top">
-                <span class="pill" data-intro><i></i>Disponible para proyectos</span>
-                <p class="hero4__hello" data-intro>Hola, soy</p>
+    <!-- ============ PORTADA ============ -->
+    <section class="hero" id="top">
+        <span class="hero__glow" aria-hidden="true"></span>
+        <div class="wrap hero__inner">
+            <div class="hero__top">
+                <span class="status caps" data-intro><i></i>Disponible · Barcelona</span>
+                <p class="hero__hello" data-intro>Hola, soy</p>
             </div>
-
-            <h1 class="hero4__name" aria-label="Hola, soy Mireia Killinger" data-intro>
-                <span class="hero4__name-in serif" data-depth="-14">Mireia.</span>
-            </h1>
-
-            <div class="hero4__me" data-intro>
-                <img data-depth="10" src="assets/img/mk-cut.webp" alt="Retrato de Mireia Killinger" width="783" height="928" fetchpriority="high">
+            <h1 class="hero__name" aria-label="Hola, soy Mireia Killinger" data-intro><span>Mireia</span></h1>
+            <div class="hero__me" data-intro>
+                <img src="assets/img/mk-cut.webp" alt="Retrato de Mireia Killinger" width="783" height="928" fetchpriority="high">
             </div>
-
-            <div class="hero4__left" data-intro>
-                <p class="kicker kicker--wide">Diseñadora gráfica · UI/UX<br>Web · App · Vídeo</p>
-                <p class="hero4__lead">Creo webs, apps y vídeo claros, cuidados y fáciles de usar. Sé cómo se programan y uso la IA de forma profesional.</p>
+            <div class="hero__side hero__side--l" data-intro>
+                <span class="caps">Diseño gráfico<br>y comunicación visual</span>
+                <p>Catálogos, fichas de producto, flyers, artes finales y piezas para web y redes. Vengo de la preimpresión, así que sé preparar los archivos para imprenta.</p>
             </div>
+            <div class="hero__side hero__side--r" data-intro>
+                <a href="#destacado" class="btn btn--solid">Ver mi trabajo <span aria-hidden="true">→</span></a>
+                <a href="#contacto" class="textlink">Contactar</a>
+            </div>
+        </div>
+    </section>
 
-            <div class="hero4__right" data-intro>
-                <a href="#apartados" class="btn btn--solid magnetic">Ver portfolio <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-                <a href="#contacto" class="btn magnetic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg> Contactar</a>
-                <span class="hero4__place kicker">Barcelona · <span data-clock>--:--</span></span>
+    <!-- ============ PROYECTO DESTACADO ============ -->
+    <section class="sec" id="destacado">
+        <div class="wrap">
+            <div class="sec-head">
+                <div><span class="caps">Proyecto destacado</span><h2>Vinilos para motos, de la <span class="serif">idea al catálogo</span></h2></div>
+                <p>SWS diseña y vende kits de vinilos personalizados para motos. Colaboro con la marca diseñando su material de producto y comercial.</p>
+            </div>
+            <div class="feature-sws">
+                <div class="spreads" data-reveal>
+                    <div class="spread spread--big"><img src="assets/img/sws-cat5.webp" alt="Catálogo SWS: página de kits completos" loading="lazy"></div>
+                    <div class="spread spread--s"><img src="assets/img/sws-cat6.webp" alt="Catálogo SWS: ejemplo de proyecto" loading="lazy"></div>
+                    <div class="spread spread--s"><img src="assets/img/sws-cat10.webp" alt="Catálogo SWS: materiales y acabados" loading="lazy"></div>
+                    <div class="spread spread--s"><img src="assets/img/sws-cat16.webp" alt="Catálogo SWS: instrucciones de instalación" loading="lazy"></div>
+                </div>
+                <div class="feature-sws__text" data-reveal>
+                    <span class="caps">SWS Graphics · Colaboración</span>
+                    <h3>Catálogo de <span class="serif">18 páginas</span> y material comercial</h3>
+                    <p>Diseñé y maqueté el catálogo completo: presentación de producto, kits, materiales y acabados, proceso e instrucciones de instalación.</p>
+                    <ul class="did">
+                        <li>Catálogo y páginas de producto <span>Editorial</span></li>
+                        <li>Hojas de precios por modelo <span>Comercial</span></li>
+                        <li>Diseño de vinilos para producción <span>Impresión</span></li>
+                        <li>Banners, pop-ups y emails de campaña <span>Digital</span></li>
+                        <li>Tarjetas de visita y merchandising <span>Print</span></li>
+                    </ul>
+                    <div class="prices">
+                        <img src="assets/img/sws-pre1.webp" alt="Hoja de precios del kit Naked/R" loading="lazy">
+                        <img src="assets/img/sws-pre2.webp" alt="Hoja de precios del kit Supermotard" loading="lazy">
+                        <img src="assets/img/sws-pre3.webp" alt="Hoja de precios del kit Pitbike" loading="lazy">
+                        <img src="assets/img/sws-pre4.webp" alt="Hoja de precios del kit Trail" loading="lazy">
+                    </div>
+                    <p class="prices-cap">Un mismo formato adaptado a cuatro productos.</p>
+                    <div class="feature-sws__links">
+                        <a href="02_SWS/Catalogo%20SWS.pdf" target="_blank" rel="noopener" class="btn btn--sm">Ver catálogo completo (PDF)</a>
+                        <a href="DISEÑO/diseño.html#colaboraciones" class="textlink">Más de SWS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ LO QUE SÉ HACER ============ -->
+    <section class="sec" id="servicios">
+        <div class="wrap">
+            <div class="sec-head">
+                <div><span class="caps">Lo que sé hacer</span><h2>Del flyer al <span class="serif">arte final</span></h2></div>
+                <p>Las tareas de un equipo de diseño de marketing y producto, cada una con trabajo real.</p>
+            </div>
+            <div class="skills-list">
+                <a href="DISEÑO/diseño.html#colaboraciones" class="skill-row" data-reveal>
+                    <span class="skill-row__n">I.</span>
+                    <h3>Catálogos y fichas de producto</h3>
+                    <p><strong>Catálogo de SWS</strong> (18 páginas), manual de identidad y memoria corporativa de Graape Art.</p>
+                    <span class="thumbs"><img src="assets/img/sws-cat14.webp" alt="" loading="lazy"><img src="assets/img/sws-cat1.webp" alt="" loading="lazy"></span>
+                </a>
+                <a href="DISEÑO/diseño.html#campanas" class="skill-row" data-reveal>
+                    <span class="skill-row__n">II.</span>
+                    <h3>Flyers y adaptaciones comerciales</h3>
+                    <p><strong>Hojas de precios</strong> de SWS en 4 versiones, oferta 2x1 de la campaña de Oreo y carteles.</p>
+                    <span class="thumbs"><img src="assets/img/sws-pre2.webp" alt="" loading="lazy"><img src="assets/img/oreo3.webp" alt="" loading="lazy"><img src="assets/img/portadajordans.webp" alt="" loading="lazy"></span>
+                </a>
+                <a href="DISEÑO/diseño.html#colaboraciones" class="skill-row" data-reveal>
+                    <span class="skill-row__n">III.</span>
+                    <h3>Artes finales para imprenta</h3>
+                    <p><strong>CFGM en Preimpresión Digital.</strong> Vinilos listos para producción, tarjetas y catálogo preparados para imprimir.</p>
+                    <span class="thumbs"><img src="assets/img/ktm1.webp" alt="" loading="lazy"><img src="assets/img/husky1.webp" alt="" loading="lazy"><img src="assets/img/sws-tarjeta1.webp" alt="" loading="lazy"></span>
+                </a>
+                <a href="WEBS/webs.html#funcionales" class="skill-row" data-reveal>
+                    <span class="skill-row__n">IV.</span>
+                    <h3>Adaptaciones para web</h3>
+                    <p><strong>Banners, pop-ups y emails</strong> para las campañas de SWS, y diseño y mantenimiento de la web de GOCO en WordPress.</p>
+                    <span class="thumbs"><img src="assets/img/goco.webp" alt="" loading="lazy"></span>
+                </a>
+                <a href="DISEÑO/diseño.html#campanas" class="skill-row" data-reveal>
+                    <span class="skill-row__n">V.</span>
+                    <h3>Piezas para redes sociales</h3>
+                    <p><strong>Campaña de Oreo</strong> en 5 piezas, de awareness a loyalty, y contenido para GOCO y Glifing.</p>
+                    <span class="thumbs"><img src="assets/img/oreo1.webp" alt="" loading="lazy"><img src="assets/img/oreo4.webp" alt="" loading="lazy"></span>
+                </a>
+                <a href="MULTIMEDIA/foto.html#motos" class="skill-row" data-reveal>
+                    <span class="skill-row__n">VI.</span>
+                    <h3>Edición y retoque fotográfico</h3>
+                    <p><strong>Fotografía de motos</strong> y retrato, y composiciones en Photoshop como el anuncio de Air Jordan.</p>
+                    <span class="thumbs"><img src="assets/img/moto9.webp" alt="" loading="lazy"><img src="assets/img/persona3.webp" alt="" loading="lazy"></span>
+                </a>
+                <a href="MULTIMEDIA/foto.html#videos" class="skill-row" data-reveal>
+                    <span class="skill-row__n">VII.</span>
+                    <h3>Vídeo</h3>
+                    <p><strong>Edición en Premiere Pro:</strong> vídeos de stunt para redes y vídeo promocional de Lifty. Nociones de animación en After Effects.</p>
+                    <span class="thumbs"><img src="assets/img/moto10.webp" alt="" loading="lazy"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ HERRAMIENTAS ============ -->
+    <section class="sec">
+        <div class="wrap">
+            <div class="sec-head">
+                <div><span class="caps">Herramientas</span><h2>Con qué <span class="serif">trabajo</span></h2></div>
+                <p>Las que uso en mis proyectos, con mi nivel real.</p>
+            </div>
+            <div class="tools" data-reveal>
+                <div class="tool"><b>Adobe · nivel alto</b><span>Photoshop, Illustrator, InDesign</span></div>
+                <div class="tool"><b>Vídeo</b><span>Premiere Pro · After Effects (nociones)</span></div>
+                <div class="tool"><b>IA</b><span>Firefly, ChatGPT, Claude, Gemini</span></div>
+                <div class="tool"><b>Web</b><span>WordPress, HTML, CSS, Figma</span></div>
             </div>
         </div>
     </section>
 
     <!-- ============ APARTADOS ============ -->
-    <section class="section apartados" id="apartados">
+    <section class="sec" id="apartados">
         <div class="wrap">
-            <div class="center-head">
-                <span class="kicker kicker--wide">Apartados</span>
-                <h2 class="h-title" data-split-scroll><span class="line-mask"><span>Explora mi <span class="serif">trabajo</span></span></span></h2>
+            <div class="sec-head">
+                <div><span class="caps">Apartados</span><h2>Todo mi <span class="serif">trabajo</span></h2></div>
+                <p>Entra en cada área para ver los proyectos completos.</p>
             </div>
-            <div class="services">
-                <a href="WEBS/webs.html" class="service" data-reveal data-delay="0.00" data-cursor="Explorar">
-                    <div class="service__head">
-                        <h3>Webs</h3>
-                        <span class="muted">Diseño y desarrollo web</span>
-                    </div>
-                    <div class="service__media"><img src="assets/img/goco.webp" alt="Web de GOCO Autoescola" loading="lazy"></div>
-                    <span class="btn btn--sm btn--light">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+            <div class="areas">
+                <a href="DISEÑO/diseño.html" class="area" data-reveal>
+                    <div class="area__img"><img src="assets/img/portadajordans.webp" alt="Cartel de Air Jordan" loading="lazy"><span class="area__num">I.</span></div>
+                    <div class="area__row"><h3>Diseño gráfico</h3><span class="area__arrow" aria-hidden="true">→</span></div>
+                    <p>Catálogos, campañas y editorial</p>
                 </a>
-                <a href="LIFTY/lifty.html" class="service" data-reveal data-delay="0.08" data-cursor="Explorar">
-                    <div class="service__head">
-                        <h3>Apps</h3>
-                        <span class="muted">UI/UX y prototipos</span>
-                    </div>
-                    <div class="service__media"><img src="assets/img/xd2.webp" alt="Prototipo de la app Lifty" loading="lazy"></div>
-                    <span class="btn btn--sm btn--light">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                <a href="MULTIMEDIA/foto.html" class="area" data-reveal data-hover-video>
+                    <div class="area__img"><video muted loop playsinline preload="none" poster="assets/img/moto10.webp"><source src="img/polstunt1.mp4" type="video/mp4"></video><span class="area__num">II.</span></div>
+                    <div class="area__row"><h3>Vídeo &amp; foto</h3><span class="area__arrow" aria-hidden="true">→</span></div>
+                    <p>Grabación, montaje y retoque</p>
                 </a>
-                <a href="DISEÑO/diseño.html" class="service" data-reveal data-delay="0.00" data-cursor="Explorar">
-                    <div class="service__head">
-                        <h3>Diseño gráfico</h3>
-                        <span class="muted">Branding, campañas y editorial</span>
-                    </div>
-                    <div class="service__media"><img src="assets/img/portadajordans.webp" alt="Cartel de Air Jordan" loading="lazy"></div>
-                    <span class="btn btn--sm btn--light">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                <a href="WEBS/webs.html" class="area" data-reveal>
+                    <div class="area__img"><img src="assets/img/goco.webp" alt="Web de GOCO Autoescola" loading="lazy"><span class="area__num">III.</span></div>
+                    <div class="area__row"><h3>Webs</h3><span class="area__arrow" aria-hidden="true">→</span></div>
+                    <p>Diseño y mantenimiento web</p>
                 </a>
-                <a href="MULTIMEDIA/foto.html" class="service" data-reveal data-delay="0.08" data-cursor="Explorar" data-hover-video>
-                    <div class="service__head">
-                        <h3>Vídeo &amp; foto</h3>
-                        <span class="muted">Grabación, montaje y color</span>
-                    </div>
-                    <div class="service__media"><video muted loop playsinline preload="none" poster="assets/img/moto10.webp"><source src="img/polstunt1.mp4" type="video/mp4"></video></div>
-                    <span class="btn btn--sm btn--light">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                <a href="LIFTY/lifty.html" class="area" data-reveal>
+                    <div class="area__img"><img src="assets/img/xd2.webp" alt="Prototipo de la app Lifty" loading="lazy"><span class="area__num">IV.</span></div>
+                    <div class="area__row"><h3>Apps</h3><span class="area__arrow" aria-hidden="true">→</span></div>
+                    <p>UI/UX y prototipos</p>
                 </a>
             </div>
-
-            <div class="more-cards">
-                <a href="SOBRE-MI/sobre-mi.html" class="more-card" data-reveal data-delay="0.00" data-cursor="Abrir">
-                    <span class="kicker">05</span>
-                    <h3>Sobre mí</h3>
-                    <p class="muted">Quién soy, habilidades, formación e idiomas.</p>
-                    <span class="more-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a>
-                <a href="EXPERIENCIA/experiencia.html" class="more-card" data-reveal data-delay="0.08" data-cursor="Abrir">
-                    <span class="kicker">06</span>
-                    <h3>Experiencia</h3>
-                    <p class="muted">Empresas y proyectos con los que he trabajado.</p>
-                    <span class="more-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a>
-                <a href="PROCESO/proceso.html" class="more-card" data-reveal data-delay="0.16" data-cursor="Abrir">
-                    <span class="kicker">07</span>
-                    <h3>Proceso e IA</h3>
-                    <p class="muted">Cómo trabajo, paso a paso, y cómo uso la IA.</p>
-                    <span class="more-card__arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
-                </a>
+            <div class="more-row">
+                <a href="SOBRE-MI/sobre-mi.html"><em>V.</em><span><b>Sobre mí</b><span class="d">Quién soy, habilidades e idiomas</span></span><i aria-hidden="true">→</i></a>
+                <a href="EXPERIENCIA/experiencia.html"><em>VI.</em><span><b>Experiencia</b><span class="d">Empresas y proyectos</span></span><i aria-hidden="true">→</i></a>
+                <a href="PROCESO/proceso.html"><em>VII.</em><span><b>Proceso e IA</b><span class="d">Cómo trabajo, paso a paso</span></span><i aria-hidden="true">→</i></a>
             </div>
         </div>
     </section>
@@ -182,36 +234,35 @@
 <footer class="footer2" id="contacto">
     <div class="wrap footer2__grid">
         <div>
-            <a href="index.html" class="logo logo--mono"><span class="logo__mark">MK</span><span class="logo__name">Mireia Killinger</span></a>
-            <p class="muted">Diseño gráfico, UI/UX, web, app y vídeo.</p>
+            <span class="caps">Contacto</span>
+            <a href="mailto:mkillingerdesign@gmail.com" class="footer2__mail">mkillingerdesign<em>@</em>gmail.com</a>
         </div>
         <div>
-            <span class="kicker">Trabajo</span>
-            <a href="WEBS/webs.html">Webs</a><a href="LIFTY/lifty.html">Apps</a><a href="DISEÑO/diseño.html">Diseño gráfico</a><a href="MULTIMEDIA/foto.html">Vídeo &amp; foto</a>
+            <span class="caps">Trabajo</span>
+            <a href="DISEÑO/diseño.html">Diseño gráfico</a><a href="MULTIMEDIA/foto.html">Vídeo &amp; foto</a><a href="WEBS/webs.html">Webs</a><a href="LIFTY/lifty.html">Apps</a>
         </div>
         <div>
-            <span class="kicker">Sobre mí</span>
+            <span class="caps">Sobre mí</span>
             <a href="SOBRE-MI/sobre-mi.html">Sobre mí</a><a href="EXPERIENCIA/experiencia.html">Experiencia</a><a href="PROCESO/proceso.html">Proceso e IA</a>
         </div>
         <div>
-            <span class="kicker">Contacto</span>
-            <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
+            <span class="caps">Redes</span>
             <a href="https://linkedin.com/in/mireiakillinger" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://instagram.com/mireiakillinger" target="_blank" rel="noopener">Instagram</a>
             <a href="https://github.com/mkillingerdesign" target="_blank" rel="noopener">GitHub</a>
         </div>
     </div>
-    <div class="wrap footer2__bottom mono muted">
-        <span>© 2026 Mireia Killinger</span>
-        <a href="#top" class="to-top">Volver arriba <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="footer2__bottom caps">
+        <span>© 2026 Mireia Killinger · Barcelona</span>
+        <a href="#top" class="to-top">Volver arriba <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 </footer>
 
-<div class="toast mono" role="status" aria-live="polite"></div>
+<div class="toast" role="status" aria-live="polite"></div>
 
 <script src="assets/vendor/gsap.min.js" defer></script>
 <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="assets/vendor/lenis.min.js" defer></script>
-<script src="assets/js/main.js?v=14" defer></script>
+<script src="assets/js/main.js?v=15" defer></script>
 </body>
 </html>
