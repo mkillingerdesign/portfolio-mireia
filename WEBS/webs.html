@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proyectos web — Mireia Killinger</title>
     <meta name="description" content="Wireframes, prototipos interactivos y webs funcionales diseñadas por Mireia Killinger.">
-    <meta name="theme-color" content="#0b0710">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%239d7bff'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial Black,Arial' font-weight='900' font-size='26' fill='%23f2eee6'%3EMK%3C/text%3E%3C/svg%3E">
+    <meta name="theme-color" content="#0e0b10">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='31' fill='%230e0b10' stroke='%23e9a8c6' stroke-width='2'/%3E%3Ctext x='50%25' y='57%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='24' fill='%23f3ece6'%3EMK%3C/text%3E%3C/svg%3E">
     <script>document.documentElement.dataset.theme = (function () { try { return localStorage.getItem("theme"); } catch (e) { return null; } })() || (window.matchMedia && matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/main.css?v=14">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/site.css?v=1">
 </head>
 
 <body class="page-sub">
@@ -37,7 +37,7 @@
         </nav>
 
         <div class="header__right">
-            <a href="#contacto" class="btn btn--solid btn--sm header__cta">Hablemos</a>
+            <a href="#contacto" class="header__cta">Hablemos</a>
             <button class="theme-toggle" type="button" aria-label="Cambiar tema"></button>
             <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu">
                 Menú <span class="menu-btn__icon"></span>
@@ -49,10 +49,10 @@
 <div class="menu" id="menu">
     <ul class="menu__list">
         <li><a href="../index.html"><small>00</small>Inicio</a></li>
-        <li><a href="../WEBS/webs.html" aria-current="page"><small>01</small>Webs</a></li>
-        <li><a href="../LIFTY/lifty.html"><small>02</small>Apps</a></li>
-        <li><a href="../DISEÑO/diseño.html"><small>03</small>Diseño gráfico</a></li>
-        <li><a href="../MULTIMEDIA/foto.html"><small>04</small>Vídeo & foto</a></li>
+        <li><a href="../DISEÑO/diseño.html"><small>01</small>Diseño gráfico</a></li>
+        <li><a href="../MULTIMEDIA/foto.html"><small>02</small>Vídeo & foto</a></li>
+        <li><a href="../WEBS/webs.html" aria-current="page"><small>03</small>Webs</a></li>
+        <li><a href="../LIFTY/lifty.html"><small>04</small>Apps</a></li>
         <li><a href="../SOBRE-MI/sobre-mi.html"><small>05</small>Sobre mí</a></li>
         <li><a href="../EXPERIENCIA/experiencia.html"><small>06</small>Experiencia</a></li>
         <li><a href="../PROCESO/proceso.html"><small>07</small>Proceso e IA</a></li>
@@ -68,7 +68,7 @@
     <section class="page-hero" id="top">
         <div class="wrap">
             <a href="../index.html#apartados" class="back-link mono" data-intro><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg> Volver al inicio</a>
-            <span class="label" data-intro>Área 01</span>
+            <span class="label" data-intro>Área III</span>
             <h1 class="page-hero__title display h-xl" data-split-intro style="margin-top: 18px;">
                 <span class="line-mask"><span>Proyectos</span></span>
                 <span class="line-mask"><span><span class="serif">web</span></span></span>
@@ -193,28 +193,27 @@
 <footer class="footer2" id="contacto">
     <div class="wrap footer2__grid">
         <div>
-            <a href="../index.html" class="logo logo--mono"><span class="logo__mark">MK</span><span class="logo__name">Mireia Killinger</span></a>
-            <p class="muted">Diseño gráfico, UI/UX, web, app y vídeo.</p>
+            <span class="caps">Contacto</span>
+            <a href="mailto:mkillingerdesign@gmail.com" class="footer2__mail">mkillingerdesign<em>@</em>gmail.com</a>
         </div>
         <div>
-            <span class="kicker">Trabajo</span>
-            <a href="../WEBS/webs.html">Webs</a><a href="../LIFTY/lifty.html">Apps</a><a href="../DISEÑO/diseño.html">Diseño gráfico</a><a href="../MULTIMEDIA/foto.html">Vídeo &amp; foto</a>
+            <span class="caps">Trabajo</span>
+            <a href="../DISEÑO/diseño.html">Diseño gráfico</a><a href="../MULTIMEDIA/foto.html">Vídeo &amp; foto</a><a href="../WEBS/webs.html">Webs</a><a href="../LIFTY/lifty.html">Apps</a>
         </div>
         <div>
-            <span class="kicker">Sobre mí</span>
+            <span class="caps">Sobre mí</span>
             <a href="../SOBRE-MI/sobre-mi.html">Sobre mí</a><a href="../EXPERIENCIA/experiencia.html">Experiencia</a><a href="../PROCESO/proceso.html">Proceso e IA</a>
         </div>
         <div>
-            <span class="kicker">Contacto</span>
-            <a href="mailto:mkillingerdesign@gmail.com">mkillingerdesign@gmail.com</a>
+            <span class="caps">Redes</span>
             <a href="https://linkedin.com/in/mireiakillinger" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://instagram.com/mireiakillinger" target="_blank" rel="noopener">Instagram</a>
             <a href="https://github.com/mkillingerdesign" target="_blank" rel="noopener">GitHub</a>
         </div>
     </div>
-    <div class="wrap footer2__bottom mono muted">
-        <span>© 2026 Mireia Killinger</span>
-        <a href="#top" class="to-top">Volver arriba <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    <div class="footer2__bottom caps">
+        <span>© 2026 Mireia Killinger · Barcelona</span>
+        <a href="#top" class="to-top">Volver arriba <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
     </div>
 </footer>
 
@@ -240,6 +239,6 @@
 <script src="../assets/vendor/gsap.min.js" defer></script>
 <script src="../assets/vendor/ScrollTrigger.min.js" defer></script>
 <script src="../assets/vendor/lenis.min.js" defer></script>
-<script src="../assets/js/main.js?v=14" defer></script>
+<script src="../assets/js/main.js?v=15" defer></script>
 </body>
 </html>

@@ -39,7 +39,7 @@
             doc.dataset.theme = next;
             store.set("theme", next);
             const tc = document.querySelector('meta[name="theme-color"]');
-            if (tc) tc.setAttribute("content", next === "light" ? "#f5f3ff" : "#0b0710");
+            if (tc) tc.setAttribute("content", next === "light" ? "#f7f2ee" : "#0e0b10");
             themeBtn.setAttribute("aria-label", next === "light" ? "Activar modo oscuro" : "Activar modo claro");
         });
     }
